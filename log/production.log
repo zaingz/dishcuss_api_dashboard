@@ -12,3 +12,31 @@ D, [2016-09-02T17:42:33.648353 #18737] DEBUG -- :   [1m[35m (409.9ms)[0m  ALT
 D, [2016-09-02T17:42:34.092378 #18737] DEBUG -- :   [1m[36m (443.5ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" inet[0m
 D, [2016-09-02T17:42:35.310528 #18737] DEBUG -- :   [1m[35m (407.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
 D, [2016-09-02T17:42:35.707118 #18737] DEBUG -- :   [1m[36m (396.3ms)[0m  [1mROLLBACK[0m
+D, [2016-09-02T17:45:05.396520 #18886] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (404.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-09-02T17:45:05.874205 #18886]  INFO -- : Migrating to AddDeviseToUsers (20160730112040)
+D, [2016-09-02T17:45:06.275859 #18886] DEBUG -- :   [1m[35m (401.1ms)[0m  BEGIN
+D, [2016-09-02T17:45:07.106343 #18886] DEBUG -- :   [1m[36m (426.7ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+D, [2016-09-02T17:45:07.510629 #18886] DEBUG -- :   [1m[35m (403.9ms)[0m  ALTER TABLE "users" ADD "reset_password_token" character varying
+D, [2016-09-02T17:45:07.913775 #18886] DEBUG -- :   [1m[36m (402.8ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+D, [2016-09-02T17:45:08.321458 #18886] DEBUG -- :   [1m[35m (407.3ms)[0m  ALTER TABLE "users" ADD "remember_created_at" timestamp
+D, [2016-09-02T17:45:09.211862 #18886] DEBUG -- :   [1m[36m (472.7ms)[0m  [1mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+D, [2016-09-02T17:45:09.644295 #18886] DEBUG -- :   [1m[35m (432.1ms)[0m  ALTER TABLE "users" ADD "current_sign_in_at" timestamp
+D, [2016-09-02T17:45:10.099866 #18886] DEBUG -- :   [1m[36m (455.2ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_at" timestamp[0m
+D, [2016-09-02T17:45:10.537373 #18886] DEBUG -- :   [1m[35m (437.2ms)[0m  ALTER TABLE "users" ADD "current_sign_in_ip" inet
+D, [2016-09-02T17:45:10.954379 #18886] DEBUG -- :   [1m[36m (416.6ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" inet[0m
+D, [2016-09-02T17:45:12.240433 #18886] DEBUG -- :   [1m[35m (429.5ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+D, [2016-09-02T17:45:12.672147 #18886] DEBUG -- :   [1m[36m (431.4ms)[0m  [1mROLLBACK[0m
+D, [2016-09-02T17:45:35.471995 #18944] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (398.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-09-02T17:45:35.880493 #18944]  INFO -- : Migrating to AddDeviseToUsers (20160730112040)
+D, [2016-09-02T17:45:36.274043 #18944] DEBUG -- :   [1m[35m (393.0ms)[0m  BEGIN
+D, [2016-09-02T17:45:37.066569 #18944] DEBUG -- :   [1m[36m (402.4ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+D, [2016-09-02T17:45:37.464469 #18944] DEBUG -- :   [1m[35m (397.6ms)[0m  ALTER TABLE "users" ADD "reset_password_token" character varying
+D, [2016-09-02T17:45:37.857304 #18944] DEBUG -- :   [1m[36m (392.5ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+D, [2016-09-02T17:45:38.255958 #18944] DEBUG -- :   [1m[35m (398.2ms)[0m  ALTER TABLE "users" ADD "remember_created_at" timestamp
+D, [2016-09-02T17:45:39.066921 #18944] DEBUG -- :   [1m[36m (408.8ms)[0m  [1mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+D, [2016-09-02T17:45:39.479617 #18944] DEBUG -- :   [1m[35m (412.1ms)[0m  ALTER TABLE "users" ADD "current_sign_in_at" timestamp
+D, [2016-09-02T17:45:39.894038 #18944] DEBUG -- :   [1m[36m (414.0ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_at" timestamp[0m
+D, [2016-09-02T17:45:40.319002 #18944] DEBUG -- :   [1m[35m (424.5ms)[0m  ALTER TABLE "users" ADD "current_sign_in_ip" inet
+D, [2016-09-02T17:45:40.732770 #18944] DEBUG -- :   [1m[36m (413.3ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" inet[0m
+D, [2016-09-02T17:45:42.005516 #18944] DEBUG -- :   [1m[35m (437.8ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+D, [2016-09-02T17:45:42.443841 #18944] DEBUG -- :   [1m[36m (438.0ms)[0m  [1mROLLBACK[0m
