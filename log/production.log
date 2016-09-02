@@ -1,0 +1,14 @@
+D, [2016-09-02T17:42:28.678396 #18737] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (400.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-09-02T17:42:29.127727 #18737]  INFO -- : Migrating to AddDeviseToUsers (20160730112040)
+D, [2016-09-02T17:42:29.533185 #18737] DEBUG -- :   [1m[35m (404.6ms)[0m  BEGIN
+D, [2016-09-02T17:42:30.363656 #18737] DEBUG -- :   [1m[36m (416.2ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+D, [2016-09-02T17:42:30.777480 #18737] DEBUG -- :   [1m[35m (413.5ms)[0m  ALTER TABLE "users" ADD "reset_password_token" character varying
+D, [2016-09-02T17:42:31.173540 #18737] DEBUG -- :   [1m[36m (395.7ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+D, [2016-09-02T17:42:31.578489 #18737] DEBUG -- :   [1m[35m (404.6ms)[0m  ALTER TABLE "users" ADD "remember_created_at" timestamp
+D, [2016-09-02T17:42:32.406822 #18737] DEBUG -- :   [1m[36m (419.6ms)[0m  [1mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+D, [2016-09-02T17:42:32.824567 #18737] DEBUG -- :   [1m[35m (417.3ms)[0m  ALTER TABLE "users" ADD "current_sign_in_at" timestamp
+D, [2016-09-02T17:42:33.238049 #18737] DEBUG -- :   [1m[36m (413.1ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_at" timestamp[0m
+D, [2016-09-02T17:42:33.648353 #18737] DEBUG -- :   [1m[35m (409.9ms)[0m  ALTER TABLE "users" ADD "current_sign_in_ip" inet
+D, [2016-09-02T17:42:34.092378 #18737] DEBUG -- :   [1m[36m (443.5ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" inet[0m
+D, [2016-09-02T17:42:35.310528 #18737] DEBUG -- :   [1m[35m (407.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+D, [2016-09-02T17:42:35.707118 #18737] DEBUG -- :   [1m[36m (396.3ms)[0m  [1mROLLBACK[0m
