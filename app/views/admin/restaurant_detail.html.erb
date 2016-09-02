@@ -1,0 +1,121 @@
+<section class="content-header">
+  <h1>
+    <%= @restaurant.name %>
+    <small><%= @restaurant.location %></small>
+    <small style="float: right;"><%= link_to 'Back' , url_for(:back) , class: 'btn btn-info' %></small>
+  </h1>
+</section>
+
+
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Reviews</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="review_table" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Summary</th>
+                    <th>Rating</th>
+                    <th>Reviewer</th>
+                    <th>Review On</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @restaurant.reviews.each do |us| %>
+                    <tr>
+                      <td><%= us.title %></td>
+                      <td><%= us.summary %></td>
+                      <td><%= us.rating %></td>
+                      <td><%= us.reviewer.email %></td>
+                      <td><%= us.reviewable_type %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>
+
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Checkins</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="checkin_table" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Address</th>
+                    <th>Post Title</th>
+                    <th>User</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @restaurant.checkins.each do |us| %>
+                    <tr>
+                      <td><%= us.address %></td>
+                      <td><%= us.post.title %></td>
+                      <td><%= us.post.user.email %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>
+
+<% if @restaurant.claim_credit %>
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Credit Claims</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="credit_table" class="dataTables table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @restaurant.credit_histories.each do |us| %>
+                    <tr>
+                      <td><%= us.user.name %></td>
+                      <td><%= us.user.email %></td>
+                      <td><%= us.price %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>
+<% end %>
+
+<script>
+  $(function () {
+    $("#review_table").DataTable();
+    $("#checkin_table").DataTable();
+    $("#credit_table").DataTable();
+  });
+</script>

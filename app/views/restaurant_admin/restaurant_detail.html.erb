@@ -1,0 +1,229 @@
+
+<section class="content-header">
+  <h1>
+    <%= @restaurant.name %>
+    <small ><%= @restaurant.location.present? ? @restaurant.location.truncate(40) : '' %></small>
+    <small style="float: right;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit_restaurant">Edit</button></small>
+    <small style="float: right;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#cover_image">Change CoverImage</button></small>
+    <% if @restaurant.claim_credit %>
+    <small style="float: right;"><%= link_to 'QR Code' , qrcodes_rest_admin_path(@restaurant.id), class: 'btn btn-info' %></small>
+    <% end %>
+    <small style="float: right;"><%= link_to 'Notification' , restaurant_admin_notification_path(@restaurant.id) , class: 'btn btn-info' %></small>
+    <small style="float: right;"><%= link_to 'Message' , restaurant_admin_message_path(@restaurant.id) , class: 'btn btn-info' %></small>
+    <small style="float: right;"><%= link_to 'Menu' , restaurant_food_items_admin_path(@restaurant.id), class: 'btn btn-info' %></small>
+  </h1>
+
+  <!-- Modal -->
+  <div class="modal fade" id="edit_restaurant" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit Restaurant</h4>
+        </div>
+        <div class="modal-body">
+          <%= form_for @restaurant ,  url: restaurant_update_admin_path(@restaurant), html: { method: :put } do |f| %>
+            <% if @restaurant.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+
+                <ul>
+                <% @restaurant.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="box-body">
+              <div class="form-group">
+                <%= f.label 'name', 'Name'%>
+                <%= f.text_field :name, class: 'form-control', autofocus: true %>
+              </div>
+              <div class="form-group">
+                <%= f.label 'opening_time', 'Opening Time'%>
+                <%= f.time_field :opening_time , class: 'form-control', autofocus: true %>
+              </div>
+              <div class="form-group">
+                <%= f.label 'closing_time', 'Closing Time'%>
+                <%= f.time_field :closing_time  , class: 'form-control', autofocus: true %>
+              </div>
+              <div class="form-group">
+                <%= f.label 'location', 'Location'%>
+                <%= f.text_field :location  , class: 'form-control', autofocus: true %>
+              </div>
+              <!-- <div class="form-group">
+                <%= f.label 'image', 'Image'%>
+                <%= file_field( "image", "image" ) %>
+              </div> -->
+            </div>
+
+
+                     
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit "Update" , class: 'btn btn-default' %>
+          <% end %> 
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="cover_image" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Change Cover Image</h4>
+        </div>
+        <div class="modal-body">
+          <%= form_tag(cover_image_update_path(@restaurant) , method: "put" , :multipart => true) do %>
+
+            <div class="box-body">
+              <div class="form-group">
+                <%= label_tag 'image', 'Image'%>
+                <%= file_field( "image", "image" ) %>
+              </div>
+            </div>
+                     
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= submit_tag "Update" , class: 'btn btn-default' %>
+          <% end %> 
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</section>
+
+
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Reviews</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="review_table" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Summary</th>
+                    <th>Rating</th>
+                    <th>Reviewer</th>
+                    <th>Review On</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @restaurant.reviews.each do |us| %>
+                    <tr>
+                      <td><%= us.title %></td>
+                      <td><%= us.summary %></td>
+                      <td><%= us.rating %></td>
+                      <td><%= us.reviewer.email %></td>
+                      <td><%= us.reviewable_type %></td>
+                      <td><%= us.updated_at.strftime('%H:%M %F') %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>
+
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Checkins</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="checkin_table" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Address</th>
+                    <th>Post Title</th>
+                    <th>User</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @restaurant.checkins.each do |us| %>
+                    <tr>
+                      <td><%= us.address %></td>
+                      <td><%= us.post.title %></td>
+                      <td><%= us.post.user.email %></td>
+                      <td><%= us.updated_at.strftime('%H:%M %F') %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>
+
+<% if @restaurant.claim_credit %>
+
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Credit Claims</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="credit_table" class="dataTables table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Price</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @restaurant.credit_histories.each do |us| %>
+                    <tr>
+                      <td><%= us.user.name %></td>
+                      <td><%= us.user.email %></td>
+                      <td><%= us.price %></td>
+                      <td><%= us.updated_at.strftime('%H:%M %F') %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>
+
+<% end %>
+
+<script>
+  $(function () {
+    $("#review_table").DataTable();
+    $("#checkin_table").DataTable();
+    $("#credit_table").DataTable();
+  });
+</script>

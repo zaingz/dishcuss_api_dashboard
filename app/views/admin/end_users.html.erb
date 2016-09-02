@@ -1,0 +1,53 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    End Users
+    <small></small>
+  </h1>
+</section>
+
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <!-- <div class="box-header">
+              <h3 class="box-title">Reviews</h3>
+            </div> -->
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Verified</th>
+                    <th>Referal Code</th>
+                    <th>Block</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <% @user.each do |us| %>
+                      <tr>
+                        <td><%= us.name %></td>
+                        <td><%= us.username %></td>
+                        <td><%= us.email %></td>
+                        <td><%= us.gender %></td>
+                        <td><%= us.verified ? 'Yes' : 'No' %></td>
+                        <td><%= us.referal_code %></td>
+                        <td><% if us.block  %>
+                              <%= link_to "Yes" , unblock_user_path(us.id) %>
+                            <% else  %>
+                              <%= link_to "No" , block_user_path(us.id) %>
+                            <% end  %>
+                        </td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>

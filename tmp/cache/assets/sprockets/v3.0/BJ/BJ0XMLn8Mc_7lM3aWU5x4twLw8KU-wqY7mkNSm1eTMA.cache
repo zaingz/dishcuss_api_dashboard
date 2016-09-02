@@ -1,0 +1,33 @@
+{:uriI"©file://app/assets/plugins/ckeditor/samples/toolbarconfigurator/font/config.json?type=application/json&id=7cac58768be258036861b1338a8045054aa6b3abb610cfaa1f838f90a5835db0:ET:load_pathI"app/assets/plugins;T:filenameI"Mapp/assets/plugins/ckeditor/samples/toolbarconfigurator/font/config.json;T:	nameI"5ckeditor/samples/toolbarconfigurator/font/config;T:logical_pathI":ckeditor/samples/toolbarconfigurator/font/config.json;T:content_typeI"application/json;T:sourceI"-{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "f48ae54adfb27d8ada53d0fd9e34ee10",
+      "css": "trash-empty",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "1c4068ed75209e21af36017df8871802",
+      "css": "down-big",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "95376bf082bfec6ce06ea1cda7bd7ead",
+      "css": "up-big",
+      "code": 59394,
+      "src": "fontawesome"
+    }
+  ]
+};T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"[file-digest://app/assets/plugins/ckeditor/samples/toolbarconfigurator/font/config.json;TT:charsetI"
+utf-8;F:digest"%m6¦;Cèá
+þñ àDeÏÉŒM‡ßÜY!â)¨l:lengthi-:dependencies_digest"%æq…åç5šWL+6ðtëcmä«j¯îÔ'>:idI"E7cac58768be258036861b1338a8045054aa6b3abb610cfaa1f838f90a5835db0;F:
+mtimel+r-yW

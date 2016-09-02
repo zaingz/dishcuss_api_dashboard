@@ -1,0 +1,75 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Restaurants
+    <small></small>
+  </h1>
+</section>
+
+
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <!-- <div class="box-header">
+              <h3 class="box-title">Reviews</h3>
+            </div> -->
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Opening Time</th>
+                    <th>Closing Time</th>
+                    <th>Location</th>
+                    <th>Approved</th>
+                    <th>Featured</th>
+                    <th>Claim Credit</th>
+                    <th>Owner</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <% @restaurant.each do |rest| %>
+                      <tr>
+                        <td><%= link_to rest.name , restauarant_ad_details_path(rest.id) %></td>
+                        <td><%= rest.opening_time.strftime("%H:%M %p") %></td>
+                        <td><%= rest.closing_time.strftime("%H:%M %p") %></td>
+                        <td><%= rest.location %></td>
+                        <td><% if rest.approved %>
+                            <%= link_to "Yes" , unaprove_rest_path(rest.id) %>
+                          <% else %>
+                            <%= link_to "No" , approve_restaurant_admin_path(rest.id) %>
+                          <% end %>
+                        </td>
+                        <td><% if rest.approved %>
+                              <% if rest.featured %>
+                                <%= link_to "Yes" , unfeature_rest_path(rest.id) %>
+                              <% else %>
+                                <%= link_to "No" , feature_restaurant_admin_path(rest.id) %>
+                              <% end %>
+                            <% else %>
+                              <%= rest.featured ? 'Yes' : 'No' %>
+                            <% end %> 
+                        </td>
+                        <td>
+                            <% if rest.approved %>
+                              <% if rest.claim_credit %>
+                                <%= link_to "Yes" , disapprove_claim_restaurant_path(rest.id) %>
+                              <% else %>
+                                <%= link_to "No" , enable_claim_restaurant_path(rest.id) %>
+                              <% end %>
+                            <% else %>
+                              <%= rest.claim_credit ? 'Yes' : 'No' %>
+                            <% end %> 
+                          </td>
+                          <td><%= rest.owner.name.present? ? rest.owner.name : rest.owner.email %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>

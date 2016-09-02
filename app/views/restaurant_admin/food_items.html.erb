@@ -1,0 +1,194 @@
+<section class="content-header">
+  <h1>
+    <%= @restaurant.name %>
+    <small >Menu</small>
+    <small style="float: right;"><%= link_to 'Back' , restauarant_owner_details_path(@restaurant.id) , class: 'btn btn-info' %></small>
+    <small style="float: right;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#add_fooditem">Add FoodItem</button></small>
+  </h1>
+
+
+  <div class="modal fade" id="add_fooditem" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Fooditem</h4>
+        </div>
+        <div class="modal-body">
+          <%= form_tag(restaurant_add_food_admin_path , method: "post" , :multipart => true) do %>
+          <%= hidden_field_tag(:restaurant_id, @restaurant.id) %> 
+            <div class="box-body">
+              <div class="form-group">
+                <%= label_tag 'name', 'Name'%>
+                <%= text_field_tag :name , '' , class: 'form-control', autofocus: true %>
+              </div>
+              <div class="form-group">
+                <%= label_tag 'fooditem', 'Price'%>
+                <%= number_field :fooditem, :price , class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= label 'Section' , 'section' %>
+                <%= select_tag(:menu_section, options_for_select(@restaurant.menu.sections.map {|s| [s.title, s.id]}), { class: 'form-control select2' , style: 'width: 100%' }) %>
+              </div>
+              <div class="form-group">
+                <label id="section_new" class="btn btn-info btn-sm"><i class="fa fa-plus"></i> Add New Section</label>
+                <%= text_field_tag :section, '' , class: 'form-control' , style: 'display: none ; margin-top: 3px;'%>
+              </div>
+              <div class="form-group">
+                <%= label 'Caegories' , 'categories' %>
+                <%= select_tag(:categories, options_for_select(Category.all.map {|s| [s.name, s.id]}), {:multiple => true , class: 'form-control select2' , style: 'width: 100%' }) %>
+              </div>
+              <div class="form-group">
+                <label id="category_new" class="btn btn-info btn-sm"><i class="fa fa-plus"></i> Add New Category</label>
+                <%= text_field_tag :new_category , '', class: 'form-control' , autofocus: true , style: 'display: none ; margin-top: 3px;' %>
+              </div>
+              <div class="form-group">
+                <%= label_tag 'image', 'Image'%>
+                <%= file_field "image", "image" , :multiple => true %>
+              </div>
+            </div>                    
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= submit_tag "Add" , class: 'btn btn-default' %>
+          <% end %> 
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Food Items</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Section</th>
+                    <th>Likes</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <% @food_items.each_with_index do |us , i| %>
+                    <% count = us.food_items.count %>
+                    <% temp = 0 %>
+                    <% while(count != 0) do %>
+                      <% editi = "edit_fooditem" + i.to_s + count.to_s %>
+                      <% p editi %>
+                      <tr>
+                        <td><%= us.food_items[temp].name %></td>
+                        <td><%= us.food_items[temp].price %></td>
+                        <td><%= us.title %></td>
+                        <td><%= us.food_items[temp].likers_count %></td>
+                        <td><%= link_to "Edit", "#"+editi, "data-toggle" => "modal" %></td>
+                        <td><%= link_to 'Delete' , restaurant_food_items_delete_admin_path(id: us.food_items[temp].id , restaurant_id: @restaurant.id) , method: 'DELETE' ,  data: { confirm: "Are you sure?" } %></td>
+                      </tr>
+
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="<%= editi %>" role="dialog">
+                        <div class="modal-dialog">
+                        
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Edit FoodItem</h4>
+                            </div>
+                            <div class="modal-body">
+                              <%= form_for us.food_items[temp] ,  url: restaurant_food_items_update_admin_path(us.food_items[temp]), html: { method: :put } do |f| %>
+                                <% if us.food_items[temp].errors.any? %>
+                                  <div id="error_explanation">
+                                    <h2><%= pluralize(us.food_items[temp].errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+
+                                    <ul>
+                                    <% us.food_items[temp].errors.full_messages.each do |message| %>
+                                      <li><%= message %></li>
+                                    <% end %>
+                                    </ul>
+                                  </div>
+                                <% end %>
+
+                                <%= hidden_field_tag(:menu_id, @restaurant.menu.id) %> 
+                                <div class="box-body">
+                                  <div class="form-group">
+                                    <%= f.label 'name', 'Name'%>
+                                    <%= f.text_field :name, class: 'form-control', autofocus: true %>
+                                  </div>
+                                  <div class="form-group">
+                                    <%= f.label 'price', 'Price'%>
+                                    <%= f.number_field :price  , class: 'form-control', autofocus: true %>
+                                  </div>
+                                  <div class="form-group">
+                                    <label id="section_new_s" > Add New Section</label>
+                                    <%= text_field_tag :section, '' , class: 'form-control' , autofocus: true %>
+                                  </div>
+                                  <div class="form-group">
+                                    <%= label 're_categories' , 'Remove Categories' %>
+                                    <%= select_tag(:re_categories, options_for_select(us.food_items[temp].categories.map {|s| [s.name, s.id]}), {:multiple => true , class: 'form-control select2' , style: 'width: 100%' }) %>
+                                  </div>
+                                  <div class="form-group">
+                                    <%= label 'ad_categories' , 'Add Categories' %>
+                                    <%= select_tag(:ad_categories, options_for_select(Category.all.map {|s| [s.name, s.id]}), {:multiple => true , class: 'form-control select2' , style: 'width: 100%' }) %>
+                                  </div>
+                                  <div class="form-group">
+                                    <%= f.label 'image', 'Image'%>
+                                    <%= file_field "image", "image" , :multiple => true %>
+                                  </div>
+
+                                </div>
+
+
+                                         
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <%= f.submit "Update" , class: 'btn btn-default' %>
+                              <% end %> 
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+
+                      <% count = count - 1 %>
+                      <% temp = temp + 1 %>
+                    <% end %>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>
+
+
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $(".select2").select2();
+
+    $("#category_new").click(function(){
+        $("#new_category").toggle();
+    });
+    
+    $("#section_new").click(function(){
+        $("#section").toggle();
+    });
+
+  });
+</script>

@@ -1,0 +1,48 @@
+<section class="content-header">
+  <h1>
+    <%= @qr.restaurant.name %>
+    <small >QR Code</small>
+    <small style="float: right;"><%= link_to 'Back' , qrcodes_rest_admin_path(@qr.restaurant.id) , class: 'btn btn-info' %></small>
+  </h1>
+</section>
+
+
+<div class="row content">
+  <div class="col-xs-12">
+    <div class="box">
+            <div class="box-header">
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="qrcode_detail_table" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Price</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @qrcode.each do |us| %>
+                    <tr>
+                      <td><%= us.user.username %></td>
+                      <td><%= us.user.email %></td>
+                      <td><%= us.price %></td>
+                      <td><%= us.updated_at.strftime('%H:%M %F') %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+  </div>
+</div>
+
+<script>
+  $(function () {
+    $("#qrcode_detail_table").DataTable();
+  });
+</script>

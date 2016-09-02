@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: tayyab
+  api_key: '425178493638268'
+  api_secret: Nv4RyXrzBU8XKyXqR49RuNKb5II
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: tayyab
+  api_key: '425178493638268'
+  api_secret: Nv4RyXrzBU8XKyXqR49RuNKb5II
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: tayyab
+  api_key: '425178493638268'
+  api_secret: Nv4RyXrzBU8XKyXqR49RuNKb5II
+  enhance_image_tag: true
+  static_image_support: false
