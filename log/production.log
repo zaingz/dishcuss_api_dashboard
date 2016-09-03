@@ -40,3 +40,30 @@ D, [2016-09-02T17:45:40.319002 #18944] DEBUG -- :   [1m[35m (424.5ms)[0m  ALT
 D, [2016-09-02T17:45:40.732770 #18944] DEBUG -- :   [1m[36m (413.3ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" inet[0m
 D, [2016-09-02T17:45:42.005516 #18944] DEBUG -- :   [1m[35m (437.8ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
 D, [2016-09-02T17:45:42.443841 #18944] DEBUG -- :   [1m[36m (438.0ms)[0m  [1mROLLBACK[0m
+D, [2016-09-02T17:48:34.577012 #19075] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (542.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-09-02T17:48:35.010626 #19075]  INFO -- : Migrating to AddDeviseToUsers (20160730112040)
+D, [2016-09-02T17:48:35.434267 #19075] DEBUG -- :   [1m[35m (423.0ms)[0m  BEGIN
+D, [2016-09-02T17:48:35.935762 #19075] DEBUG -- :   [1m[36m (500.7ms)[0m  [1mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+D, [2016-09-02T17:48:37.070932 #19075] DEBUG -- :   [1m[35m (642.1ms)[0m  ALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL
+D, [2016-09-02T17:48:37.636481 #19075] DEBUG -- :   [1m[36m (565.2ms)[0m  [1mALTER TABLE "users" ADD "current_sign_in_at" timestamp[0m
+D, [2016-09-02T17:48:38.065086 #19075] DEBUG -- :   [1m[35m (428.2ms)[0m  ALTER TABLE "users" ADD "last_sign_in_at" timestamp
+D, [2016-09-02T17:48:38.484881 #19075] DEBUG -- :   [1m[36m (419.4ms)[0m  [1mALTER TABLE "users" ADD "current_sign_in_ip" inet[0m
+D, [2016-09-02T17:48:38.904237 #19075] DEBUG -- :   [1m[35m (419.0ms)[0m  ALTER TABLE "users" ADD "last_sign_in_ip" inet
+D, [2016-09-02T17:48:41.149094 #19075] DEBUG -- :   [1m[36mSQL (426.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160730112040"]]
+D, [2016-09-02T17:48:41.598956 #19075] DEBUG -- :   [1m[35m (449.4ms)[0m  COMMIT
+I, [2016-09-02T17:48:41.599169 #19075]  INFO -- : Migrating to AlterMessage (20160809103350)
+D, [2016-09-02T17:48:42.019724 #19075] DEBUG -- :   [1m[36m (419.7ms)[0m  [1mBEGIN[0m
+D, [2016-09-02T17:48:42.452316 #19075] DEBUG -- :   [1m[35m (432.1ms)[0m  ALTER TABLE "messages" DROP "user_id"
+D, [2016-09-02T17:48:42.919629 #19075] DEBUG -- :   [1m[36m (466.8ms)[0m  [1mALTER TABLE "messages" DROP "restaurant_id"[0m
+D, [2016-09-02T17:48:43.785611 #19075] DEBUG -- :   [1m[35m (420.9ms)[0m  ALTER TABLE "messages" ADD "sender_id" integer
+D, [2016-09-02T17:48:44.212092 #19075] DEBUG -- :   [1m[36m (425.7ms)[0m  [1mALTER TABLE "messages" ADD "sender_type" character varying[0m
+D, [2016-09-02T17:48:44.631680 #19075] DEBUG -- :   [1m[35m (419.1ms)[0m  ALTER TABLE "messages" ADD "reciever_id" integer
+D, [2016-09-02T17:48:45.050692 #19075] DEBUG -- :   [1m[36m (418.5ms)[0m  [1mALTER TABLE "messages" ADD "reciever_type" character varying[0m
+D, [2016-09-02T17:48:46.304793 #19075] DEBUG -- :   [1m[35mSQL (418.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160809103350"]]
+D, [2016-09-02T17:48:46.729186 #19075] DEBUG -- :   [1m[36m (424.0ms)[0m  [1mCOMMIT[0m
+I, [2016-09-02T17:48:46.729364 #19075]  INFO -- : Migrating to AddBlockedToUser (20160811053614)
+D, [2016-09-02T17:48:47.153435 #19075] DEBUG -- :   [1m[35m (423.6ms)[0m  BEGIN
+D, [2016-09-02T17:48:48.421335 #19075] DEBUG -- :   [1m[36m (425.6ms)[0m  [1mALTER TABLE "users" ADD "block" boolean DEFAULT 'f'[0m
+D, [2016-09-02T17:48:49.677525 #19075] DEBUG -- :   [1m[35mSQL (417.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160811053614"]]
+D, [2016-09-02T17:48:50.110948 #19075] DEBUG -- :   [1m[36m (433.0ms)[0m  [1mCOMMIT[0m
+D, [2016-09-03T23:30:23.048737 #3168] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (515.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
