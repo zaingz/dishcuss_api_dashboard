@@ -1,5 +1,5 @@
 class RestaurantSocialSerializer < ActiveModel::Serializer
-  root :restaurant
+  
   attributes :id , :name, :location , :latitude , :longitude , :opening ,:closing , :rating , :like , :follow 
   has_one :cover_image
   has_one :menu

@@ -58,7 +58,7 @@ class RestaurantsController < ApplicationController
 
 	def social
 		restaurant = Restaurant.approved.find(params[:id])
-		render json: restaurant , serializer: RestaurantSocialSerializer, status: :ok
+		render json: restaurant , serializer: RestaurantSocialSerializer , root: 'restaurant, status: :ok
 	end
 
 	#def likeable
