@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826075236) do
+ActiveRecord::Schema.define(version: 20160905081918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -160,24 +160,6 @@ ActiveRecord::Schema.define(version: 20160826075236) do
     t.string   "reciever_type"
   end
 
-  create_table "models", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-  end
-
-  add_index "models", ["email"], name: "index_models_on_email", unique: true, using: :btree
-  add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true, using: :btree
-
   create_table "newsfeeds", force: :cascade do |t|
     t.integer  "ids",        default: [],              array: true
     t.datetime "created_at",              null: false
@@ -292,35 +274,30 @@ ActiveRecord::Schema.define(version: 20160826075236) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",                   default: ""
-    t.string   "username",               default: ""
-    t.string   "email",                  default: ""
-    t.string   "avatar",                 default: ""
-    t.string   "location",               default: ""
+    t.string   "name",                default: ""
+    t.string   "username",            default: ""
+    t.string   "email",               default: ""
+    t.string   "avatar",              default: ""
+    t.string   "location",            default: ""
     t.integer  "gender"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "password"
-    t.integer  "role",                   default: 0
-    t.integer  "followees_count",        default: 0
-    t.integer  "followers_count",        default: 0
-    t.integer  "likees_count",           default: 0
-    t.boolean  "verified",               default: false
+    t.integer  "role",                default: 0
+    t.integer  "followees_count",     default: 0
+    t.integer  "followers_count",     default: 0
+    t.integer  "likees_count",        default: 0
+    t.boolean  "verified",            default: false
     t.datetime "dob"
-    t.string   "referal_code",           default: ""
-    t.string   "encrypted_password",     default: "",    null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
+    t.string   "referal_code",        default: ""
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",       default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.boolean  "block",                  default: false
+    t.boolean  "block",               default: false
+    t.string   "encrypted_password"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
