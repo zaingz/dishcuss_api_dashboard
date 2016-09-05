@@ -1,5 +1,4 @@
 class UserSocialSerializer < ActiveModel::Serializer
-  root :user
   attributes :id , :name, :username, :email, :avatar , :location , :gender , :date_of_birth , :role , :following ,:followers , :likes
   has_many :posts
   has_many :reviews

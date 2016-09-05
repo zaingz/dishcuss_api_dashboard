@@ -1,5 +1,5 @@
 class UserTokenSerializer < ActiveModel::Serializer
-  root :user
+  
   attributes :id , :name, :username, :email, :gender , :location , :date_of_birth ,:provider , :token , :referral_code
 
   def date_of_birth
