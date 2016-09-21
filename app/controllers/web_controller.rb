@@ -32,6 +32,7 @@ class WebController < ApplicationController
 		@menu = @restaurant.menu.sections
 		@reviews = @restaurant.reviews.order(created_at: 'DESC')
 		@photos = @restaurant.photos.order(created_at: 'DESC')
+		@checkins = @restaurant.checkins.order(created_at: 'DESC').limit(10)
 	end
 
 	def user_profile

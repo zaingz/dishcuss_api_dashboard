@@ -41,7 +41,6 @@ h6,h5,h4,h3,h2,h1 {
 	float:left;
 }
 .a-banner-section{
-	background: rgba(0, 0, 0, 0) url("../img/banner.png") no-repeat scroll 0 0 / cover ;
     height: auto;
     width: 100%;
     padding: 0 0 30px;

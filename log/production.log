@@ -225,3 +225,12 @@ D, [2016-09-21T12:23:11.999030 #11131] DEBUG -- :   [1m[35mPhoto Load (343.4ms
 D, [2016-09-21T12:41:36.914977 #11131] DEBUG -- :   [1m[36mCallNow Load (337.6ms)[0m  [1mSELECT "call_nows".* FROM "call_nows" WHERE "call_nows"."restaurant_id" = $1[0m  [["restaurant_id", 6]]
 D, [2016-09-21T12:42:59.864725 #11131] DEBUG -- :   [1m[35mReview Load (1191.5ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 6], ["reviewable_type", "Restaurant"]]
 D, [2016-09-21T12:49:46.753469 #11131] DEBUG -- :   [1m[36mPhoto Load (736.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 6], ["imageable_type", "Restaurant"]]
+D, [2016-09-21T13:04:10.074786 #11131] DEBUG -- :   [1m[35mCheckin Load (341.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 6]]
+D, [2016-09-21T13:05:00.542888 #11131] DEBUG -- :   [1m[36mPost Load (336.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 4]]
+D, [2016-09-21T13:05:01.930786 #11131] DEBUG -- :   [1m[35mUser Load (339.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+D, [2016-09-21T13:14:30.634988 #11131] DEBUG -- :   [1m[36m (388.7ms)[0m  [1mSELECT "users"."avatar" FROM "users"[0m
+D, [2016-09-21T13:15:29.046652 #11131] DEBUG -- :   [1m[35m (348.4ms)[0m  SELECT COUNT(*) FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 6]]
+D, [2016-09-21T13:59:06.212067 #16707] DEBUG -- :   [1m[36mRestaurant Load (483.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+D, [2016-09-21T13:59:08.899633 #16707] DEBUG -- :   [1m[35mRestaurant Load (336.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-21T13:59:15.667457 #16707] DEBUG -- :   [1m[36mRestaurant Load (485.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+D, [2016-09-21T13:59:23.084481 #16707] DEBUG -- :   [1m[35mCoverImage Load (393.2ms)[0m  SELECT  "cover_images".* FROM "cover_images" WHERE "cover_images"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 6]]

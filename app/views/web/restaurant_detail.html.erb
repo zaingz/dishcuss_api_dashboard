@@ -1,6 +1,18 @@
 <link rel="stylesheet" href="css/main.css">
 
-
+<% if @restaurant.cover_image.present? %>
+<style type="text/css">
+    .a-banner-section{
+        background: rgba(0, 0, 0, 0) url('img/banner.png') no-repeat scroll 0 0 / cover ;
+    }
+</style>
+<% else %>
+<style type="text/css">
+    .a-banner-section{
+        background: rgba(0, 0, 0, 0) url('<%= @restaurant.cover_image.image_url %>') no-repeat scroll 0 0 / cover ;
+    }
+</style>
+<% end %>
 <header class="a-header">
 	<nav class="a-top-bar">
     	<div class="container-fluid">
@@ -98,7 +110,7 @@
 				</ul>
 				<div class="tab-content">
 					<div id="menus" class="tab-pane fade">
-						<h3>HOME</h3>
+						<h3>MENU</h3>
                         <% @menu.each do |sect| %>
 						<h4><%= sect.title %></h4>
                         <% sect.food_items.each do |food_item| %>
@@ -146,8 +158,8 @@
                         <% end %>
 					</div>
 					<div id="photos" class="tab-pane fade">
-						<!-- <h3>Menu 1</h3>
-						<p>Some content in menu 1.</p> -->
+						<h3>PHOTO</h3>
+						<!-- <p>Some content in menu 1.</p -->>
                         <% @photos.each do |phot| %>
                         <div class="col-md-4">
                             <img src="<%= phot.image_url %>" class="img-rounded" alt="image" width="108" height="108">
@@ -155,6 +167,7 @@
                         <% end %>
 					</div>
 					<div id="reviews" class="tab-pane fade in active">
+                        <h3>REVIEW</h3>
                         <% @reviews.each do |review| %>
 						<h3><%= review.title %></h3>
 						<p><%= review.summary %></p>
@@ -166,7 +179,9 @@
         <aside class="a-sidebar-right">
         	<div class="food-photo">
             	<h3>Photos</h3>
-                <img src="img/burger01.png" alt="image descrp">
+                <% @photos.order(created_at: 'DESC').limit(6).each do |phot| %>
+                    <img src="<%= phot.image_url %>" class="img-rounded" alt="image" width="92" height="92">
+                <% end %>
                 <img src="img/burger01.png" alt="image descrp">
                 <img src="img/burger01.png" alt="image descrp">
                 <img src="img/burger01.png" alt="image descrp">
@@ -175,16 +190,13 @@
             </div>
             <div class="food-photo">
             	<h3>People Been There</h3>
-                <img src="img/man01.png" alt="image descrp">
-                <img src="img/man02.png" alt="image descrp">
-                <img src="img/man03.png" alt="image descrp">
-                <img src="img/man04.png" alt="image descrp">
-                <img src="img/man05.png" alt="image descrp">
-                <img src="img/man01.png" alt="image descrp">
-                <img src="img/man02.png" alt="image descrp">
-                <img src="img/man03.png" alt="image descrp">
-                <img src="img/man04.png" alt="image descrp">
-                <img src="img/man05.png" alt="image descrp">
+                <% @checkins.each do |checkin| %>
+                    <% if checkin.post.user.avatar.present? %>
+                    <img src="<%= checkin.post.user.avatar %>" alt="image descrp" class="img-circle" width="53" height="53">
+                    <% else %>
+                    <img src="img/man01.png" alt="image descrp">
+                    <% end %>
+                <% end %>
             </div>
             <img src="img/burger.png" alt="image descrp">
         </aside>
