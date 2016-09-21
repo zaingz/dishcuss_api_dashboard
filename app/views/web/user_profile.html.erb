@@ -33,7 +33,7 @@
             	<div class="row">
                 	<div class="col-md-6">
                         <section class="section-left">
-                            <img src="img/arooba.png" alt="image descrp">
+                            <img src="<%= @user.avatar %>" alt="<%= @user.name %>">
                             <h1 id="p_name"><%= @user.name %></h1>
                             <h2><%= @user.location.present? ? @user.location : "Locating" %></h2><br>
                             <span><%= @reviews.count %> Reviews</span>
@@ -80,24 +80,25 @@
                 </div>
             </div>
             <section class="section">
+                <% @reviews.each do |review| %>
             	<div class="section-border">
                     <div class="section-pan">
                         <div class="row">
                             <div class="col-md-12">
                                 <h1><%= @user.name %>'s Reviews</h1>
                                 <div class="section-article">
-                                    <img src="img/chekin-krahi.png" alt="image descrp">
-                                    <h2>Chicken Karahi</h2>
-                                    <p>Casa Biaca, Lahore</p>
+                                    <img src="<%= review.reviewable_type == 'Restaurant' ? review.reviewable.cover_image.image_url : review.reviewable.avatar %>" class="img-rounded" alt="user" width="51" height="51" >
+                                    <h2><%= review.title %></h2>
+                                    <p><%= review.reviewable.name + ", " + review.reviewable.location +"." %></p>
                                  </div>
                                 <h3>2 hours ago</h3>
-                                <p><b>Rated</b> <em>5.0</em> klfjnldsfhasdfuhofua oh aofu haiouf paf8 oafhiur yawefna,ioafhuf a8ou hiauf 8y fjka faagudfaifuah dih afahsdfui hfuiahduifhlajhaouiy oigefowefio uf aiou fhuio fdasuiof afa ffa fa o9fy89e ryaw89 fafa8o faui8ofhuif a8ofifga8o fhaofhifr9w8  r8ro  u fafsuigfif hk asdfusadui fof asiof safhasdi  afiasdiuf of iusfa s</p>
+                                <p><b>Rated</b> <em>5.0</em><%= review.summary %></p>
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <input type="button" class="form-control-like" value="Like">
+                                        <input type="button" class="form-control-like" value="Like <%= review.likers_count %>">
                                     </div>
                                     <div class="col-md-4">
-                                        <input type="text" class="form-control-comment" placeholder="Comment">
+                                        <input type="text" class="form-control-comment" placeholder="Comment <%= review.comments.count %>">
                                     </div>
                                     <div class="col-md-5">
                                         <a href="#"><img src="img/share-icon.png"></a>
@@ -106,10 +107,10 @@
                                 <div class="comment">
                                     <div class="row">
                                         <div class="col-md-1">
-                                            <img src="img/arooba-coment.png">
+                                            <img src="<%= @user.avatar %>" class="img-circle" alt="user" width="48" height="48" >
                                         </div>
                                         <div class="col-md-11">
-                                            <input type="text" class="form-control-coment" placeholder="Write a comment... Use @ to tag your friends">
+                                            <input type="text" class="form-control-coment" placeholder="Write a comment...">
                                         </div>
                                     </div>
                                     
@@ -118,6 +119,7 @@
                         </div>
                     </div>
                 </div>
+                <% end %>
                 <div class="section-pan">
                         <div class="row">
                             <div class="col-md-12">
