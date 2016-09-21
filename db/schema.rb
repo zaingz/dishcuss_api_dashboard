@@ -274,32 +274,30 @@ ActiveRecord::Schema.define(version: 20160905111718) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",                   default: ""
-    t.string   "username",               default: ""
-    t.string   "email",                  default: ""
-    t.string   "avatar",                 default: ""
-    t.string   "location",               default: ""
+    t.string   "name",                default: ""
+    t.string   "username",            default: ""
+    t.string   "email",               default: ""
+    t.string   "avatar",              default: ""
+    t.string   "location",            default: ""
     t.integer  "gender"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "password"
-    t.integer  "role",                   default: 0
-    t.integer  "followees_count",        default: 0
-    t.integer  "followers_count",        default: 0
-    t.integer  "likees_count",           default: 0
-    t.boolean  "verified",               default: false
+    t.integer  "role",                default: 0
+    t.integer  "followees_count",     default: 0
+    t.integer  "followers_count",     default: 0
+    t.integer  "likees_count",        default: 0
+    t.boolean  "verified",            default: false
     t.datetime "dob"
-    t.string   "referal_code",           default: ""
+    t.string   "referal_code",        default: ""
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",       default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.boolean  "block",                  default: false
+    t.boolean  "block",               default: false
     t.string   "encrypted_password"
-    t.string   "reset_password_token"
-    t.string   "reset_password_sent_at"
   end
 
 end

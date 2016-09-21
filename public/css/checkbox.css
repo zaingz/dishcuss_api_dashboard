@@ -1,0 +1,38 @@
+/* iCheck plugin Flat skin, green
+----------------------------------- */
+ul.list {
+	margin:0;
+	list-style:none;
+	padding:0;
+	float:left;
+	margin-bottom:12px;
+	width:170px;
+}
+ul.list li {
+	float:left;
+	margin-right:15px;
+}
+.icheckbox_flat-green {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	width:39px;
+	height:68px;
+	background: url(../img/glass-sprite.png) no-repeat;
+	border: none;
+	cursor: pointer;
+}
+.icheckbox_flat-green {
+	background-position:0 0;
+}
+.icheckbox_flat-green.checked {
+	background-position:0px -138px;
+}
+.icheckbox_flat-green.disabled {
+	background-position:0px -138px;
+	cursor: default;
+}
+.icheckbox_flat-green.checked.disabled {
+	background-position:0px -138px;
+}

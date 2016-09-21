@@ -216,3 +216,9 @@ D, [2016-09-05T14:55:50.920964 #18311] DEBUG -- :   [1m[35m (383.5ms)[0m  SEL
 D, [2016-09-05T14:56:15.234353 #18311] DEBUG -- :   [1m[36mSQL (373.3ms)[0m  [1mDELETE FROM "checkins" WHERE "checkins"."restaurant_id" IS NULL[0m
 D, [2016-09-05T14:56:22.052312 #18311] DEBUG -- :   [1m[35mSQL (389.1ms)[0m  DELETE FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 0]]
 D, [2016-09-05T14:56:25.321953 #18311] DEBUG -- :   [1m[36m (402.7ms)[0m  [1mSELECT "checkins"."restaurant_id" FROM "checkins"[0m
+D, [2016-09-21T11:41:17.093341 #11131] DEBUG -- :   [1m[36mRestaurant Load (514.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+D, [2016-09-21T11:41:30.340640 #11131] DEBUG -- :   [1m[35mRestaurant Load (498.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-21T11:42:45.716364 #11131] DEBUG -- :   [1m[36mMenu Load (530.8ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 6]]
+D, [2016-09-21T11:43:04.066614 #11131] DEBUG -- :   [1m[35mSection Load (525.2ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."menu_id" = $1  [["menu_id", 3]]
+D, [2016-09-21T11:43:28.828570 #11131] DEBUG -- :   [1m[36mFoodItem Load (532.8ms)[0m  [1mSELECT "food_items".* FROM "food_items" WHERE "food_items"."section_id" = $1[0m  [["section_id", 1]]
+D, [2016-09-21T12:23:11.999030 #11131] DEBUG -- :   [1m[35mPhoto Load (343.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 8], ["imageable_type", "FoodItem"]]

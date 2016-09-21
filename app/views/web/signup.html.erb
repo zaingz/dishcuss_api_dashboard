@@ -1,0 +1,109 @@
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+<link rel="stylesheet" type="text/css" href="css/ns-style-bar.css" />
+
+<style type="text/css">
+#customBtn {
+  width: inherit;
+  border-radius: 21px;
+  margin-top: -40px;
+}
+#customBtn:hover {
+  cursor: pointer;
+  opacity:0.7;
+}
+
+</style>
+
+<div id="wrapper">
+	<header class="header" role="main">
+    	<img src="img/img01.jpg" alt="image descraption">
+        <nav class="nav-top">
+        	<div class="container-fluid">
+            	<div class="row">
+                	<div class="col-md-8 col-sm-8 col-xs-12">
+        				<div class="logo">
+            				<a href="#"><img src="img/logo_03.png" alt="image descraption"></a>
+            			</div>
+                	</div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                    	<a href="#"><span class="food"><span>Foot Pandits</span></span></a>
+                    	<a href="<%= signin_path %>"><span class="login"><span>Login</span></span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+        	<div class="l-main">
+            	<div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="l-main-side">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <input id="signup-name" type="text" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <input id="signup-username" type="text" class="form-control" placeholder="UserName">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <input id="signup-email" type="email" class="form-control" placeholder="E Mail">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <input id="signup-password" type="password" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <input id="signup-cpassword" type="password" class="form-control" placeholder="Confirm Password">
+                                </div>
+                            </div>
+                            <div class="row">
+                            	<div class="col-md-12">
+                                	<input type="button" onclick="signupsubmit();" class="form-control-next" placeholder="" value="Next" >
+                                </div>
+                            </div>
+                            <div class="row">
+                            	<div class="col-md-12">
+                                	<div class="social-icon">
+                                    	<p>Sign in with</p>
+                                    	<a href="https://www.google.com"><img src="img/icon10.png" alt="image desrcp"></a>
+                                        <a href="javascript:checkLoginState();"><img src="img/icon09.png" alt="image desrcp"></a>
+                                        <!-- <a href="javascript:void(0);" data-onsuccess="onSignIn"><img src="img/icon08.png" alt="image desrcp"></a> -->
+                                        <div id="gSignInWrapper">
+                                            <div id="customBtn" class="customGPlusSignIn">
+                                              <img src="img/icon08.png" alt="image desrcp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    	<div class="account">
+                        	<h1>Creat Account</h1>
+                            <p>is simply dummy text of the printing and<br>typesetting industry. Lorem Ipsum has been<br>the industry's standard dummy text ever<br>since the</p>
+                            <div class="row">
+                            	<div class="col-md-8">
+                                	<input type="button" onclick="location.href='<%= signin_path %>';" class="form-control-sign-up" placeholder="" value="Sign In">
+                                </div>
+                                <div class="col-md-4">
+                                	<img src="img/icon11.png" alt="image descrp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>

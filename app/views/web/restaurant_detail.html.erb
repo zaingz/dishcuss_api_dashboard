@@ -1,0 +1,247 @@
+<link rel="stylesheet" href="css/main.css">
+
+
+<header class="a-header">
+	<nav class="a-top-bar">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-md-8 col-sm-8 col-xs-12">
+    				<div class="logo">
+        				<a href="#"><img src="img/logo_03.png" alt="image descraption"></a>
+        			</div>
+            	</div>
+                <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top: 15px;">
+                	<a href="#"><span class="food"><span>Foot Pandits</span></span></a>
+                	<a href="<%= signin_path %>"><span class="login"><span>Login</span></span></a>
+                </div>
+    		</div>
+        </div>
+    </nav>
+    <section class="a-banner-section">
+    	<div class="container">
+    		 <form role="form" class="a-search-form">
+				<div class="input-group input-group-lg">
+				  	<span class="input-group-addon" id="sizing-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+					<input type="text" class="form-control" placeholder="Search for Resturant, Dishes & Foodies ">
+					<span class="input-group-btn">
+				        <button class="btn btn-secondary" type="button">search</button>
+				    </span>
+				</div>
+			</form>
+			<div class="arcadian-cafe">
+				<h2><%= @restaurant.name %></h2>
+				<ul>
+					<li><a href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+					<li><a href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+					<li><a href="javascript:;"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+					<li><a href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i>Write Review</a></li>
+					<li><a href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div class="a-rating">
+				<div class="public-rating">
+					<h3>Public Rating</h3>
+					<strong><%= @rating %></strong>
+					<span><%= @coun %> votes</span>
+				</div>
+			</div>
+    	</div>
+    </section>
+</header>
+<div class="container">
+    <main class="a-main-content">
+		<aside class="a-sidebar-left">
+			<article class="a-address-block clearfix">
+				<div class="a-number">
+					<h4>Phone Number</h4>
+					<a href="javascript:;"><%= @call_now.present? ? @call_now : 'Number Missing' %></a>
+				</div>
+				<div class="a-address">
+					<h4>Address</h4>
+					<p><%= @restaurant.location %></p>
+				</div>
+			</article>
+			<article class="a-cuisines-block">
+				<h4>Cuisines</h4>
+				<ul class="clearfix">
+					<li><a href="javascript:;">Chinese</a></li>
+					<li><a href="javascript:;">Indians</a></li>
+					<li><a href="javascript:;">Pakistanis</a></li>
+					<li><a href="javascript:;">Chinese</a></li>
+					<li><a href="javascript:;">Indians</a></li>
+				</ul>
+			</article>
+			<article class="a-dishes-block">
+				<h4>Recommended Dishes</h4>
+				<ul class="clearfix">
+					<li><a href="javascript:;">Burger</a></li>
+					<li><a href="javascript:;">Burger</a></li>
+					<li><a href="javascript:;">Burger</a></li>
+					<li><a href="javascript:;">Burger</a></li>
+					<li><a href="javascript:;">Burger</a></li>
+				</ul>
+			</article>
+			<article class="a-costPerPerson-block">
+				<h4>Cost per Person</h4>
+				<p>PKR 750 - PKR 1000</p>
+			</article>
+			<figure>
+				<img src="img/burger.png" alt="">
+			</figure>
+		</aside>
+		<div class="a-middle-content">
+			<div class="a-tabs-section" id="my_bar">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#reviews">Reviews</a></li>
+					<li><a data-toggle="tab" href="#photos">Photos</a></li>
+					<li><a data-toggle="tab" href="#menus">Menus</a></li>
+				</ul>
+				<div class="tab-content">
+					<div id="menus" class="tab-pane fade">
+						<h3>HOME</h3>
+                        <% @menu.each do |sect| %>
+						<h4><%= sect.title %></h4>
+                        <% sect.food_items.each do |food_item| %>
+                        <div class="reviews-item">
+                        	<div class="item-detail">
+                                <% if food_item.photos.count > 0 %>
+                                <img src="<%= food_item.photos.first.image_url %>" alt="image descrp">
+                                <% else %>
+                            	<img src="img/paratha-roll.png" alt="image descrp">
+                                <% end %>
+                                <span><%= food_item.name %></span>
+                        	</div>
+                            <div class="item-price">
+                            	<span>Rs. <%= food_item.price %></span>
+                            </div>
+                        </div>
+                        <% end %>
+                        <!-- <div class="reviews-item">
+                        	<div class="item-detail">
+                            	<img src="img/paratha-roll.png" alt="image descrp">
+                                <span>Paratha Roll</span>
+                        	</div>
+                            <div class="item-price">
+                            	<span>Rs. 100</span>
+                            </div>
+                        </div>
+                        <div class="reviews-item">
+                        	<div class="item-detail">
+                            	<img src="img/paratha-roll.png" alt="image descrp">
+                                <span>Paratha Roll</span>
+                        	</div>
+                            <div class="item-price">
+                            	<span>Rs. 100</span>
+                            </div>
+                        </div>
+                        <div class="reviews-item">
+                        	<div class="item-detail">
+                            	<img src="img/paratha-roll.png" alt="image descrp">
+                                <span>Paratha Roll</span>
+                        	</div>
+                            <div class="item-price">
+                            	<span>Rs. 100</span>
+                            </div>
+                        </div> -->
+                        <% end %>
+					</div>
+					<div id="photos" class="tab-pane fade">
+						<h3>Menu 1</h3>
+						<p>Some content in menu 1.</p>
+					</div>
+					<div id="reviews" class="tab-pane fade in active">
+						<h3>Menu 2</h3>
+						<p>Some content in menu 2.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+        <aside class="a-sidebar-right">
+        	<div class="food-photo">
+            	<h3>Photos</h3>
+                <img src="img/burger01.png" alt="image descrp">
+                <img src="img/burger01.png" alt="image descrp">
+                <img src="img/burger01.png" alt="image descrp">
+                <img src="img/burger01.png" alt="image descrp">
+                <img src="img/burger01.png" alt="image descrp">
+                <img src="img/burger01.png" alt="image descrp">
+            </div>
+            <div class="food-photo">
+            	<h3>People Been There</h3>
+                <img src="img/man01.png" alt="image descrp">
+                <img src="img/man02.png" alt="image descrp">
+                <img src="img/man03.png" alt="image descrp">
+                <img src="img/man04.png" alt="image descrp">
+                <img src="img/man05.png" alt="image descrp">
+                <img src="img/man01.png" alt="image descrp">
+                <img src="img/man02.png" alt="image descrp">
+                <img src="img/man03.png" alt="image descrp">
+                <img src="img/man04.png" alt="image descrp">
+                <img src="img/man05.png" alt="image descrp">
+            </div>
+            <img src="img/burger.png" alt="image descrp">
+        </aside>
+    </main>
+</div>
+	
+
+<footer class="footer">
+	<div class="container">
+    	<div class="footer-border">
+            <div class="footer-iner">
+                <div class="row">
+                    <div class="col-md-3 col-sm-2 col-xs-12">
+                    	<h2>Businesses</h2>
+                        <span>Add a Restaurant</span>
+                        <span>Claim your Listing</span>
+                        <span>Business App</span>
+                        <span>Restaurant Widgetst</span>
+                        <span>Guidelines</span>
+                        <span>Business Blog</span>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                    	<h2><br></h2>
+                        <span>Advertise</span>
+                        <span>Book</span>
+                        <span>Order</span>
+                        <span>Base</span>
+                        <span>Whitelabel</span>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                    	<h2>Countries</h2>
+                        <span>Australia</span>
+                        <span>Brasil</span>
+                        <span>Canada</span>
+                        <span>Chile</span>
+                        <span>Czech Republic</span>
+                        <span>India</span>
+                        <span>Indonesia</span>
+                        <span>Ireland</span>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                    	<h2><br></h2>
+                        <span>Itly</span>
+                        <span>Lebanon</span>
+                        <span>Malaysia</span>
+                        <span>New Zealand</span>
+                        <span>Philippines</span>
+                        <span>Poland</span>
+                        <span>Portugal</span>
+                        <span>Qatar</span>
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-12">
+                    	<h2><br></h2>
+                        <span>Slovakia</span>
+                        <span>South Africa</span>
+                        <span>Sri Lanka</span>
+                        <span>Turkey</span>
+                        <span>UAE</span>
+                        <span>United Kingdom</span>
+                        <span>United States</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+.erb

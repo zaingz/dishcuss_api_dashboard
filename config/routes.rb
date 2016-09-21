@@ -162,6 +162,15 @@ Rails.application.routes.draw do
   #     end
   #   end
 
+
+  get 'signin' => 'web#signin'
+  get 'signup' => 'web#signup'
+  get 'signup_detail' => 'web#signup_detail'
+  get 'featured_restaurants' => 'web#select_restaurant'
+  get 'restaurant_:id' => 'web#restaurant_detail'
+  get 'user_:id' => 'web#user_profile'
+
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

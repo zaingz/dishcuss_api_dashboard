@@ -1,0 +1,29 @@
+span.food {
+	background:url("../img/icon01_03.png") no-repeat scroll 50% 0;
+    display: block;
+    float: left;
+    height: 38px;
+    margin-left: 180px;
+    padding: 33px 0 0;
+    text-align: center;
+    width: 92px;
+}
+span.food span{
+	font-size:15px;
+	color:#8190b6;
+	font-weight:bold;
+}
+span.login {
+	background:url("../img/icon02_03.png") no-repeat scroll 50% 0;
+    display: block;
+    float: right;
+    height: 38px;
+    padding: 33px 0 0;
+    text-align: center;
+    width: 90px;
+}
+span.login span{
+	font-size:15px;
+	color:#8190b6;
+	font-weight:bold;
+}

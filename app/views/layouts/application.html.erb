@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DishCussApp</title>
+  <title>DishCuss</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- <div id="wrapper">
+	<header class="header" role="main">
+    	<img src="img/img01.jpg" alt="image">
+        <nav class="nav-top">
+        	<div class="container-fluid">
+            	<div class="row">
+                	<div class="col-md-8 col-sm-8 col-xs-12">
+        				<div class="logo">
+            				<a href="#"><img src="img/logo_03.png" alt="image descraption"></a>
+            			</div>
+                	</div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                    	<a href="#"><span class="food"><span>Foot Pandits</span></span></a>
+                    	<a href="<%= signin_path %>"><span class="login"><span>Login</span></span></a>
+                    </div>
+                </div>
+            </div>
+        </nav> -->
 
-<%= yield %>
+		<%= yield %>
+
+<!-- 	</header>
+</div> -->
 
 </body>
 </html>
