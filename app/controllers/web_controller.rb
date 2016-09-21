@@ -30,6 +30,8 @@ class WebController < ApplicationController
 		end
 		@call_now = @restaurant.call_nows.first
 		@menu = @restaurant.menu.sections
+		@reviews = @restaurant.reviews.order(created_at: 'DESC')
+		@photos = @restaurant.photos.order(created_at: 'DESC')
 	end
 
 	def user_profile

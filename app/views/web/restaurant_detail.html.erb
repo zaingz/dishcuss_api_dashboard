@@ -54,7 +54,7 @@
 			<article class="a-address-block clearfix">
 				<div class="a-number">
 					<h4>Phone Number</h4>
-					<a href="javascript:;"><%= @call_now.present? ? @call_now : 'Number Missing' %></a>
+					<a href="javascript:;"><%= @call_now.present? ? @call_now.number : 'Number Missing' %></a>
 				</div>
 				<div class="a-address">
 					<h4>Address</h4>
@@ -105,7 +105,7 @@
                         <div class="reviews-item">
                         	<div class="item-detail">
                                 <% if food_item.photos.count > 0 %>
-                                <img src="<%= food_item.photos.first.image_url %>" alt="image descrp">
+                                <img src="<%= food_item.photos.first.image_url %>" alt="image descrp" style="height: 108px;width: 108px;border-radius: 10px;">
                                 <% else %>
                             	<img src="img/paratha-roll.png" alt="image descrp">
                                 <% end %>
@@ -146,12 +146,19 @@
                         <% end %>
 					</div>
 					<div id="photos" class="tab-pane fade">
-						<h3>Menu 1</h3>
-						<p>Some content in menu 1.</p>
+						<!-- <h3>Menu 1</h3>
+						<p>Some content in menu 1.</p> -->
+                        <% @photos.each do |phot| %>
+                        <div class="col-md-4">
+                            <img src="<%= phot.image_url %>" class="img-rounded" alt="image" width="108" height="108">
+                        </div>
+                        <% end %>
 					</div>
 					<div id="reviews" class="tab-pane fade in active">
-						<h3>Menu 2</h3>
-						<p>Some content in menu 2.</p>
+                        <% @reviews.each do |review| %>
+						<h3><%= review.title %></h3>
+						<p><%= review.summary %></p>
+                        <% end %>
 					</div>
 				</div>
 			</div>
