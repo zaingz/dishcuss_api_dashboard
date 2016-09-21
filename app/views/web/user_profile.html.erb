@@ -89,9 +89,9 @@
                                 <div class="section-article">
                                     <img src="<%= review.reviewable_type == 'Restaurant' ? review.reviewable.cover_image.image_url : review.reviewable.avatar %>" class="img-rounded" alt="user" width="51" height="51" >
                                     <h2><%= review.title %></h2>
-                                    <p><%= review.reviewable.name + ", " + review.reviewable.location +"." %></p>
+                                    <p><%= review.reviewable.name %> , <%= review.reviewable.location %>.</p>
                                  </div>
-                                <h3>2 hours ago</h3>
+                                <h3><%= time_ago_in_words(review.updated_at) %> ago</h3>
                                 <p><b>Rated</b> <em>5.0</em><%= review.summary %></p>
                                 <div class="row">
                                     <div class="col-md-3">
