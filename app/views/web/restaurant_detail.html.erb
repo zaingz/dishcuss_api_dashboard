@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/rest_detail_nav.css">
 
 <% if @restaurant.cover_image.present? %>
 <style type="text/css">
     .a-banner-section{
-        background: rgba(0, 0, 0, 0) url('<%= @restaurant.cover_image.image_url %>') no-repeat scroll 0 488 / cover ;
+        background: rgba(0, 0, 0, 0) url('<%= @restaurant.cover_image.image_url %>') no-repeat scroll 0 0 / cover ;
     }
 </style>
 <% else %>
