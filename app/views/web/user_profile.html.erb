@@ -35,7 +35,7 @@
                         <section class="section-left">
                             <img src="img/arooba.png" alt="image descrp">
                             <h1 id="p_name"><%= @user.name %></h1>
-                            <h2><%= @user.location.present? ? @@user.location : "Locating" %></h2><br>
+                            <h2><%= @user.location.present? ? @user.location : "Locating" %></h2><br>
                             <span><%= @reviews.count %> Reviews</span>
                             <span><%= @photos.count %> Photo</span><br>
                             <span><%= @followings.count %> Following</span>
