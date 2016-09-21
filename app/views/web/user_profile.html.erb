@@ -34,12 +34,12 @@
                 	<div class="col-md-6">
                         <section class="section-left">
                             <img src="img/arooba.png" alt="image descrp">
-                            <h1 id="p_name">Arooba Khalid</h1>
-                            <h2>Lahore</h2><br>
-                            <span>123 Reviews</span>
-                            <span>456 Photo</span><br>
-                            <span>1011 Following</span>
-                            <span>7890 Followers</span>
+                            <h1 id="p_name"><%= @user.name %></h1>
+                            <h2><%= @user.location.present? ? @@user.location : "Locating" %></h2><br>
+                            <span><%= @reviews.count %> Reviews</span>
+                            <span><%= @photos.count %> Photo</span><br>
+                            <span><%= @followings.count %> Following</span>
+                            <span><%= @followers.count %> Followers</span>
                             <a href="#">Following</a>
                         </section>
                     </div>
@@ -84,7 +84,7 @@
                     <div class="section-pan">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1>Arooba Khalid's Reviews</h1>
+                                <h1><%= @user.name %>'s Reviews</h1>
                                 <div class="section-article">
                                     <img src="img/chekin-krahi.png" alt="image descrp">
                                     <h2>Chicken Karahi</h2>

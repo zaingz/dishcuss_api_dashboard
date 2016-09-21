@@ -40,6 +40,15 @@ class WebController < ApplicationController
 	end
 
 	def user_profile
-
+		@user = User.find(params[:id])
+		@reviews = Review.where(reviewer_id: @user.id).order(created_at: 'DESC')
+		@photos = []
+		@user.posts.order(created_at: 'DESC').each do |post|
+			post.photos.each do |photo|
+				@photos.push({'photo' => photo.image_url })
+			end
+		end
+		@followings = @user.followees(User)
+		@followers = @user.followers(User)
 	end
 end
