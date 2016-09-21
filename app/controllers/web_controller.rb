@@ -29,7 +29,11 @@ class WebController < ApplicationController
 			@rating = 0
 		end
 		@call_now = @restaurant.call_nows.first
-		@menu = @restaurant.menu.sections
+		if @restaurant.menu.present?
+			@menu = @restaurant.menu.sections
+		else
+			@menu = []
+		end
 		@reviews = @restaurant.reviews.order(created_at: 'DESC')
 		@photos = @restaurant.photos.order(created_at: 'DESC')
 		@checkins = @restaurant.checkins.order(created_at: 'DESC').limit(10)
