@@ -308,3 +308,7 @@ D, [2016-09-21T17:35:20.985901 #24115] DEBUG -- :   [1m[35mReview Load (328.9m
 D, [2016-09-21T17:36:35.525873 #24115] DEBUG -- :   [1m[36mReview Load (363.5ms)[0m  [1mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1  ORDER BY "reviews"."id" ASC LIMIT 1[0m  [["reviewer_id", 84]]
 D, [2016-09-21T17:36:37.139078 #24115] DEBUG -- :   [1m[35mRestaurant Load (379.5ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 9]]
 D, [2016-09-21T17:37:05.890541 #24115] DEBUG -- :   [1m[36mUser Load (346.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+D, [2016-09-22T11:59:02.747134 #11127] DEBUG -- :   [1m[36mUser Load (330.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+D, [2016-09-22T11:59:14.539667 #11127] DEBUG -- :   [1m[35mUser Load (393.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["role", 1]]
+D, [2016-09-22T11:59:22.429131 #11127] DEBUG -- :   [1m[36mUser Load (356.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["role", 2]]
+D, [2016-09-22T11:59:26.851095 #11127] DEBUG -- :   [1m[35mUser Load (331.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 2]]

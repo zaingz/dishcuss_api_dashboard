@@ -61,7 +61,7 @@ Rails.application.routes.draw do
   end
 
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -161,6 +161,10 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+
+
+  #match get 'auth/:provider/callback', to: 'web#omniauth'
+  #match get 'auth/failure', to: redirect('/signin')
 
 
   get 'signin' => 'web#signin'

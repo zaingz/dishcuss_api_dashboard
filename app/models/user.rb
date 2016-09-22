@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
 	#validates_uniqueness_of :username
 	#validates_presence_of :username
 	devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable,
+         :omniauthable, :omniauth_providers => [:facebook , :google_oauth2 , :twitter]
 	
 	enum gender: [:male , :female]
 	enum role: [:end_user , :restaurant_owner , :admin , :food_pundit]

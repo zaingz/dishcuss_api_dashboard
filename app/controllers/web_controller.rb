@@ -51,4 +51,5 @@ class WebController < ApplicationController
 		@followings = @user.followees(User)
 		@followers = @user.followers(User)
 	end
+
 end
