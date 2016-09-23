@@ -44,6 +44,10 @@
                 <%= label_tag 'closing_time', 'Closing Time'%>
                 <%= time_field :closing_time , params[:closing_time] , class: 'form-control', autofocus: true %>
               </div>
+              <div class="form-group">
+                <%= label_tag 'cost', 'Price Per Head'%>
+                <%= number_field_tag :cost , params[:cost] , class: 'form-control', autofocus: true %>
+              </div>
               
               <div class="form-group">
                 <%= label_tag 'location', 'Location'%>
