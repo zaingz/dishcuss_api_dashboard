@@ -14,7 +14,7 @@ class RestaurantAdminController < ApplicationController
 	def check
 		p params
 		if params[:image].present?
-			restaurant = Restaurant.new(name: params[:name] , location: params[:location] , opening_time: params[:opening_time].first , closing_time: params[:closing_time].first , per_head: params[:cost])
+			restaurant = Restaurant.new(name: params[:name] , typee: params[:typee] , location: params[:location] , opening_time: params[:opening_time].first , closing_time: params[:closing_time].first , per_head: params[:cost])
 			restaurant.owner_id = @owner.id
 			if restaurant.save
 		        c_image = CoverImage.create(:image => params[:image][:image] , :restaurant_id => restaurant.id)
