@@ -18,7 +18,7 @@
       hex = hexFromRGB( red, green, blue );
     $( "#swatch" ).css( "background-color", "#" + hex );
   }
-  $(function() {
+  /*$(function() {
     $( "#red, #green, #blue" ).slider({
       orientation: "horizontal",
       range: "min",
@@ -30,7 +30,7 @@
     $( "#red" ).slider( "value", 255 );
     $( "#green" ).slider( "value", 140 );
     $( "#blue" ).slider( "value", 60 );
-  });
+  });*/
 
   //js for toggle button
   $(function() {
