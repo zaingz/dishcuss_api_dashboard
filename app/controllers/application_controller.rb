@@ -34,6 +34,8 @@ class ApplicationController < ActionController::Base
 		if user_signed_in?
 			if @current_user.role == 'restaurant_owner'
 				@owner = @current_user
+			elsif @current_user.role == 'admin'
+				@owner = @current_user
 			else
 				redirect_to '/' , status: :unauthorized
 			end

@@ -33,6 +33,6 @@
   });*/
 
   //js for toggle button
-  $(function() {
+  /*$(function() {
     $('#toggle-one').bootstrapToggle();
-  })
+  })*/

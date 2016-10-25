@@ -18,9 +18,10 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                   <tr>
+                    <th>Active Since</th>
                     <th>Name</th>
-                    <th>Opening Time</th>
-                    <th>Closing Time</th>
+                    <!-- <th>Opening Time</th>
+                    <th>Closing Time</th> -->
                     <th>Location</th>
                     <th>Approved</th>
                     <th>Featured</th>
@@ -31,9 +32,10 @@
                   <tbody>
                     <% @restaurant.each do |rest| %>
                       <tr>
+                        <td><%= rest.created_at.strftime("%d-%m-%Y") %>
                         <td><%= link_to rest.name , restauarant_ad_details_path(rest.id) %></td>
-                        <td><%= rest.opening_time.strftime("%H:%M %p") %></td>
-                        <td><%= rest.closing_time.strftime("%H:%M %p") %></td>
+                        <!-- <td><%= rest.opening_time.strftime("%H:%M %p") %></td>
+                        <td><%= rest.closing_time.strftime("%H:%M %p") %></td> -->
                         <td><%= rest.location %></td>
                         <td><% if rest.approved %>
                             <%= link_to "Yes" , unaprove_rest_path(rest.id) %>
