@@ -312,3 +312,30 @@ D, [2016-09-22T11:59:02.747134 #11127] DEBUG -- :   [1m[36mUser Load (330.6ms)
 D, [2016-09-22T11:59:14.539667 #11127] DEBUG -- :   [1m[35mUser Load (393.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["role", 1]]
 D, [2016-09-22T11:59:22.429131 #11127] DEBUG -- :   [1m[36mUser Load (356.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["role", 2]]
 D, [2016-09-22T11:59:26.851095 #11127] DEBUG -- :   [1m[35mUser Load (331.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 2]]
+D, [2016-09-28T13:38:34.369284 #13573] DEBUG -- :   [1m[36mUser Load (337.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:38:57.980059 #13573] DEBUG -- :   [1m[35mUser Load (337.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 2]]
+D, [2016-09-28T13:39:03.808357 #13573] DEBUG -- :   [1m[36mUser Load (336.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+D, [2016-09-28T13:39:21.076776 #13573] DEBUG -- :   [1m[35mUser Load (334.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+D, [2016-09-28T13:39:27.643505 #13573] DEBUG -- :   [1m[36mUser Load (339.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+D, [2016-09-28T13:39:33.558937 #13573] DEBUG -- :   [1m[35mUser Load (337.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+D, [2016-09-28T13:39:42.615889 #13573] DEBUG -- :   [1m[36mUser Load (335.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+D, [2016-09-28T13:39:45.396397 #13573] DEBUG -- :   [1m[35mUser Load (335.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+D, [2016-09-28T13:40:04.757010 #13573] DEBUG -- :   [1m[36mRestaurant Load (340.7ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  ORDER BY "restaurants"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:40:17.898904 #13573] DEBUG -- :   [1m[35mRestaurant Load (335.7ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-28T13:40:23.589296 #13573] DEBUG -- :   [1m[36mRestaurant Load (335.8ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 5]]
+D, [2016-09-28T13:44:06.832322 #13573] DEBUG -- :   [1m[35mQrcode Load (341.7ms)[0m  SELECT "qrcodes".* FROM "qrcodes"
+D, [2016-09-28T13:45:17.523663 #13573] DEBUG -- :   [1m[36mQrcode Load (335.2ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:45:24.157754 #13573] DEBUG -- :   [1m[35mQrcode Load (337.5ms)[0m  SELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1
+D, [2016-09-28T13:46:08.679068 #13573] DEBUG -- :   [1m[36mQrcode Load (416.5ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" ASC LIMIT 1[0m
+D, [2016-09-28T13:47:18.406858 #13573] DEBUG -- :   [1m[35m (334.4ms)[0m  SELECT COUNT(*) FROM "qrcodes"
+D, [2016-09-28T13:47:22.771206 #13573] DEBUG -- :   [1m[36mQrcode Load (335.8ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" ASC LIMIT 1[0m
+D, [2016-09-28T13:47:32.099403 #13573] DEBUG -- :   [1m[35mQrcode Load (342.6ms)[0m  SELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1
+D, [2016-09-28T13:47:37.574237 #13573] DEBUG -- :   [1m[36mQrcode Load (334.9ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:47:37.916360 #13573] DEBUG -- :   [1m[35mRestaurant Load (336.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-28T13:48:23.934400 #13573] DEBUG -- :   [1m[36mQrcode Load (339.3ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:48:41.394213 #13573] DEBUG -- :   [1m[35mQrcode Load (336.9ms)[0m  SELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1
+D, [2016-09-28T13:48:44.092037 #13573] DEBUG -- :   [1m[36mQrcode Load (335.7ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:49:02.314330 #13573] DEBUG -- :   [1m[35mQrcode Load (334.9ms)[0m  SELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" ASC LIMIT 1
+D, [2016-09-28T13:49:09.659725 #13573] DEBUG -- :   [1m[36mQrcode Load (340.7ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1[0m  [["id", 2]]
+D, [2016-09-28T13:49:14.313218 #13573] DEBUG -- :   [1m[35mQrcode Load (333.2ms)[0m  SELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1  [["id", 2]]
+D, [2016-09-28T13:50:07.798590 #13573] DEBUG -- :   [1m[36mQrcode Load (334.7ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1[0m  [["id", 6]]
