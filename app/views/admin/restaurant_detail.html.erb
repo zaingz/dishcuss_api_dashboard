@@ -2,6 +2,7 @@
   <h1>
     <%= @restaurant.name %>
     <small><%= @restaurant.location %></small>
+    <small style="float: right;"><%= link_to 'Edit' , restauarant_owner_details_path(@restaurant.id), class: 'btn btn-info' %></small>
     <small style="float: right;"><%= link_to 'Back' , url_for(:back) , class: 'btn btn-info' %></small>
   </h1>
 </section>

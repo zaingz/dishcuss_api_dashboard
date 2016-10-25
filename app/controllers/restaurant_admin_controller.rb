@@ -8,7 +8,11 @@ class RestaurantAdminController < ApplicationController
 	end
 
 	def restaurant_detail
-		@restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		if @current_user.role == 'admin'
+			@restaurant = Restaurant.find(params[:id])
+		else
+			@restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		end
 	end
 
 	def check
@@ -18,6 +22,9 @@ class RestaurantAdminController < ApplicationController
 			restaurant.owner_id = @owner.id
 			if restaurant.save
 		        c_image = CoverImage.create(:image => params[:image][:image] , :restaurant_id => restaurant.id)
+		        if params[:call_now].present?
+		        	cal = CallNow.create(:number => params[:call_now] , :restaurant_id => restaurant.id)
+		        end
 				redirect_to :back , notice: 'Successfully Created'
 			else
 				redirect_to :back , notice: 'Unprocessable Entity'
@@ -30,7 +37,11 @@ class RestaurantAdminController < ApplicationController
 	def update_cover_image
 		p params
 		if params[:image][:image].present?
-			rest = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+			if @current_user.role == 'admin'
+				rest = Restaurant.find(params[:id])
+			else
+				rest = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+			end
 			if rest.cover_image.present?
 				rest.cover_image.update(image: params[:image][:image])
 			else
@@ -42,7 +53,11 @@ class RestaurantAdminController < ApplicationController
 
 	def update_rest
 		p params
-		res = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		if @current_user.role == 'admin'
+			res = Restaurant.find(params[:id])
+		else
+			res = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		end
 		res.update(rest_update_params)
 		if params[:image].present?
 			if res.cover_image.present?
@@ -58,7 +73,11 @@ class RestaurantAdminController < ApplicationController
 		p params
 		if params[:name].present? && params[:fooditem][:price].present? && ( params[:section].present? || params[:menu_section].present? )
 			cat_foo = false
-			restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:restaurant_id])
+			if @current_user.role == 'admin'
+				restaurant = Restaurant.find(params[:restaurant_id])
+			else
+				restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:restaurant_id])
+			end
 			if restaurant.menu.nil?
 				menur = Menu.create(name: 'Menu', summary: 'Menu', restaurant_id: restaurant.id)
 			else
@@ -109,7 +128,11 @@ class RestaurantAdminController < ApplicationController
 
 	def food_items
 		p params
-		@restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		if @current_user.role == 'admin'
+			@restaurant = Restaurant.find(params[:id])
+		else
+			@restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		end
 		unless @restaurant.menu.nil?
 			@food_items = @restaurant.menu.sections
 		else
@@ -148,7 +171,11 @@ class RestaurantAdminController < ApplicationController
 	end
 
 	def delete_fooditem
-		restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:restaurant_id])
+		if @current_user.role == 'admin'
+			restaurant = Restaurant.find(params[:restaurant_id])
+		else
+			restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:restaurant_id])
+		end
 		fooditem = FoodItem.find(params[:id])
 		if fooditem.section.menu.restaurant.id == restaurant.id
 			fooditem.destroy

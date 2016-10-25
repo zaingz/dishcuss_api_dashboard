@@ -3,6 +3,9 @@
   <h1>
     <%= @restaurant.name %>
     <small ><%= @restaurant.location.present? ? @restaurant.location.truncate(40) : '' %></small>
+    <% if @current_user.role == 'admin' %>
+      <small style="float: right;"><%= link_to 'Back' , url_for(:back) , class: 'btn btn-info' %></small>
+    <% end %>
     <small style="float: right;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit_restaurant">Edit</button></small>
     <small style="float: right;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#cover_image">Change CoverImage</button></small>
     <% if @restaurant.claim_credit %>

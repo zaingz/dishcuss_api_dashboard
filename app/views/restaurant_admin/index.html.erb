@@ -52,6 +52,10 @@
                 <%= label_tag 'cost', 'Price Per Head'%>
                 <%= number_field_tag :cost , params[:cost] , class: 'form-control', autofocus: true %>
               </div>
+              <div class="form-group">
+                <%= label_tag 'call_now', 'Phone Number'%>
+                <%= text_field_tag :call_now , params[:call_now] , class: 'form-control', autofocus: true %>
+              </div>
               
               <div class="form-group">
                 <%= label_tag 'location', 'Location'%>
