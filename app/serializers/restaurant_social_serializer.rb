@@ -1,13 +1,13 @@
 class RestaurantSocialSerializer < ActiveModel::Serializer
-  
-  attributes :id , :name, :location , :latitude , :longitude , :opening ,:closing , :rating , :like , :follow 
+  #root :restaurant
+  attributes :id , :name, :typee , :location , :latitude , :longitude , :opening ,:closing , :rating , :price_per_head , :like  , :follow  , :menu
   has_one :cover_image
-  has_one :menu
+  #has_one :menu
   has_many :checkins
   has_many :call_nows
   has_many :reviews
   has_many :photos
-  has_many :messages , serializer: MessageWithUserSerializer
+
 
 
   def opening
@@ -19,12 +19,12 @@ class RestaurantSocialSerializer < ActiveModel::Serializer
   end
   
   def like
-  	object.likers(User).as_json(except: [:created_at, :updated_at , :password])
+  	object.likers(User).as_json(only: [:id , :name , :username , :email , :avatar , :location , :gender , :dob , :role , :followees_count , :followers_count , :likees_count , :referal_code])
 
   end
 
   def follow
-  	object.followers(User).as_json(except: [:created_at, :updated_at , :password])
+  	object.followers(User).as_json(only: [:id , :name , :username , :email , :avatar , :location , :gender , :dob , :role , :followees_count , :followers_count , :likees_count , :referal_code])
   end
 
   def rating
@@ -41,6 +41,35 @@ class RestaurantSocialSerializer < ActiveModel::Serializer
     else
       count
     end
+  end
+
+  def menu
+    ch = {}
+    if object.menu.present?
+      #ch = ActiveModel::Serializer.serializer_for()
+      ch = MenuSerializer.new(object.menu , {root: false})
+    end
+    ch
+  end
+
+  def price_per_head
+    object.per_head
+  end
+
+  def follows
+    fo = false
+    if serialization_options[:option_name].present?
+      fo = serialization_options[:option_name].follows?(object)
+    end
+    fo
+  end
+
+  def likes
+    fo = false
+    if serialization_options[:option_name].present?
+      fo = serialization_options[:option_name].likes?(object)
+    end
+    fo
   end
 
 end

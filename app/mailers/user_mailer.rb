@@ -1,10 +1,10 @@
 class UserMailer < ApplicationMailer
-	default from: 'noreply@wifiexplore.com'
+	default from: 'hello@dishcuss.pk'
 
 	def welcome_email(user)
-		@url = "localhost:3000"
-		@user = user
-		mail(to: @user.email, subject: 'Dishcuss', body: 'Welcome. Please click on link to confirm email: ' + @url + '/user/email/verify/' + @user.identities.find_by_provider('Dishcuss').token )
+		url = "localhost:3000"
+		user = user
+		mail(to: user.email, subject: 'DishCuss', body: 'Welcome. Please use that code in app: ' + user.email_verification_code )
 	end
 
 end

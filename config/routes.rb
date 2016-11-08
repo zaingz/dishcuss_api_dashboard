@@ -1,63 +1,103 @@
 Rails.application.routes.draw do
 
-  constraints subdomain: 'api' do
-    namespace 'api' , path: '/' do
 
-      scope "user" do
-        post 'signup' => 'users#create'
-        delete 'signout' => 'users#signout'
-        post 'restaurant/signup' => 'users#restaurant_user_create'
-        post 'signin' => 'users#signin'
-        get 'email/verify/:token' => 'users#verify_email'
-        get 'follow/:id' => 'users#follow'
-        get 'unfollow/:id' => 'users#unfollow'
-        get 'followers' => 'users#followers'
-        post 'reviews' => 'reviews#create_user_review'
-        get 'social/:id' => 'users#social'
-        post 'message/:id' => 'users#message'
-        post ':type/:id' => 'users#report'
-        resources :posts , except: [:new, :edit , :show]
-        get 'like/:typee/:id' => 'users#likers'
-        get 'dislike/:typee/:id' => 'users#dislike' 
-        scope 'posts' do
-          get 'likes/:id' => 'posts#likeable'
-          post 'comment/new' => 'posts#comment'
-          get 'comments/:id' => 'posts#showcomment'
-          resources :checkins, only: [:update]
-        end
-        get 'referral/:referral_code' => 'referral#create'
-        get 'referral' => 'referral#get_users'
-        post 'claim_credit' => 'restaurants#claim_credit'
-        get 'newsfeed' => 'newsfeed#index'
-        get 'localfeed' => 'users#my_feeds'
-      end
-      resources :restaurants, except: [:new, :edit , :show]
-      scope "restaurants" do
-        post 'qrcode' => 'restaurants#qrcode'
-        get 'featured' => 'restaurants#featuredr'
-        get 'social/:id' => 'restaurants#social'
-        get 'follow/:id' => 'restaurants#follow'
-        get 'unfollow/:id' => 'restaurants#unfollow'
-        post 'reviews' => 'reviews#create_restaurant_review'
-        resources :menus, except: [:new, :edit]
-        scope 'menus' do
-          resources :food_items, except: [:new, :edit]
-        end
-        resources :rating, only: [:create]
-        get 'search' => 'restaurants#search'
-        get 'categories/search' => 'categories#search'
-      end
-      resources :reviews, except: [:new, :edit]
-      post 'reviews/comment' => 'reviews#comment'
-      get 'reviews/comment/:id' => 'reviews#showcomment'
-      get 'restaurants/approve/:id' => 'admin#approve_restaurant' , as: 'approve_restaurant'
-      get 'restaurants/feature/:id' => 'admin#feature_restaurant' , as: 'featture_restaurant'
+  root 'web#select_restaurant'
 
-      post 'pundit' => 'admin#create_pundit'
-      post 'credit' => 'admin#create_credit_adjust'
-      get 'enable_claim/:id' => 'admin#enable_claim_restaurant'
+  scope 'api' do
+	  #resources :posts, except: [:new, :edit]
+	  resources :categories, only: [:create, :index]
+	  #mount Knock::Engine => "/knock"
+	  
+	  
+	  #resources :identities, except: [:new, :edit]
+	  #resources :users, except: [:new, :edit]
+	  # The priority is based upon order of creation: first created -> highest priority.
+	  # See how all your routes lay out with "rake routes".
 
-    end
+	  resources :offers, only: [:index]
+	  post 'add_fooditem_image' => 'food_items#add_image'
+	  get 'get_users' => 'users#get_users'
+	  get 'get_restaurants' => 'restaurants#send_all'
+	  #final Routes
+	  put 'user' => 'users#update'
+	  patch 'user' => 'users#update'
+	  scope "user" do
+	    post 'signup' => 'users#create'
+	    delete 'signout' => 'users#signout'
+	    post 'restaurant/signup' => 'users#restaurant_user_create'
+	    post 'signin' => 'users#signin'
+	    get 'email/verify/:token' => 'users#verify_email'
+	    get 'follow/:id' => 'users#follow'
+	    get 'unfollow/:id' => 'users#unfollow'
+	    get 'followers' => 'users#followers'
+	    post 'reviews' => 'reviews#create_user_review'
+	    get 'social/:id' => 'users#social'
+	    post 'message/:id' => 'users#message'
+	    get 'notifications' => 'users#notifications'
+	    get 'all_notifications' => 'push_notification#notifications'
+	    get 'notifications/seen' => 'users#notification_seen'
+	    post ':type/:id' => 'users#report'
+	    resources :posts , except: [:new, :edit , :show]
+	    get 'like/:typee/:id' => 'users#likers'
+	    get 'unlike/:typee/:id' => 'users#unlike'
+	    get 'dislike/:typee/:id' => 'users#dislike' 
+	    scope 'posts' do
+	      get 'likes/:id' => 'posts#likeable'
+	      post 'comment/new' => 'posts#comment'
+	      get 'comments/:id' => 'posts#showcomment'
+	      resources :checkins, only: [:update]
+	    end
+	    get 'referral/:referral_code' => 'referral#create'
+	    get 'referral' => 'referral#get_users'
+	    post 'claim_credit' => 'restaurants#claim_credit'
+	    get 'newsfeed' => 'newsfeed#index'
+	    get 'localfeed' => 'users#my_feeds'
+	    get 'all_feed' => 'newsfeed#localfeed_updated'
+	    get 'follows/check/:id' => 'users#chk_follow_user'
+	    #get 'comment/:id' => 'users#like_comment'
+	    resources :khaba_history, only: [:index ]
+	    get 'credits' => 'khaba_history#credit'
+
+	    get 'bookmarks' => 'users#get_user_likes'
+
+	    post 'eat_buddies' => 'search#find_fb_friends'
+	    post 'gcm' => 'push_notification#set_key'
+	    post 'profile_picture' => 'users#update_picture'
+	    get 'post/:id' => 'posts#get_post'
+	  end
+	  resources :restaurants, except: [:new, :edit , :show]
+	  post 'comment/reply/:id' => 'reply#reply_to_comment'
+	  scope "restaurants" do
+	    get 'explore' => 'restaurants#explore_rest'
+	    post 'qrcode' => 'restaurants#qrcode'
+	    get 'featured' => 'restaurants#featuredr'
+	    get 'social/:id' => 'restaurants#social'
+	    get 'follow/:id' => 'restaurants#follow'
+	    get 'unfollow/:id' => 'restaurants#unfollow'
+	    post 'reviews' => 'reviews#create_restaurant_review'
+	    resources :menus, except: [:new, :edit]
+	    scope 'menus' do
+	      resources :food_items, except: [:new, :edit]
+	    end
+	    resources :rating, only: [:create]
+	    get 'search' => 'search#res_search'
+	    get 'categories/search' => 'categories#search'
+	    get 'sections/search' => 'search#sec_search'
+	    get 'nearby' => 'restaurants#nearby'
+	  end
+	  resources :reviews, except: [:new, :edit]
+	  get 'search' => 'search#search'
+	  post 'reviews/comment' => 'reviews#comment'
+	  get 'review/:id' => 'reviews#get_review'
+	  get 'reviews/comment/:id' => 'reviews#showcomment'
+	  get 'restaurants/approve/:id' => 'admin#approve_restaurant'
+	  get 'restaurants/feature/:id' => 'admin#feature_restaurant'
+	  get 'restaurant/bookmarks/follows/:id' => 'restaurants#chk_follow_like'
+	  get 'restaurant/unlike/:id' => 'restaurants#unlike'
+
+	  post 'pundit' => 'admin#create_pundit'
+	  post 'credit' => 'admin#create_credit_adjust'
+	  get 'enable_claim/:id' => 'admin#enable_claim_restaurant'
   end
 
 
@@ -118,7 +158,8 @@ Rails.application.routes.draw do
   get 'admin/notification_:id' => 'admin#notification' , as: 'superadmin_notification'
   get 'admin/block_:id' => 'admin#end_user_block' , as: 'block_user'
   get 'admin/unblock_:id' => 'admin#end_user_unblock' , as: 'unblock_user'
-  
+  get 'admin/give_credits' => 'admin#give_user_credit' , as: 'give_credits'
+  post 'admin/sent_credits' => 'admin#credits_sent' , as: 'sent_credits'
 
 
 

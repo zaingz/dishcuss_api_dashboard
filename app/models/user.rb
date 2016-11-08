@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
 	#validates_uniqueness_of :username
-	#validates_presence_of :username
 	devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook , :google_oauth2 , :twitter]
-	
+
+	validates_presence_of :email
+	mount_uploader :dp , ImageUploader
 	enum gender: [:male , :female]
 	enum role: [:end_user , :restaurant_owner , :admin , :food_pundit]
 	has_many :identities ,dependent: :destroy
@@ -12,8 +13,7 @@ class User < ActiveRecord::Base
 	has_many :reviews, :as => 'reviewable'
 	has_many :posts
 	has_many :reports
-	has_many :messages , :as => 'sender'
-	has_many :messages , :as => 'reciever'
+	#has_many :messages
 	has_one :review ,:as => 'reviewer'
 	has_one :notification , :as => 'notifier'
 	accepts_nested_attributes_for :identities
@@ -35,10 +35,48 @@ class User < ActiveRecord::Base
 
   	has_one :newsfeed , :as => 'feed'
 
+  	has_many :gcm_devices
+
+  	has_many :comments
+
   	def generate_referral_code
-  		p self.username
+  		if self.username.present?
+  			as = self.username
+  		elsif self.name.present?
+  			as = self.name
+  		else
+  			as = 'User'
+  		end
 		begin
-	      self.referal_code = self.username + "_" + SecureRandom.hex.to_s
+	      self.referal_code = as + "_" + Random.rand(0..9999).to_s
 	    end while self.class.exists?(referal_code: referal_code)
+	end
+
+	def referal_notification
+		if self.referal_code_used == false
+			if c = CreditAdjustment.find_by_typee('Referal')
+				cre = self.credit
+				pos = cre.points + c.points
+				cre.update(points: pos)
+				self.update(referal_code_used: true)
+				Notification.create(target_id: self.id , target_type: 'User' , body: 'Credit is added to your account through referal')
+			end
+		end
+	end
+
+	def referal_sender_notification
+		if c = CreditAdjustment.find_by_typee('Referal')
+			cre = self.credit
+			pos = cre.points + c.points
+			cre.update(points: pos)
+			self.update(referal_code_used: true)
+			Notification.create(target_id: self.id , target_type: 'User' , body: 'Credit is added to your account through referal')
+		end
+	end
+
+	def generate_email_verification_code
+		begin
+	      self.email_verification_code =  Random.rand(0..99999).to_s
+	    end while self.class.exists?(referal_code: email_verification_code)
 	end
 end

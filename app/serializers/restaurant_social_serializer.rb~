@@ -1,13 +1,12 @@
 class RestaurantSocialSerializer < ActiveModel::Serializer
   root :restaurant
-  attributes :id , :name, :location ,  :opening ,:closing , :rating , :like , :follow 
+  attributes :id , :name, :location , :latitude , :longitude , :opening ,:closing , :rating , :like , :follow 
   has_one :cover_image
   has_one :menu
   has_many :checkins
   has_many :call_nows
   has_many :reviews
   has_many :photos
-  has_many :messages , serializer: MessageWithUserSerializer
 
 
   def opening

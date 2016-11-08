@@ -1,7 +1,7 @@
 class RestaurantSerializer < ActiveModel::Serializer
-  attributes :id, :name, :location , :latitude , :longitude , :opening ,:closing , :rating , :owner ,:followers_count , :likers_count
+  attributes :id, :name, :typee , :location , :latitude , :longitude , :opening ,:closing , :rating , :price_per_head , :owner ,:followers_count , :likers_count , :menu 
   has_one :cover_image
-  has_one :menu
+  #has_one :menu
   has_many :call_nows
   has_many :checkins
 
@@ -15,7 +15,7 @@ class RestaurantSerializer < ActiveModel::Serializer
   end
 
   def owner
-  	object.owner.as_json(except: [:created_at, :updated_at , :password])
+  	object.owner.as_json(only: [:id , :name , :username , :email , :avatar , :location , :gender , :dob])
   end
 
   def rating
@@ -32,6 +32,19 @@ class RestaurantSerializer < ActiveModel::Serializer
     else
       count
     end
+  end
+
+  def menu
+    ch = {}
+    if object.menu.present?
+      #ch = ActiveModel::Serializer.serializer_for()
+      ch = MenuSerializer.new(object.menu , {root: false})
+    end
+    ch
+  end
+
+  def price_per_head
+    object.per_head
   end
 
 end

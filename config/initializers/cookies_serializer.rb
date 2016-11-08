@@ -2,3 +2,4 @@
 
 Rails.application.config.action_dispatch.cookies_serializer = :json
 ActiveModelSerializers.config.default_includes = '**'
+ActiveModelSerializers.config.adapter = :json

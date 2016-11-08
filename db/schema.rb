@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160905111718) do
+ActiveRecord::Schema.define(version: 20161108103044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,6 +119,14 @@ ActiveRecord::Schema.define(version: 20160905111718) do
     t.integer  "section_id"
   end
 
+  create_table "gcm_devices", force: :cascade do |t|
+    t.string   "token",      default: ""
+    t.string   "device",     default: ""
+    t.integer  "user_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
   create_table "identities", force: :cascade do |t|
     t.string   "provider",   default: ""
     t.string   "uid",        default: ""
@@ -166,6 +174,7 @@ ActiveRecord::Schema.define(version: 20160905111718) do
     t.datetime "updated_at",              null: false
     t.integer  "feed_id"
     t.string   "feed_type"
+    t.integer  "rest_ids",   default: [],              array: true
   end
 
   create_table "notifications", force: :cascade do |t|
@@ -201,16 +210,21 @@ ActiveRecord::Schema.define(version: 20160905111718) do
     t.datetime "updated_at",               null: false
     t.integer  "user_id"
     t.integer  "likers_count", default: 0
+    t.integer  "shares",       default: 0
   end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "qrcodes", force: :cascade do |t|
     t.string   "code"
     t.integer  "restaurant_id"
     t.integer  "points"
-    t.string   "description",   default: ""
+    t.string   "description",     default: ""
     t.string   "img"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "consumed_credit", default: 0
+    t.integer  "max_credit",      default: 0
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -242,8 +256,8 @@ ActiveRecord::Schema.define(version: 20160905111718) do
     t.datetime "opening_time"
     t.datetime "closing_time"
     t.string   "location"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.boolean  "approved",        default: false
     t.integer  "owner_id"
     t.integer  "followers_count", default: 0
@@ -252,7 +266,12 @@ ActiveRecord::Schema.define(version: 20160905111718) do
     t.boolean  "claim_credit",    default: false
     t.float    "latitude"
     t.float    "longitude"
+    t.integer  "per_head",        default: 0
+    t.string   "typee",           default: "Restaurant"
   end
+
+  add_index "restaurants", ["approved"], name: "index_restaurants_on_approved", using: :btree
+  add_index "restaurants", ["name"], name: "index_restaurants_on_name", using: :btree
 
   create_table "reviews", force: :cascade do |t|
     t.string   "title"
@@ -264,7 +283,10 @@ ActiveRecord::Schema.define(version: 20160905111718) do
     t.datetime "updated_at",                  null: false
     t.integer  "reviewer_id"
     t.integer  "likers_count",    default: 0
+    t.integer  "shares",          default: 0
   end
+
+  add_index "reviews", ["reviewer_id"], name: "index_reviews_on_reviewer_id", using: :btree
 
   create_table "sections", force: :cascade do |t|
     t.string   "title"
@@ -274,30 +296,33 @@ ActiveRecord::Schema.define(version: 20160905111718) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",                default: ""
-    t.string   "username",            default: ""
-    t.string   "email",               default: ""
-    t.string   "avatar",              default: ""
-    t.string   "location",            default: ""
+    t.string   "name",                    default: ""
+    t.string   "username",                default: ""
+    t.string   "email",                   default: ""
+    t.string   "avatar",                  default: ""
+    t.string   "location",                default: ""
     t.integer  "gender"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "password"
-    t.integer  "role",                default: 0
-    t.integer  "followees_count",     default: 0
-    t.integer  "followers_count",     default: 0
-    t.integer  "likees_count",        default: 0
-    t.boolean  "verified",            default: false
+    t.integer  "role",                    default: 0
+    t.integer  "followees_count",         default: 0
+    t.integer  "followers_count",         default: 0
+    t.integer  "likees_count",            default: 0
+    t.boolean  "verified",                default: false
     t.datetime "dob"
-    t.string   "referal_code",        default: ""
+    t.string   "referal_code",            default: ""
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",       default: 0,     null: false
+    t.integer  "sign_in_count",           default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.boolean  "block",               default: false
+    t.boolean  "block",                   default: false
     t.string   "encrypted_password"
+    t.string   "dp"
+    t.boolean  "referal_code_used",       default: false
+    t.string   "email_verification_code"
   end
 
 end

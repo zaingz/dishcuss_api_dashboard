@@ -3,7 +3,7 @@ class FoodItemSerializer < ActiveModel::Serializer
   has_many :photos
 
   def likes
-  	object.likers(User).as_json(except: [:created_at, :updated_at , :password])
+  	object.likers(User).as_json(only: [:id , :name , :username , :email , :avatar , :location , :gender , :dob , :role , :followees_count , :followers_count , :likees_count , :referal_code])
   end
 
   def category

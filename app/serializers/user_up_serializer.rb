@@ -1,5 +1,5 @@
 class UserUpSerializer < ActiveModel::Serializer
-  
+  #root :user
   attributes :id , :name, :username , :email , :location , :gender , :date_of_birth
 
   def date_of_birth

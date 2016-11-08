@@ -1,6 +1,25 @@
 class UserTokenSerializer < ActiveModel::Serializer
-  
-  attributes :id , :name, :username, :email, :gender , :location , :date_of_birth ,:provider , :token , :referral_code
+  #root :user
+  attributes :id , :name, :username, :email, :avatar ,  :gender , :location , :date_of_birth , :email_verified ,:provider , :token , :referral_code , :referal_code_used
+
+  def referal_code_used
+    t = true
+    if ( object.user.created_at > (Time.now - 5.minute) ) && ( object.user.referal_code_used == false )
+      t = false
+    end
+    t
+  end
+  def email_verified
+    object.user.verified
+  end
+
+  def avatar
+    if object.user.dp.present?
+      k = object.user.dp.url.gsub('upload','upload/g_face,c_thumb,w_150,h_150')
+    else
+      k = object.user.avatar
+    end
+  end
 
   def date_of_birth
     object.user.dob.present? ? object.user.dob.strftime("%d-%m-%Y") : ""

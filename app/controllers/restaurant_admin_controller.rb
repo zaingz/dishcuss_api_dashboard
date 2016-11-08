@@ -209,8 +209,8 @@ class RestaurantAdminController < ApplicationController
 
 	def gen_qr
 		p params
-		if params[:image].present?
-			qr = Qrcode.create(points: params[:points] , description: params[:description] , restaurant_id: params[:id])
+		if params[:image].present? && params[:max_credit].present?
+			qr = Qrcode.create(points: params[:points] , description: params[:description] , restaurant_id: params[:id] , max_credit: params[:max_credit])
 			of = OfferImage.create(image: params[:image][:image] , qrcode_id: qr.id)
 		end
 		redirect_to :back

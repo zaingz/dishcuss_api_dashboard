@@ -15,7 +15,7 @@ class KhabaHistorySerializer < ActiveModel::Serializer
     if object.qrcode_id.present?
   	 qr = Qrcode.find(object.qrcode_id)
      if qr.offer_image.present?
-      qr.offer_image.image_url
+      qr.offer_image.image_url.gsub('upload','upload/q_auto:low')
      else
       ""
      end

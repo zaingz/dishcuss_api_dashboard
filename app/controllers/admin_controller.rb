@@ -2,6 +2,7 @@ class AdminController < ApplicationController
 	before_filter :authenticate_user!
 	before_filter :is_admin
 	layout "admin"
+
 	def index
 		@restaurant = Restaurant.all
 	end
@@ -176,6 +177,21 @@ class AdminController < ApplicationController
 
 	def restaurant_detail
 		@restaurant = Restaurant.find(params[:id])
+	end
+
+	def give_user_credit
+
+	end
+
+	def credits_sent
+		if params[:email].present? && params[:credit].present?
+			if u = User.find_by_email(params[:email])
+				c = u.credit
+				c.points = c.points + params[:credit].to_i
+				c.save
+			end
+		end
+		redirect_to :back
 	end
 
 	private

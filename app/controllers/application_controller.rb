@@ -3,13 +3,13 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  include ActionController::HttpAuthentication::Token::ControllerMethods
+  include ActionController::Serialization
+
   include Devise::Controllers::Helpers
 
-	include ActionController::HttpAuthentication::Token::ControllerMethods
-	include ActionController::Serialization
-
-	require './app/controllers/concerns/notification.rb'
-	require './app/controllers/concerns/credit.rb'
+  require './app/controllers/concerns/notification.rb'
+  require './app/controllers/concerns/credit.rb'
   
   private
 

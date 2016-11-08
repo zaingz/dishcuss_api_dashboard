@@ -11,4 +11,5 @@ class Post < ActiveRecord::Base
 
 	has_many :dislikes, :as => 'dislikable'
 	attr_accessor :image , :photo_id
+
 end

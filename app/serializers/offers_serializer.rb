@@ -19,7 +19,7 @@ class OffersSerializer < ActiveModel::Serializer
   def offer_image
     if object.offer_image.present?
       if object.offer_image.image_url.present?
-        object.offer_image.image_url
+        object.offer_image.image_url.gsub('upload','upload/q_auto:low')
       else
         ""
       end

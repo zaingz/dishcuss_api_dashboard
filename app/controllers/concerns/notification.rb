@@ -77,13 +77,14 @@ module NotificationHelper
 	end
 
 	def self.credit_notification(user_id , from)
+		p 'Credit Notification'
 		n = Notification.new( :target_id => user_id , :target_type => 'User')
 		n.body = 'Credit points are added  in your account through '+ from
 		n.save
 	end
 
 	def self.credit_history_notification(user_id , restaurant_id)
-		n = Notification.new( :target_id => user_id , :target_type => 'User')
+		n = Notification.new( :notifier_id =>  restaurant_id, :notifier_type => 'Restaurant', :target_id => user_id , :target_type => 'User')
 		n.body = 'Credit points are claimed from your account.'
 		n.save
 

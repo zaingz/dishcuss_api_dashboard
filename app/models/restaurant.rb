@@ -13,7 +13,7 @@ class Restaurant < ActiveRecord::Base
 	has_many :photos , :as => 'imageable'
 	accepts_nested_attributes_for :photos
 
-	has_many :messages , dependent: :destroy
+	#has_many :messages , dependent: :destroy
 
 	has_many :notifications , :as => 'target'
 
@@ -36,5 +36,7 @@ class Restaurant < ActiveRecord::Base
 
 	scope :approved, lambda {where(:approved => true)}
 	scope :featured, lambda {where(:featured => true)}
+
+	scope :highest_rated, lambda {where("restaurants.id in (select restaurant_id from restaurants)").group('restaurants.id').joins(:ratings).order('AVG(ratings.rate) DESC')}
 
 end

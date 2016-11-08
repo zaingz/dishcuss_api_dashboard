@@ -3,6 +3,7 @@ class Comment < ActiveRecord::Base
   include ActsAsCommentable::Comment
 
   belongs_to :commentable, :polymorphic => true
+  belongs_to :user
   acts_as_likeable
   
   default_scope -> { order('created_at ASC') }
@@ -15,5 +16,6 @@ class Comment < ActiveRecord::Base
 
   has_one :photo , :as => 'imageable'
   has_many :reports , :as => 'reportable'
+  has_many :comments , :as => 'commentable'
 
 end
