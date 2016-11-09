@@ -1,0 +1,341 @@
+D, [2016-09-02T17:42:28.678396 #18737] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (400.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-09-02T17:42:29.127727 #18737]  INFO -- : Migrating to AddDeviseToUsers (20160730112040)
+D, [2016-09-02T17:42:29.533185 #18737] DEBUG -- :   [1m[35m (404.6ms)[0m  BEGIN
+D, [2016-09-02T17:42:30.363656 #18737] DEBUG -- :   [1m[36m (416.2ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+D, [2016-09-02T17:42:30.777480 #18737] DEBUG -- :   [1m[35m (413.5ms)[0m  ALTER TABLE "users" ADD "reset_password_token" character varying
+D, [2016-09-02T17:42:31.173540 #18737] DEBUG -- :   [1m[36m (395.7ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+D, [2016-09-02T17:42:31.578489 #18737] DEBUG -- :   [1m[35m (404.6ms)[0m  ALTER TABLE "users" ADD "remember_created_at" timestamp
+D, [2016-09-02T17:42:32.406822 #18737] DEBUG -- :   [1m[36m (419.6ms)[0m  [1mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+D, [2016-09-02T17:42:32.824567 #18737] DEBUG -- :   [1m[35m (417.3ms)[0m  ALTER TABLE "users" ADD "current_sign_in_at" timestamp
+D, [2016-09-02T17:42:33.238049 #18737] DEBUG -- :   [1m[36m (413.1ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_at" timestamp[0m
+D, [2016-09-02T17:42:33.648353 #18737] DEBUG -- :   [1m[35m (409.9ms)[0m  ALTER TABLE "users" ADD "current_sign_in_ip" inet
+D, [2016-09-02T17:42:34.092378 #18737] DEBUG -- :   [1m[36m (443.5ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" inet[0m
+D, [2016-09-02T17:42:35.310528 #18737] DEBUG -- :   [1m[35m (407.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+D, [2016-09-02T17:42:35.707118 #18737] DEBUG -- :   [1m[36m (396.3ms)[0m  [1mROLLBACK[0m
+D, [2016-09-02T17:45:05.396520 #18886] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (404.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-09-02T17:45:05.874205 #18886]  INFO -- : Migrating to AddDeviseToUsers (20160730112040)
+D, [2016-09-02T17:45:06.275859 #18886] DEBUG -- :   [1m[35m (401.1ms)[0m  BEGIN
+D, [2016-09-02T17:45:07.106343 #18886] DEBUG -- :   [1m[36m (426.7ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+D, [2016-09-02T17:45:07.510629 #18886] DEBUG -- :   [1m[35m (403.9ms)[0m  ALTER TABLE "users" ADD "reset_password_token" character varying
+D, [2016-09-02T17:45:07.913775 #18886] DEBUG -- :   [1m[36m (402.8ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+D, [2016-09-02T17:45:08.321458 #18886] DEBUG -- :   [1m[35m (407.3ms)[0m  ALTER TABLE "users" ADD "remember_created_at" timestamp
+D, [2016-09-02T17:45:09.211862 #18886] DEBUG -- :   [1m[36m (472.7ms)[0m  [1mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+D, [2016-09-02T17:45:09.644295 #18886] DEBUG -- :   [1m[35m (432.1ms)[0m  ALTER TABLE "users" ADD "current_sign_in_at" timestamp
+D, [2016-09-02T17:45:10.099866 #18886] DEBUG -- :   [1m[36m (455.2ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_at" timestamp[0m
+D, [2016-09-02T17:45:10.537373 #18886] DEBUG -- :   [1m[35m (437.2ms)[0m  ALTER TABLE "users" ADD "current_sign_in_ip" inet
+D, [2016-09-02T17:45:10.954379 #18886] DEBUG -- :   [1m[36m (416.6ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" inet[0m
+D, [2016-09-02T17:45:12.240433 #18886] DEBUG -- :   [1m[35m (429.5ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+D, [2016-09-02T17:45:12.672147 #18886] DEBUG -- :   [1m[36m (431.4ms)[0m  [1mROLLBACK[0m
+D, [2016-09-02T17:45:35.471995 #18944] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (398.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-09-02T17:45:35.880493 #18944]  INFO -- : Migrating to AddDeviseToUsers (20160730112040)
+D, [2016-09-02T17:45:36.274043 #18944] DEBUG -- :   [1m[35m (393.0ms)[0m  BEGIN
+D, [2016-09-02T17:45:37.066569 #18944] DEBUG -- :   [1m[36m (402.4ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+D, [2016-09-02T17:45:37.464469 #18944] DEBUG -- :   [1m[35m (397.6ms)[0m  ALTER TABLE "users" ADD "reset_password_token" character varying
+D, [2016-09-02T17:45:37.857304 #18944] DEBUG -- :   [1m[36m (392.5ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+D, [2016-09-02T17:45:38.255958 #18944] DEBUG -- :   [1m[35m (398.2ms)[0m  ALTER TABLE "users" ADD "remember_created_at" timestamp
+D, [2016-09-02T17:45:39.066921 #18944] DEBUG -- :   [1m[36m (408.8ms)[0m  [1mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+D, [2016-09-02T17:45:39.479617 #18944] DEBUG -- :   [1m[35m (412.1ms)[0m  ALTER TABLE "users" ADD "current_sign_in_at" timestamp
+D, [2016-09-02T17:45:39.894038 #18944] DEBUG -- :   [1m[36m (414.0ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_at" timestamp[0m
+D, [2016-09-02T17:45:40.319002 #18944] DEBUG -- :   [1m[35m (424.5ms)[0m  ALTER TABLE "users" ADD "current_sign_in_ip" inet
+D, [2016-09-02T17:45:40.732770 #18944] DEBUG -- :   [1m[36m (413.3ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" inet[0m
+D, [2016-09-02T17:45:42.005516 #18944] DEBUG -- :   [1m[35m (437.8ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+D, [2016-09-02T17:45:42.443841 #18944] DEBUG -- :   [1m[36m (438.0ms)[0m  [1mROLLBACK[0m
+D, [2016-09-02T17:48:34.577012 #19075] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (542.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-09-02T17:48:35.010626 #19075]  INFO -- : Migrating to AddDeviseToUsers (20160730112040)
+D, [2016-09-02T17:48:35.434267 #19075] DEBUG -- :   [1m[35m (423.0ms)[0m  BEGIN
+D, [2016-09-02T17:48:35.935762 #19075] DEBUG -- :   [1m[36m (500.7ms)[0m  [1mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+D, [2016-09-02T17:48:37.070932 #19075] DEBUG -- :   [1m[35m (642.1ms)[0m  ALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL
+D, [2016-09-02T17:48:37.636481 #19075] DEBUG -- :   [1m[36m (565.2ms)[0m  [1mALTER TABLE "users" ADD "current_sign_in_at" timestamp[0m
+D, [2016-09-02T17:48:38.065086 #19075] DEBUG -- :   [1m[35m (428.2ms)[0m  ALTER TABLE "users" ADD "last_sign_in_at" timestamp
+D, [2016-09-02T17:48:38.484881 #19075] DEBUG -- :   [1m[36m (419.4ms)[0m  [1mALTER TABLE "users" ADD "current_sign_in_ip" inet[0m
+D, [2016-09-02T17:48:38.904237 #19075] DEBUG -- :   [1m[35m (419.0ms)[0m  ALTER TABLE "users" ADD "last_sign_in_ip" inet
+D, [2016-09-02T17:48:41.149094 #19075] DEBUG -- :   [1m[36mSQL (426.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160730112040"]]
+D, [2016-09-02T17:48:41.598956 #19075] DEBUG -- :   [1m[35m (449.4ms)[0m  COMMIT
+I, [2016-09-02T17:48:41.599169 #19075]  INFO -- : Migrating to AlterMessage (20160809103350)
+D, [2016-09-02T17:48:42.019724 #19075] DEBUG -- :   [1m[36m (419.7ms)[0m  [1mBEGIN[0m
+D, [2016-09-02T17:48:42.452316 #19075] DEBUG -- :   [1m[35m (432.1ms)[0m  ALTER TABLE "messages" DROP "user_id"
+D, [2016-09-02T17:48:42.919629 #19075] DEBUG -- :   [1m[36m (466.8ms)[0m  [1mALTER TABLE "messages" DROP "restaurant_id"[0m
+D, [2016-09-02T17:48:43.785611 #19075] DEBUG -- :   [1m[35m (420.9ms)[0m  ALTER TABLE "messages" ADD "sender_id" integer
+D, [2016-09-02T17:48:44.212092 #19075] DEBUG -- :   [1m[36m (425.7ms)[0m  [1mALTER TABLE "messages" ADD "sender_type" character varying[0m
+D, [2016-09-02T17:48:44.631680 #19075] DEBUG -- :   [1m[35m (419.1ms)[0m  ALTER TABLE "messages" ADD "reciever_id" integer
+D, [2016-09-02T17:48:45.050692 #19075] DEBUG -- :   [1m[36m (418.5ms)[0m  [1mALTER TABLE "messages" ADD "reciever_type" character varying[0m
+D, [2016-09-02T17:48:46.304793 #19075] DEBUG -- :   [1m[35mSQL (418.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160809103350"]]
+D, [2016-09-02T17:48:46.729186 #19075] DEBUG -- :   [1m[36m (424.0ms)[0m  [1mCOMMIT[0m
+I, [2016-09-02T17:48:46.729364 #19075]  INFO -- : Migrating to AddBlockedToUser (20160811053614)
+D, [2016-09-02T17:48:47.153435 #19075] DEBUG -- :   [1m[35m (423.6ms)[0m  BEGIN
+D, [2016-09-02T17:48:48.421335 #19075] DEBUG -- :   [1m[36m (425.6ms)[0m  [1mALTER TABLE "users" ADD "block" boolean DEFAULT 'f'[0m
+D, [2016-09-02T17:48:49.677525 #19075] DEBUG -- :   [1m[35mSQL (417.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160811053614"]]
+D, [2016-09-02T17:48:50.110948 #19075] DEBUG -- :   [1m[36m (433.0ms)[0m  [1mCOMMIT[0m
+D, [2016-09-03T23:30:23.048737 #3168] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (515.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2016-09-05T13:53:09.900095 #17092] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (4212.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-09-05T13:53:10.414853 #17092]  INFO -- : Migrating to AddEncryptedPasswordToUsers (20160905081918)
+D, [2016-09-05T13:53:10.836831 #17092] DEBUG -- :   [1m[35m (421.5ms)[0m  BEGIN
+D, [2016-09-05T13:53:12.565274 #17092] DEBUG -- :   [1m[36m (1727.8ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" character varying[0m
+D, [2016-09-05T13:53:15.360627 #17092] DEBUG -- :   [1m[35mSQL (473.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160905081918"]]
+D, [2016-09-05T13:53:15.778634 #17092] DEBUG -- :   [1m[36m (417.5ms)[0m  [1mCOMMIT[0m
+D, [2016-09-05T14:50:36.239641 #18311] DEBUG -- :   [1m[36mUser Load (614.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+D, [2016-09-05T14:50:48.289146 #18311] DEBUG -- :   [1m[35m (399.3ms)[0m  BEGIN
+D, [2016-09-05T14:50:49.542725 #18311] DEBUG -- :   [1m[36mSQL (439.1ms)[0m  [1mUPDATE "users" SET "role" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["role", 2], ["updated_at", "2016-09-05 09:50:48.290333"], ["id", 100]]
+D, [2016-09-05T14:50:50.153773 #18311] DEBUG -- :   [1m[35m (610.1ms)[0m  COMMIT
+D, [2016-09-05T14:52:02.650265 #18311] DEBUG -- :   [1m[36mCheckin Load (474.7ms)[0m  [1mSELECT "checkins".* FROM "checkins"[0m
+D, [2016-09-05T14:52:56.259207 #18311] DEBUG -- :   [1m[35mCheckin Load (549.8ms)[0m  SELECT "checkins".* FROM "checkins"
+D, [2016-09-05T14:52:57.793636 #18311] DEBUG -- :   [1m[36mPost Load (375.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+D, [2016-09-05T14:52:58.179877 #18311] DEBUG -- :   [1m[35mPost Load (379.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 3]]
+D, [2016-09-05T14:52:58.560550 #18311] DEBUG -- :   [1m[36mPost Load (379.8ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 4]]
+D, [2016-09-05T14:52:58.971045 #18311] DEBUG -- :   [1m[35mPost Load (409.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 5]]
+D, [2016-09-05T14:52:59.355864 #18311] DEBUG -- :   [1m[36mPost Load (383.9ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+D, [2016-09-05T14:52:59.750253 #18311] DEBUG -- :   [1m[35mPost Load (393.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 7]]
+D, [2016-09-05T14:53:00.131426 #18311] DEBUG -- :   [1m[36mPost Load (380.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 8]]
+D, [2016-09-05T14:53:00.587734 #18311] DEBUG -- :   [1m[35mPost Load (455.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 9]]
+D, [2016-09-05T14:53:00.974400 #18311] DEBUG -- :   [1m[36mPost Load (385.8ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 10]]
+D, [2016-09-05T14:53:01.362108 #18311] DEBUG -- :   [1m[35mPost Load (386.9ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 11]]
+D, [2016-09-05T14:53:01.747904 #18311] DEBUG -- :   [1m[36mPost Load (384.9ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 12]]
+D, [2016-09-05T14:53:02.128959 #18311] DEBUG -- :   [1m[35mPost Load (380.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 13]]
+D, [2016-09-05T14:53:02.505886 #18311] DEBUG -- :   [1m[36mPost Load (376.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 14]]
+D, [2016-09-05T14:53:02.881223 #18311] DEBUG -- :   [1m[35mPost Load (374.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 15]]
+D, [2016-09-05T14:53:03.869584 #18311] DEBUG -- :   [1m[36mPost Load (987.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 16]]
+D, [2016-09-05T14:53:04.257837 #18311] DEBUG -- :   [1m[35mPost Load (387.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 17]]
+D, [2016-09-05T14:53:04.650335 #18311] DEBUG -- :   [1m[36mPost Load (391.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 18]]
+D, [2016-09-05T14:53:05.041523 #18311] DEBUG -- :   [1m[35mPost Load (390.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 19]]
+D, [2016-09-05T14:53:05.431580 #18311] DEBUG -- :   [1m[36mPost Load (389.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 20]]
+D, [2016-09-05T14:53:05.828807 #18311] DEBUG -- :   [1m[35mPost Load (396.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 21]]
+D, [2016-09-05T14:53:06.225698 #18311] DEBUG -- :   [1m[36mPost Load (396.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 22]]
+D, [2016-09-05T14:53:06.612282 #18311] DEBUG -- :   [1m[35mPost Load (385.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 23]]
+D, [2016-09-05T14:53:56.902315 #18311] DEBUG -- :   [1m[36mCheckin Load (401.4ms)[0m  [1mSELECT "checkins".* FROM "checkins"[0m
+D, [2016-09-05T14:53:57.291895 #18311] DEBUG -- :   [1m[35mPost Load (388.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 1]]
+D, [2016-09-05T14:53:58.075392 #18311] DEBUG -- :   [1m[36mUser Load (389.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+D, [2016-09-05T14:53:58.466117 #18311] DEBUG -- :   [1m[35mPost Load (389.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 3]]
+D, [2016-09-05T14:53:58.855841 #18311] DEBUG -- :   [1m[36mUser Load (388.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+D, [2016-09-05T14:53:59.259634 #18311] DEBUG -- :   [1m[35mPost Load (402.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 4]]
+D, [2016-09-05T14:53:59.639869 #18311] DEBUG -- :   [1m[36mUser Load (379.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+D, [2016-09-05T14:54:01.166974 #18311] DEBUG -- :   [1m[35mRestaurant Load (379.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-05T14:54:01.551863 #18311] DEBUG -- :   [1m[36mPost Load (375.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 5]]
+D, [2016-09-05T14:54:02.077523 #18311] DEBUG -- :   [1m[35mUser Load (524.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 83]]
+D, [2016-09-05T14:54:03.083275 #18311] DEBUG -- :   [1m[36mRestaurant Load (1004.6ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+D, [2016-09-05T14:54:03.659241 #18311] DEBUG -- :   [1m[35mPost Load (575.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-05T14:54:04.150194 #18311] DEBUG -- :   [1m[36mUser Load (490.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-05T14:54:04.522895 #18311] DEBUG -- :   [1m[35mRestaurant Load (371.7ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 10]]
+D, [2016-09-05T14:54:04.888215 #18311] DEBUG -- :   [1m[36mPost Load (364.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 7]]
+D, [2016-09-05T14:54:05.942642 #18311] DEBUG -- :   [1m[35mUser Load (1053.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:06.312902 #18311] DEBUG -- :   [1m[36mRestaurant Load (369.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 10]]
+D, [2016-09-05T14:54:06.684660 #18311] DEBUG -- :   [1m[35mPost Load (370.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 8]]
+D, [2016-09-05T14:54:07.055202 #18311] DEBUG -- :   [1m[36mUser Load (369.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-05T14:54:07.416163 #18311] DEBUG -- :   [1m[35mRestaurant Load (359.9ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 10]]
+D, [2016-09-05T14:54:07.775801 #18311] DEBUG -- :   [1m[36mPost Load (358.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+D, [2016-09-05T14:54:08.150811 #18311] DEBUG -- :   [1m[35mUser Load (374.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:08.535077 #18311] DEBUG -- :   [1m[36mRestaurant Load (383.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 10]]
+D, [2016-09-05T14:54:08.925344 #18311] DEBUG -- :   [1m[35mPost Load (389.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 10]]
+D, [2016-09-05T14:54:09.304644 #18311] DEBUG -- :   [1m[36mUser Load (378.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-05T14:54:09.682586 #18311] DEBUG -- :   [1m[35mRestaurant Load (376.9ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 10]]
+D, [2016-09-05T14:54:10.047987 #18311] DEBUG -- :   [1m[36mPost Load (364.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 11]]
+D, [2016-09-05T14:54:10.427907 #18311] DEBUG -- :   [1m[35mUser Load (379.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:10.833027 #18311] DEBUG -- :   [1m[36mRestaurant Load (404.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 10]]
+D, [2016-09-05T14:54:11.210372 #18311] DEBUG -- :   [1m[35mPost Load (376.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 12]]
+D, [2016-09-05T14:54:11.592064 #18311] DEBUG -- :   [1m[36mUser Load (380.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-05T14:54:11.979738 #18311] DEBUG -- :   [1m[35mRestaurant Load (386.6ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 10]]
+D, [2016-09-05T14:54:12.379977 #18311] DEBUG -- :   [1m[36mPost Load (399.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 13]]
+D, [2016-09-05T14:54:12.753417 #18311] DEBUG -- :   [1m[35mUser Load (372.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:13.719465 #18311] DEBUG -- :   [1m[36mRestaurant Load (965.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 10]]
+D, [2016-09-05T14:54:14.104564 #18311] DEBUG -- :   [1m[35mPost Load (384.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 14]]
+D, [2016-09-05T14:54:14.480040 #18311] DEBUG -- :   [1m[36mUser Load (374.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-05T14:54:14.853473 #18311] DEBUG -- :   [1m[35mRestaurant Load (372.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 10]]
+D, [2016-09-05T14:54:15.232467 #18311] DEBUG -- :   [1m[36mPost Load (378.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 15]]
+D, [2016-09-05T14:54:15.609290 #18311] DEBUG -- :   [1m[35mUser Load (375.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:16.005277 #18311] DEBUG -- :   [1m[36mRestaurant Load (394.9ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 10]]
+D, [2016-09-05T14:54:16.394624 #18311] DEBUG -- :   [1m[35mPost Load (388.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 16]]
+D, [2016-09-05T14:54:16.774926 #18311] DEBUG -- :   [1m[36mUser Load (379.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-05T14:54:17.157295 #18311] DEBUG -- :   [1m[35mRestaurant Load (381.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 10]]
+D, [2016-09-05T14:54:17.540772 #18311] DEBUG -- :   [1m[36mPost Load (382.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 17]]
+D, [2016-09-05T14:54:17.925228 #18311] DEBUG -- :   [1m[35mUser Load (383.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:18.312366 #18311] DEBUG -- :   [1m[36mRestaurant Load (386.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 10]]
+D, [2016-09-05T14:54:18.698443 #18311] DEBUG -- :   [1m[35mPost Load (385.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 18]]
+D, [2016-09-05T14:54:19.083795 #18311] DEBUG -- :   [1m[36mUser Load (384.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-05T14:54:19.490088 #18311] DEBUG -- :   [1m[35mRestaurant Load (405.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 10]]
+D, [2016-09-05T14:54:19.918209 #18311] DEBUG -- :   [1m[36mPost Load (427.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 19]]
+D, [2016-09-05T14:54:20.930508 #18311] DEBUG -- :   [1m[35mUser Load (1011.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:21.326201 #18311] DEBUG -- :   [1m[36mRestaurant Load (394.6ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 4]]
+D, [2016-09-05T14:54:21.732448 #18311] DEBUG -- :   [1m[35mPost Load (405.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 20]]
+D, [2016-09-05T14:54:22.289594 #18311] DEBUG -- :   [1m[36mUser Load (556.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-05T14:54:22.867073 #18311] DEBUG -- :   [1m[35mRestaurant Load (576.5ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-05T14:54:23.455848 #18311] DEBUG -- :   [1m[36mPost Load (587.8ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 21]]
+D, [2016-09-05T14:54:24.040437 #18311] DEBUG -- :   [1m[35mUser Load (583.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:24.614251 #18311] DEBUG -- :   [1m[36mRestaurant Load (572.7ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 4]]
+D, [2016-09-05T14:54:25.204471 #18311] DEBUG -- :   [1m[35mPost Load (589.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 22]]
+D, [2016-09-05T14:54:25.814902 #18311] DEBUG -- :   [1m[36mUser Load (609.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 87]]
+D, [2016-09-05T14:54:26.338861 #18311] DEBUG -- :   [1m[35mRestaurant Load (522.9ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 0]]
+D, [2016-09-05T14:54:26.731747 #18311] DEBUG -- :   [1m[36mPost Load (391.9ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 23]]
+D, [2016-09-05T14:54:27.124353 #18311] DEBUG -- :   [1m[35mUser Load (391.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:28.357634 #18311] DEBUG -- :   [1m[36mRestaurant Load (1232.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 7]]
+D, [2016-09-05T14:54:51.636892 #18311] DEBUG -- :   [1m[35mCheckin Load (419.5ms)[0m  SELECT "checkins".* FROM "checkins"
+D, [2016-09-05T14:54:52.053509 #18311] DEBUG -- :   [1m[36mPost Load (415.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+D, [2016-09-05T14:54:52.521053 #18311] DEBUG -- :   [1m[35mUser Load (466.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+D, [2016-09-05T14:54:53.115858 #18311] DEBUG -- :   [1m[36mPost Load (593.8ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 3]]
+D, [2016-09-05T14:54:53.542081 #18311] DEBUG -- :   [1m[35mUser Load (425.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+D, [2016-09-05T14:54:53.961639 #18311] DEBUG -- :   [1m[36mPost Load (418.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 4]]
+D, [2016-09-05T14:54:54.385979 #18311] DEBUG -- :   [1m[35mUser Load (423.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+D, [2016-09-05T14:54:54.818435 #18311] DEBUG -- :   [1m[36mPost Load (431.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 5]]
+D, [2016-09-05T14:54:55.250906 #18311] DEBUG -- :   [1m[35mUser Load (431.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 83]]
+D, [2016-09-05T14:54:55.672397 #18311] DEBUG -- :   [1m[36mPost Load (420.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+D, [2016-09-05T14:54:56.096328 #18311] DEBUG -- :   [1m[35mUser Load (423.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:56.525217 #18311] DEBUG -- :   [1m[36mPost Load (427.8ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 7]]
+D, [2016-09-05T14:54:57.004072 #18311] DEBUG -- :   [1m[35mUser Load (477.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:57.443460 #18311] DEBUG -- :   [1m[36mPost Load (438.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 8]]
+D, [2016-09-05T14:54:58.532393 #18311] DEBUG -- :   [1m[35mUser Load (1088.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:58.963299 #18311] DEBUG -- :   [1m[36mPost Load (429.9ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+D, [2016-09-05T14:54:59.392329 #18311] DEBUG -- :   [1m[35mUser Load (428.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:54:59.870969 #18311] DEBUG -- :   [1m[36mPost Load (477.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 10]]
+D, [2016-09-05T14:55:00.310879 #18311] DEBUG -- :   [1m[35mUser Load (439.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:00.743581 #18311] DEBUG -- :   [1m[36mPost Load (431.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 11]]
+D, [2016-09-05T14:55:01.175628 #18311] DEBUG -- :   [1m[35mUser Load (431.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:01.592415 #18311] DEBUG -- :   [1m[36mPost Load (415.8ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 12]]
+D, [2016-09-05T14:55:02.022269 #18311] DEBUG -- :   [1m[35mUser Load (429.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:02.467363 #18311] DEBUG -- :   [1m[36mPost Load (444.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 13]]
+D, [2016-09-05T14:55:02.902144 #18311] DEBUG -- :   [1m[35mUser Load (433.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:03.321824 #18311] DEBUG -- :   [1m[36mPost Load (418.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 14]]
+D, [2016-09-05T14:55:03.748613 #18311] DEBUG -- :   [1m[35mUser Load (425.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:04.172109 #18311] DEBUG -- :   [1m[36mPost Load (422.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 15]]
+D, [2016-09-05T14:55:04.589522 #18311] DEBUG -- :   [1m[35mUser Load (416.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:05.007050 #18311] DEBUG -- :   [1m[36mPost Load (416.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 16]]
+D, [2016-09-05T14:55:05.432035 #18311] DEBUG -- :   [1m[35mUser Load (424.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:05.862573 #18311] DEBUG -- :   [1m[36mPost Load (429.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 17]]
+D, [2016-09-05T14:55:06.286544 #18311] DEBUG -- :   [1m[35mUser Load (423.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:06.718124 #18311] DEBUG -- :   [1m[36mPost Load (430.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 18]]
+D, [2016-09-05T14:55:07.148940 #18311] DEBUG -- :   [1m[35mUser Load (429.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:07.572629 #18311] DEBUG -- :   [1m[36mPost Load (422.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 19]]
+D, [2016-09-05T14:55:08.007700 #18311] DEBUG -- :   [1m[35mUser Load (434.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:08.439382 #18311] DEBUG -- :   [1m[36mPost Load (430.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 20]]
+D, [2016-09-05T14:55:08.882641 #18311] DEBUG -- :   [1m[35mUser Load (442.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:09.325456 #18311] DEBUG -- :   [1m[36mPost Load (441.8ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 21]]
+D, [2016-09-05T14:55:09.767917 #18311] DEBUG -- :   [1m[35mUser Load (441.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:10.201074 #18311] DEBUG -- :   [1m[36mPost Load (432.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 22]]
+D, [2016-09-05T14:55:10.627935 #18311] DEBUG -- :   [1m[35mUser Load (425.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 87]]
+D, [2016-09-05T14:55:11.051440 #18311] DEBUG -- :   [1m[36mPost Load (422.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 23]]
+D, [2016-09-05T14:55:11.470240 #18311] DEBUG -- :   [1m[35mUser Load (417.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-05T14:55:44.017178 #18311] DEBUG -- :   [1m[36m (553.1ms)[0m  [1mSELECT "checkins"."post_id" FROM "checkins"[0m
+D, [2016-09-05T14:55:50.920964 #18311] DEBUG -- :   [1m[35m (383.5ms)[0m  SELECT "checkins"."restaurant_id" FROM "checkins"
+D, [2016-09-05T14:56:15.234353 #18311] DEBUG -- :   [1m[36mSQL (373.3ms)[0m  [1mDELETE FROM "checkins" WHERE "checkins"."restaurant_id" IS NULL[0m
+D, [2016-09-05T14:56:22.052312 #18311] DEBUG -- :   [1m[35mSQL (389.1ms)[0m  DELETE FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 0]]
+D, [2016-09-05T14:56:25.321953 #18311] DEBUG -- :   [1m[36m (402.7ms)[0m  [1mSELECT "checkins"."restaurant_id" FROM "checkins"[0m
+D, [2016-09-21T11:41:17.093341 #11131] DEBUG -- :   [1m[36mRestaurant Load (514.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+D, [2016-09-21T11:41:30.340640 #11131] DEBUG -- :   [1m[35mRestaurant Load (498.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-21T11:42:45.716364 #11131] DEBUG -- :   [1m[36mMenu Load (530.8ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 6]]
+D, [2016-09-21T11:43:04.066614 #11131] DEBUG -- :   [1m[35mSection Load (525.2ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."menu_id" = $1  [["menu_id", 3]]
+D, [2016-09-21T11:43:28.828570 #11131] DEBUG -- :   [1m[36mFoodItem Load (532.8ms)[0m  [1mSELECT "food_items".* FROM "food_items" WHERE "food_items"."section_id" = $1[0m  [["section_id", 1]]
+D, [2016-09-21T12:23:11.999030 #11131] DEBUG -- :   [1m[35mPhoto Load (343.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 8], ["imageable_type", "FoodItem"]]
+D, [2016-09-21T12:41:36.914977 #11131] DEBUG -- :   [1m[36mCallNow Load (337.6ms)[0m  [1mSELECT "call_nows".* FROM "call_nows" WHERE "call_nows"."restaurant_id" = $1[0m  [["restaurant_id", 6]]
+D, [2016-09-21T12:42:59.864725 #11131] DEBUG -- :   [1m[35mReview Load (1191.5ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 6], ["reviewable_type", "Restaurant"]]
+D, [2016-09-21T12:49:46.753469 #11131] DEBUG -- :   [1m[36mPhoto Load (736.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 6], ["imageable_type", "Restaurant"]]
+D, [2016-09-21T13:04:10.074786 #11131] DEBUG -- :   [1m[35mCheckin Load (341.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 6]]
+D, [2016-09-21T13:05:00.542888 #11131] DEBUG -- :   [1m[36mPost Load (336.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 4]]
+D, [2016-09-21T13:05:01.930786 #11131] DEBUG -- :   [1m[35mUser Load (339.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+D, [2016-09-21T13:14:30.634988 #11131] DEBUG -- :   [1m[36m (388.7ms)[0m  [1mSELECT "users"."avatar" FROM "users"[0m
+D, [2016-09-21T13:15:29.046652 #11131] DEBUG -- :   [1m[35m (348.4ms)[0m  SELECT COUNT(*) FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 6]]
+D, [2016-09-21T13:59:06.212067 #16707] DEBUG -- :   [1m[36mRestaurant Load (483.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+D, [2016-09-21T13:59:08.899633 #16707] DEBUG -- :   [1m[35mRestaurant Load (336.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-21T13:59:15.667457 #16707] DEBUG -- :   [1m[36mRestaurant Load (485.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+D, [2016-09-21T13:59:23.084481 #16707] DEBUG -- :   [1m[35mCoverImage Load (393.2ms)[0m  SELECT  "cover_images".* FROM "cover_images" WHERE "cover_images"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 6]]
+D, [2016-09-21T16:13:14.461472 #21878] DEBUG -- :   [1m[36mUser Load (348.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+D, [2016-09-21T16:13:29.838037 #21878] DEBUG -- :   [1m[35mUser Load (334.8ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+D, [2016-09-21T16:13:32.698329 #21878] DEBUG -- :   [1m[36mReview Load (1170.6ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2[0m  [["reviewable_id", 103], ["reviewable_type", "User"]]
+D, [2016-09-21T16:13:59.447449 #21878] DEBUG -- :   [1m[35mReview Load (335.0ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1  [["reviewer_id", 103]]
+D, [2016-09-21T16:14:06.723839 #21878] DEBUG -- :   [1m[36mReview Load (1077.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1[0m  [["reviewer_id", 84]]
+D, [2016-09-21T16:14:15.144180 #21878] DEBUG -- :   [1m[35mReview Load (402.4ms)[0m  SELECT  "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1  ORDER BY "reviews"."id" ASC LIMIT 1  [["reviewer_id", 84]]
+D, [2016-09-21T16:23:27.663925 #21878] DEBUG -- :   [1m[36mUser Load (340.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+D, [2016-09-21T16:25:04.074803 #21878] DEBUG -- :   [1m[35mUser Load (343.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+D, [2016-09-21T16:25:05.580608 #21878] DEBUG -- :   [1m[36mPost Load (356.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 103]]
+D, [2016-09-21T16:25:24.170716 #21878] DEBUG -- :   [1m[35mUser Load (343.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-21T16:25:24.525216 #21878] DEBUG -- :   [1m[36mPost Load (353.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 85]]
+D, [2016-09-21T16:25:27.606124 #21878] DEBUG -- :   [1m[35mPhoto Load (1239.0ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 6], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:30.241392 #21878] DEBUG -- :   [1m[36mPhoto Load (349.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 7], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:30.594208 #21878] DEBUG -- :   [1m[35mPhoto Load (351.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 8], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:30.929050 #21878] DEBUG -- :   [1m[36mPhoto Load (333.9ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 10], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:31.327490 #21878] DEBUG -- :   [1m[35mPhoto Load (397.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 11], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:31.938221 #21878] DEBUG -- :   [1m[36mPhoto Load (609.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 12], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:32.319100 #21878] DEBUG -- :   [1m[35mPhoto Load (379.8ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 18], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:32.733876 #21878] DEBUG -- :   [1m[36mPhoto Load (413.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 23], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:33.195773 #21878] DEBUG -- :   [1m[35mPhoto Load (460.9ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 21], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:33.530366 #21878] DEBUG -- :   [1m[36mPhoto Load (333.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 20], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:33.871677 #21878] DEBUG -- :   [1m[35mPhoto Load (340.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 19], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:34.205526 #21878] DEBUG -- :   [1m[36mPhoto Load (332.9ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 17], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:34.539425 #21878] DEBUG -- :   [1m[35mPhoto Load (332.9ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 16], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:34.876873 #21878] DEBUG -- :   [1m[36mPhoto Load (336.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 15], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:35.214654 #21878] DEBUG -- :   [1m[35mPhoto Load (336.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 14], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:35.604468 #21878] DEBUG -- :   [1m[36mPhoto Load (388.8ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 13], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:35.943063 #21878] DEBUG -- :   [1m[35mPhoto Load (337.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 9], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:36.372376 #21878] DEBUG -- :   [1m[36mPhoto Load (428.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 24], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:36.705801 #21878] DEBUG -- :   [1m[35mPhoto Load (332.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 25], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:37.045208 #21878] DEBUG -- :   [1m[36mPhoto Load (338.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 27], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:37.399747 #21878] DEBUG -- :   [1m[35mPhoto Load (353.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 26], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:37.743904 #21878] DEBUG -- :   [1m[36mPhoto Load (343.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 46], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:38.173916 #21878] DEBUG -- :   [1m[35mPhoto Load (429.0ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 43], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:38.521716 #21878] DEBUG -- :   [1m[36mPhoto Load (346.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 42], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:38.862718 #21878] DEBUG -- :   [1m[35mPhoto Load (340.0ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 41], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:39.216193 #21878] DEBUG -- :   [1m[36mPhoto Load (352.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 40], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:39.565344 #21878] DEBUG -- :   [1m[35mPhoto Load (348.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 39], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:39.900074 #21878] DEBUG -- :   [1m[36mPhoto Load (333.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 38], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:40.236451 #21878] DEBUG -- :   [1m[35mPhoto Load (335.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 28], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:40.570679 #21878] DEBUG -- :   [1m[36mPhoto Load (333.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 45], ["imageable_type", "Post"]]
+D, [2016-09-21T16:25:41.769163 #21878] DEBUG -- :   [1m[35mPhoto Load (1197.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 44], ["imageable_type", "Post"]]
+D, [2016-09-21T16:26:11.504729 #21878] DEBUG -- :   [1m[36mPhoto Load (333.0ms)[0m  [1mSELECT  "photos".* FROM "photos"  ORDER BY "photos"."id" DESC LIMIT 1[0m
+D, [2016-09-21T16:26:23.065780 #21878] DEBUG -- :   [1m[35mPhoto Load (333.6ms)[0m  SELECT  "photos".* FROM "photos"  ORDER BY "photos"."id" DESC LIMIT 1
+D, [2016-09-21T16:26:28.096694 #21878] DEBUG -- :   [1m[36mPhoto Load (335.0ms)[0m  [1mSELECT  "photos".* FROM "photos"  ORDER BY "photos"."id" DESC LIMIT 1[0m
+D, [2016-09-21T16:26:36.819980 #21878] DEBUG -- :   [1m[35mPhoto Load (333.9ms)[0m  SELECT  "photos".* FROM "photos"  ORDER BY "photos"."id" DESC LIMIT 1
+D, [2016-09-21T16:28:21.790041 #21878] DEBUG -- :   [1m[36mUser Load (336.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-21T16:28:22.145525 #21878] DEBUG -- :   [1m[35mPost Load (354.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1  [["user_id", 85]]
+D, [2016-09-21T16:28:28.349638 #21878] DEBUG -- :   [1m[36mUser Load (337.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-21T16:28:29.040326 #21878] DEBUG -- :   [1m[35mPost Load (354.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1  ORDER BY "posts"."id" DESC LIMIT 1  [["user_id", 85]]
+D, [2016-09-21T16:28:33.280550 #21878] DEBUG -- :   [1m[36mUser Load (411.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-21T16:28:33.658737 #21878] DEBUG -- :   [1m[35mPost Load (376.9ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1  ORDER BY "posts"."id" DESC LIMIT 1  [["user_id", 85]]
+D, [2016-09-21T16:28:33.993686 #21878] DEBUG -- :   [1m[36mPhoto Load (333.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 46], ["imageable_type", "Post"]]
+D, [2016-09-21T16:30:00.741210 #21878] DEBUG -- :   [1m[35mUser Load (382.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-21T16:30:01.163707 #21878] DEBUG -- :   [1m[36mPost Load (421.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1  ORDER BY "posts"."id" DESC LIMIT 1[0m  [["user_id", 85]]
+D, [2016-09-21T16:30:01.547733 #21878] DEBUG -- :   [1m[35mPhoto Load (382.8ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 46], ["imageable_type", "Post"]]
+D, [2016-09-21T16:37:22.875996 #21878] DEBUG -- :   [1m[36mUser Load (340.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-21T16:38:27.833241 #21878] DEBUG -- :   [1m[35mUser Load (349.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-21T16:38:29.176305 #21878] DEBUG -- :   [1m[36mUser Load (338.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "follows"."followable_id" FROM "follows" WHERE "follows"."followable_type" = $1 AND "follows"."follower_type" = $2 AND "follows"."follower_id" = $3)[0m  [["followable_type", "User"], ["follower_type", "User"], ["follower_id", 85]]
+D, [2016-09-21T16:39:55.519289 #21878] DEBUG -- :   [1m[35mUser Load (340.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+D, [2016-09-21T16:39:56.774623 #21878] DEBUG -- :   [1m[36mUser Load (354.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "follows"."follower_id" FROM "follows" WHERE "follows"."follower_type" = $1 AND "follows"."followable_type" = $2 AND "follows"."followable_id" = $3)[0m  [["follower_type", "User"], ["followable_type", "User"], ["followable_id", 85]]
+D, [2016-09-21T17:21:49.897592 #24115] DEBUG -- :   [1m[36mUser Load (532.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 85]]
+D, [2016-09-21T17:21:55.762947 #24115] DEBUG -- :   [1m[35mUser Load (498.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+D, [2016-09-21T17:22:58.229254 #24115] DEBUG -- :   [1m[36mReview Load (559.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1[0m  [["reviewer_id", 84]]
+D, [2016-09-21T17:23:24.786719 #24115] DEBUG -- :   [1m[35m (475.1ms)[0m  SELECT "reviews"."reviewable_type" FROM "reviews"
+D, [2016-09-21T17:23:56.954463 #24115] DEBUG -- :   [1m[36mReview Load (457.7ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1[0m  [["reviewer_id", 84]]
+D, [2016-09-21T17:24:00.740552 #24115] DEBUG -- :   [1m[35mReview Load (571.2ms)[0m  SELECT  "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1  ORDER BY "reviews"."id" DESC LIMIT 1  [["reviewer_id", 84]]
+D, [2016-09-21T17:29:40.187493 #24115] DEBUG -- :   [1m[36mReview Load (327.8ms)[0m  [1mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1  ORDER BY "reviews"."id" ASC LIMIT 1[0m  [["reviewer_id", 84]]
+D, [2016-09-21T17:30:22.891311 #24115] DEBUG -- :   [1m[35mReview Load (324.5ms)[0m  SELECT  "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1  ORDER BY "reviews"."id" ASC LIMIT 1  [["reviewer_id", 84]]
+D, [2016-09-21T17:30:24.006970 #24115] DEBUG -- :   [1m[36mComment Load (367.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC[0m  [["commentable_id", 20], ["commentable_type", "Review"]]
+D, [2016-09-21T17:35:20.985901 #24115] DEBUG -- :   [1m[35mReview Load (328.9ms)[0m  SELECT  "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1  ORDER BY "reviews"."id" ASC LIMIT 1  [["reviewer_id", 84]]
+D, [2016-09-21T17:36:35.525873 #24115] DEBUG -- :   [1m[36mReview Load (363.5ms)[0m  [1mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1  ORDER BY "reviews"."id" ASC LIMIT 1[0m  [["reviewer_id", 84]]
+D, [2016-09-21T17:36:37.139078 #24115] DEBUG -- :   [1m[35mRestaurant Load (379.5ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 9]]
+D, [2016-09-21T17:37:05.890541 #24115] DEBUG -- :   [1m[36mUser Load (346.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+D, [2016-09-22T11:59:02.747134 #11127] DEBUG -- :   [1m[36mUser Load (330.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+D, [2016-09-22T11:59:14.539667 #11127] DEBUG -- :   [1m[35mUser Load (393.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["role", 1]]
+D, [2016-09-22T11:59:22.429131 #11127] DEBUG -- :   [1m[36mUser Load (356.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."role" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["role", 2]]
+D, [2016-09-22T11:59:26.851095 #11127] DEBUG -- :   [1m[35mUser Load (331.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 2]]
+D, [2016-09-28T13:38:34.369284 #13573] DEBUG -- :   [1m[36mUser Load (337.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:38:57.980059 #13573] DEBUG -- :   [1m[35mUser Load (337.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 2]]
+D, [2016-09-28T13:39:03.808357 #13573] DEBUG -- :   [1m[36mUser Load (336.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+D, [2016-09-28T13:39:21.076776 #13573] DEBUG -- :   [1m[35mUser Load (334.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+D, [2016-09-28T13:39:27.643505 #13573] DEBUG -- :   [1m[36mUser Load (339.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+D, [2016-09-28T13:39:33.558937 #13573] DEBUG -- :   [1m[35mUser Load (337.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+D, [2016-09-28T13:39:42.615889 #13573] DEBUG -- :   [1m[36mUser Load (335.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+D, [2016-09-28T13:39:45.396397 #13573] DEBUG -- :   [1m[35mUser Load (335.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+D, [2016-09-28T13:40:04.757010 #13573] DEBUG -- :   [1m[36mRestaurant Load (340.7ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  ORDER BY "restaurants"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:40:17.898904 #13573] DEBUG -- :   [1m[35mRestaurant Load (335.7ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-28T13:40:23.589296 #13573] DEBUG -- :   [1m[36mRestaurant Load (335.8ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 5]]
+D, [2016-09-28T13:44:06.832322 #13573] DEBUG -- :   [1m[35mQrcode Load (341.7ms)[0m  SELECT "qrcodes".* FROM "qrcodes"
+D, [2016-09-28T13:45:17.523663 #13573] DEBUG -- :   [1m[36mQrcode Load (335.2ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:45:24.157754 #13573] DEBUG -- :   [1m[35mQrcode Load (337.5ms)[0m  SELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1
+D, [2016-09-28T13:46:08.679068 #13573] DEBUG -- :   [1m[36mQrcode Load (416.5ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" ASC LIMIT 1[0m
+D, [2016-09-28T13:47:18.406858 #13573] DEBUG -- :   [1m[35m (334.4ms)[0m  SELECT COUNT(*) FROM "qrcodes"
+D, [2016-09-28T13:47:22.771206 #13573] DEBUG -- :   [1m[36mQrcode Load (335.8ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" ASC LIMIT 1[0m
+D, [2016-09-28T13:47:32.099403 #13573] DEBUG -- :   [1m[35mQrcode Load (342.6ms)[0m  SELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1
+D, [2016-09-28T13:47:37.574237 #13573] DEBUG -- :   [1m[36mQrcode Load (334.9ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:47:37.916360 #13573] DEBUG -- :   [1m[35mRestaurant Load (336.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2016-09-28T13:48:23.934400 #13573] DEBUG -- :   [1m[36mQrcode Load (339.3ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:48:41.394213 #13573] DEBUG -- :   [1m[35mQrcode Load (336.9ms)[0m  SELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1
+D, [2016-09-28T13:48:44.092037 #13573] DEBUG -- :   [1m[36mQrcode Load (335.7ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1[0m
+D, [2016-09-28T13:49:02.314330 #13573] DEBUG -- :   [1m[35mQrcode Load (334.9ms)[0m  SELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" ASC LIMIT 1
+D, [2016-09-28T13:49:09.659725 #13573] DEBUG -- :   [1m[36mQrcode Load (340.7ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1[0m  [["id", 2]]
+D, [2016-09-28T13:49:14.313218 #13573] DEBUG -- :   [1m[35mQrcode Load (333.2ms)[0m  SELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1  [["id", 2]]
+D, [2016-09-28T13:50:07.798590 #13573] DEBUG -- :   [1m[36mQrcode Load (334.7ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1[0m  [["id", 6]]
