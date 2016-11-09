@@ -81,3 +81,112 @@ FATAL:  password authentication failed for user "dishcuss"
 [8439] === puma shutdown: 2016-11-09 11:25:05 +0500 ===
 [8439] - Goodbye!
 Exiting
+=== puma startup: 2016-11-09 11:33:27 +0500 ===
+[8953] * Starting control server on unix:///tmp/puma-status-1478673207640-8953
+[8953] - Worker 0 (pid: 8990) booted, phase: 0
+[8953] - Worker 1 (pid: 8994) booted, phase: 0
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-09 11:33:28 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WebController#select_restaurant as HTML
+  Rendered web/select_restaurant.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 579ms (Views: 555.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-09 11:33:29 +0500
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2016-11-09 11:33:39 +0500
+Processing by RestaurantsController#index as HTML
+  Rendered text template (0.0ms)
+Filter chain halted as :restrict_access rendered or redirected
+Completed 401 Unauthorized in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/user/all_feed" for 127.0.0.1 at 2016-11-09 11:33:47 +0500
+Processing by NewsfeedController#localfeed_updated as HTML
+  [1m[35mReview Load (1.0ms)[0m  SELECT  "reviews".* FROM "reviews"  ORDER BY "reviews"."created_at" DESC LIMIT 5 OFFSET 0
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC LIMIT 5 OFFSET 0[0m
+{"Checkin"=>[#<PostUserSerializer:0x007f270c4193a0 @object=#<Post id: 326, title: "Upload a picture", status: "", created_at: "2016-11-03 06:44:04", updated_at: "2016-11-03 06:44:04", user_id: 131, likers_count: 1, shares: 0>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>, #<PostUserSerializer:0x007f270c419210 @object=#<Post id: 325, title: "Post", status: "could", created_at: "2016-11-03 05:50:40", updated_at: "2016-11-03 05:50:40", user_id: 178, likers_count: 0, shares: 0>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>, #<PostUserSerializer:0x007f270c419120 @object=#<Post id: 324, title: "Post", status: "could", created_at: "2016-11-03 05:50:39", updated_at: "2016-11-03 05:50:39", user_id: 178, likers_count: 0, shares: 0>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>, #<PostUserSerializer:0x007f270c419030 @object=#<Post id: 323, title: "Post", status: "could", created_at: "2016-11-03 05:50:39", updated_at: "2016-11-03 05:50:39", user_id: 178, likers_count: 0, shares: 0>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>, #<PostUserSerializer:0x007f270c418f18 @object=#<Post id: 322, title: "Post", status: "could", created_at: "2016-11-03 05:50:39", updated_at: "2016-11-03 05:50:39", user_id: 178, likers_count: 0, shares: 0>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>], "Review"=>[#<ReviewUserSerializer:0x007f270c904680 @object=#<Review id: 215, title: "Review", summary: "direct review", rating: 1, reviewable_id: 178, reviewable_type: "Restaurant", created_at: "2016-11-03 05:50:47", updated_at: "2016-11-03 05:50:47", reviewer_id: 178, likers_count: 1, shares: 0>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>, #<ReviewUserSerializer:0x007f270c9044c8 @object=#<Review id: 214, title: "Write Review", summary: "I", rating: 5, reviewable_id: 6, reviewable_type: "Restaurant", created_at: "2016-11-02 04:46:06", updated_at: "2016-11-02 04:46:06", reviewer_id: 163, likers_count: 1, shares: 0>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>, #<ReviewUserSerializer:0x007f270c904360 @object=#<Review id: 181, title: "Write Review", summary: "null", rating: nil, reviewable_id: 6, reviewable_type: "Restaurant", created_at: "2016-11-01 09:05:48", updated_at: "2016-11-01 09:05:48", reviewer_id: 97, likers_count: 0, shares: 0>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>, #<ReviewUserSerializer:0x007f270c904158 @object=#<Review id: 180, title: nil, summary: nil, rating: 4, reviewable_id: 6, reviewable_type: "Restaurant", created_at: "2016-11-01 08:47:57", updated_at: "2016-11-01 09:05:48", reviewer_id: 43, likers_count: 0, shares: 1>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>, #<ReviewUserSerializer:0x007f270c8e7e68 @object=#<Review id: 179, title: "Write Review", summary: "thanks", rating: 2, reviewable_id: 15, reviewable_type: "Restaurant", created_at: "2016-11-01 03:57:31", updated_at: "2016-11-01 03:57:31", reviewer_id: 163, likers_count: 0, shares: 0>, @instance_options={:scope=>{:option_name=>nil}}, @root=nil, @scope={:option_name=>nil}>]}
+[active_model_serializers]   [1m[35mRestaurant Load (0.5ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 178]]
+[active_model_serializers]   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 178]]
+[active_model_serializers]   [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 178]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)[0m  [["liker_type", "User"], ["likeable_type", "Review"], ["likeable_id", 215]]
+[active_model_serializers]   [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC  [["commentable_id", 215], ["commentable_type", "Review"]]
+[active_model_serializers]   [1m[36mReport Load (0.4ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE "reports"."reportable_id" = $1 AND "reports"."reportable_type" = $2[0m  [["reportable_id", 215], ["reportable_type", "Review"]]
+[active_model_serializers]   [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+[active_model_serializers]   [1m[36mCoverImage Load (0.3ms)[0m  [1mSELECT  "cover_images".* FROM "cover_images" WHERE "cover_images"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 6]]
+[active_model_serializers]   [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 163]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 163]]
+[active_model_serializers]   [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)  [["liker_type", "User"], ["likeable_type", "Review"], ["likeable_id", 214]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC[0m  [["commentable_id", 214], ["commentable_type", "Review"]]
+[active_model_serializers]   [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE "reports"."reportable_id" = $1 AND "reports"."reportable_type" = $2  [["reportable_id", 214], ["reportable_type", "Review"]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "cover_images".* FROM "cover_images" WHERE "cover_images"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 6]]
+[active_model_serializers]   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 97]]
+[active_model_serializers]   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 97]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)[0m  [["liker_type", "User"], ["likeable_type", "Review"], ["likeable_id", 181]]
+[active_model_serializers]   [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC  [["commentable_id", 181], ["commentable_type", "Review"]]
+[active_model_serializers]   [1m[36mReport Load (0.7ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE "reports"."reportable_id" = $1 AND "reports"."reportable_type" = $2[0m  [["reportable_id", 181], ["reportable_type", "Review"]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 6]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cover_images".* FROM "cover_images" WHERE "cover_images"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 6]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."id" = $1  [["id", 43]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+[active_model_serializers]   [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)  [["liker_type", "User"], ["likeable_type", "Review"], ["likeable_id", 180]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC[0m  [["commentable_id", 180], ["commentable_type", "Review"]]
+[active_model_serializers]   [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE "reports"."reportable_id" = $1 AND "reports"."reportable_type" = $2  [["reportable_id", 180], ["reportable_type", "Review"]]
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 15]]
+[active_model_serializers]   [1m[35mCoverImage Load (0.2ms)[0m  SELECT  "cover_images".* FROM "cover_images" WHERE "cover_images"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 15]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."id" = $1[0m  [["id", 163]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 163]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)[0m  [["liker_type", "User"], ["likeable_type", "Review"], ["likeable_id", 179]]
+[active_model_serializers]   [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC  [["commentable_id", 179], ["commentable_type", "Review"]]
+[active_model_serializers]   [1m[36mReport Load (0.2ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE "reports"."reportable_id" = $1 AND "reports"."reportable_type" = $2[0m  [["reportable_id", 179], ["reportable_type", "Review"]]
+[active_model_serializers]   [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 131]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)[0m  [["liker_type", "User"], ["likeable_type", "Post"], ["likeable_id", 326]]
+[active_model_serializers]   [1m[35mCheckin Load (0.4ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 326]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC[0m  [["commentable_id", 326], ["commentable_type", "Post"]]
+[active_model_serializers]   [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 326], ["imageable_type", "Post"]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 178]]
+[active_model_serializers]   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)  [["liker_type", "User"], ["likeable_type", "Post"], ["likeable_id", 325]]
+[active_model_serializers]   [1m[36mCheckin Load (0.7ms)[0m  [1mSELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1[0m  [["post_id", 325]]
+[active_model_serializers]   [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC  [["commentable_id", 325], ["commentable_type", "Post"]]
+[active_model_serializers]   [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 325], ["imageable_type", "Post"]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 178]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)[0m  [["liker_type", "User"], ["likeable_type", "Post"], ["likeable_id", 324]]
+[active_model_serializers]   [1m[35mCheckin Load (0.3ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 324]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC[0m  [["commentable_id", 324], ["commentable_type", "Post"]]
+[active_model_serializers]   [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 324], ["imageable_type", "Post"]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 178]]
+[active_model_serializers]   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)  [["liker_type", "User"], ["likeable_type", "Post"], ["likeable_id", 323]]
+[active_model_serializers]   [1m[36mCheckin Load (0.3ms)[0m  [1mSELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1[0m  [["post_id", 323]]
+[active_model_serializers]   [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC  [["commentable_id", 323], ["commentable_type", "Post"]]
+[active_model_serializers]   [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 323], ["imageable_type", "Post"]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 178]]
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)[0m  [["liker_type", "User"], ["likeable_type", "Post"], ["likeable_id", 322]]
+[active_model_serializers]   [1m[35mCheckin Load (0.3ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 322]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2  ORDER BY created_at ASC[0m  [["commentable_id", 322], ["commentable_type", "Post"]]
+[active_model_serializers]   [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 322], ["imageable_type", "Post"]]
+[active_model_serializers]   [1m[36mPost Load (1.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 326]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 131]]
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 11]]
+[active_model_serializers]   [1m[35mCoverImage Load (0.2ms)[0m  SELECT  "cover_images".* FROM "cover_images" WHERE "cover_images"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 11]]
+[active_model_serializers]   [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 325]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 178]]
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 309]]
+[active_model_serializers]   [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 324]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 178]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 309]]
+[active_model_serializers]   [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 323]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 178]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 309]]
+[active_model_serializers]   [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 322]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 178]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 309]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (525.1ms)
+Completed 200 OK in 824ms (Views: 514.1ms | ActiveRecord: 37.1ms)
+[8953] - Gracefully shutting down workers...
+[8953] === puma shutdown: 2016-11-09 11:34:02 +0500 ===
+[8953] - Goodbye!
+Exiting
