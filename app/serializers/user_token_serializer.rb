@@ -32,6 +32,7 @@ class UserTokenSerializer < ActiveModel::Serializer
   def id
   	object.user.id
   end
+  
   def name
   	object.user.name
   end

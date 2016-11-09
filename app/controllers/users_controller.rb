@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 								u.referal_sender_notification
 							end
 						end
-						render json: user.identities.first , serializer: UserTokenSerializer,  status: :created
+						render json: user.identities.first , root: "user" , serializer: UserTokenSerializer,  status: :created
 					else
 						render json: user.errors, status: :unprocessable_entity
 					end
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
 						u.referal_sender_notification
 					end
 				end
-				render json: identity , serializer: UserTokenSerializer, status: :created
+				render json: identity  , root: "user" , serializer: UserTokenSerializer, status: :created
 				#UserMailer.welcome_email(user).deliver_later
 			else
 				render json: {'message' => 'Password length must be inbetween 8 to 16'} , status: :unprocessable_entity
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
 						user.role = 1
 						user.verified = true
 						user.save
-						render json: user.identities.first , serializer: UserTokenSerializer,  status: :created
+						render json: user.identities.first , root: "user" , serializer: UserTokenSerializer,  status: :created
 					else
 						render json: user.errors, status: :unprocessable_entity
 					end
@@ -80,7 +80,7 @@ class UsersController < ApplicationController
 				identity = Identity.new(:provider => 'Dishcuss' , :user_id => user.id)
 				identity.generate_token
 			    identity.save
-				render json: identity , serializer: UserTokenSerializer, status: :created
+				render json: identity , root: "user", serializer: UserTokenSerializer, status: :created
 			else
 				render json: {'message' => 'Password length must be inbetween 8 to 16'} , status: :unprocessable_entity
 			end
@@ -106,7 +106,7 @@ class UsersController < ApplicationController
 								end
 								identity.update_attributes(:token => ident[:token])
 								p identity.inspect
-					    		render json: identity , serializer: UserTokenSerializer, status: :ok
+					    		render json: identity , root: "user", serializer: UserTokenSerializer, status: :ok
 					    	else
 					    		render json: {'message' => 'Invalid user id'} , status: :unprocessable_entity
 					    	end
@@ -115,7 +115,7 @@ class UsersController < ApplicationController
 								iden.update_attributes(:token => nil)
 							end
 							identity = user.identities.create(user_signin_params["identities_attributes"]['0'])
-							render json: identity , serializer: UserTokenSerializer,  status: :created
+							render json: identity, root: "user" , serializer: UserTokenSerializer,  status: :created
 						end
 					else
 						render json: {'message' => 'Params are missing!'} , status: :unprocessable_entity
@@ -130,7 +130,7 @@ class UsersController < ApplicationController
 								end
 								identity.generate_token
 					    		identity.save
-					    		render json: identity , serializer: UserTokenSerializer, status: :ok
+					    		render json: identity , root: "user", serializer: UserTokenSerializer, status: :ok
 							else
 								render json: {'message' => 'Failed to signin'} , status: :bad_request
 							end
@@ -158,7 +158,7 @@ class UsersController < ApplicationController
 								u.referal_sender_notification
 							end
 						end
-						render json: user.identities.first , serializer: UserTokenSerializer,  status: :created
+						render json: user.identities.first , root: "user", serializer: UserTokenSerializer,  status: :created
 					else
 						render json: user.errors, status: :unprocessable_entity
 					end
@@ -179,7 +179,7 @@ class UsersController < ApplicationController
 					p "Identity"
 					p identity_t.count
 					identity_t.first.update(token: ident[:token])
-					render json: identity_t.first , serializer: UserTokenSerializer,  status: :ok
+					render json: identity_t.first , root: "user" , serializer: UserTokenSerializer,  status: :ok
 				else
 					p "Create New User"
 					if user = User.create(user_params)
@@ -193,7 +193,7 @@ class UsersController < ApplicationController
 								u.referal_sender_notification
 							end
 						end
-						render json: user.identities.first , serializer: UserTokenSerializer,  status: :created
+						render json: user.identities.first , root: "user" , serializer: UserTokenSerializer,  status: :created
 					else
 						render json: user.errors, status: :unprocessable_entity
 					end
