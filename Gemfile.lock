@@ -225,7 +225,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers
+  active_model_serializers (~> 0.10.0)
   acts_as_commentable
   bcrypt
   bootstrap-sass
@@ -257,4 +257,4 @@ DEPENDENCIES
   yaml_db
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
