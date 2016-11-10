@@ -1,8 +1,8 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :id, :updated_at , :title, :status , :writer , :likes , :checkin
+  attributes :id, :updated_at , :title, :status , :writer , :likes , :checkin , :comments , :photos
   #has_one :checkin
-  has_many :comments
-  has_many :photos
+  #has_many :comments
+  #has_many :photos
 
   def is_liked
     fo = false
@@ -43,4 +43,21 @@ class PostSerializer < ActiveModel::Serializer
   def likes
   	object.likers(User).as_json(only: [:id , :name , :username , :email , :avatar , :location , :gender , :dob , :role , :followees_count , :followers_count , :likees_count , :referal_code])
   end
+
+  def comments
+    c = []
+    object.comments.each do |rep|
+      c.push(CommentSerializer.new(rep , root: "comments"))
+    end
+    c
+  end
+
+  def photos
+    c = []
+    object.photos.each do |rep|
+      c.push(PhotoSerializer.new(rep , root: "photos"))
+    end
+    c
+  end
+
 end

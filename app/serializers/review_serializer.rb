@@ -1,7 +1,7 @@
 class ReviewSerializer < ActiveModel::Serializer
-  attributes :id , :updated_at , :title, :summary, :rating , :reviewable_id , :reviewable_type , :review_on , :image , :reviewer ,:likes , :shares
-  has_many :comments #, serializer: CommentSerializer, include: true
-  has_many :reports
+  attributes :id , :updated_at , :title, :summary, :rating , :reviewable_id , :reviewable_type , :review_on , :image , :reviewer ,:likes , :shares , :comments , :reports
+  #has_many :comments #, serializer: CommentSerializer, include: true
+  #has_many :reports
 
 
   def is_liked
@@ -52,5 +52,21 @@ class ReviewSerializer < ActiveModel::Serializer
 
   def likes
   	object.likers(User).as_json(only: [:id , :name , :username , :email , :avatar , :location , :gender , :dob , :role , :followees_count , :followers_count , :likees_count , :referal_code])
+  end
+
+  def comments
+    c = []
+    object.comments.each do |rep|
+      c.push(CommentSerializer.new(rep , root: "comments"))
+    end
+    c
+  end
+
+  def reports
+    c = []
+    object.reports.each do |rep|
+      c.push(ReportSerializer.new(rep , root: "reports"))
+    end
+    c
   end
 end

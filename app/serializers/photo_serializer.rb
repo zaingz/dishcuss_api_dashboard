@@ -1,6 +1,6 @@
 class PhotoSerializer < ActiveModel::Serializer
-  attributes :id , :image_url
-  has_many :reports
+  attributes :id , :image_url , :reports
+  #has_many :reports
 
   def image_url
   	as = ""
@@ -9,4 +9,13 @@ class PhotoSerializer < ActiveModel::Serializer
   	end
   	as
   end
+
+  def reports
+  	c = []
+    object.reports.each do |rep|
+      c.push(ReportSerializer.new(rep , root: "reports"))
+    end
+    c
+  end
+
 end

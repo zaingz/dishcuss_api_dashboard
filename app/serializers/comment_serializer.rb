@@ -1,6 +1,6 @@
 class CommentSerializer < ActiveModel::Serializer
-  attributes :id ,:title ,:comment ,:commentor , :created_at , :likes , :replies
-  has_many :reports
+  attributes :id ,:title ,:comment ,:commentor , :created_at , :likes , :replies , :reports
+  #has_many :reports
   #has_many :comments , root: 'replies'
 
   def commentor
@@ -25,6 +25,14 @@ class CommentSerializer < ActiveModel::Serializer
     c = []
     object.comments.each do |rep|
       c.push(CommentSerializer.new(rep , root: "replies"))
+    end
+    c
+  end
+
+  def reports
+    c = []
+    object.reports.each do |rep|
+      c.push(ReportSerializer.new(rep , root: "reports"))
     end
     c
   end
