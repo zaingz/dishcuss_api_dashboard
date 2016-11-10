@@ -92,16 +92,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  #<<: *default
-  #adapter: postgresql
-  #encoding: unicode
-  #username: penesvigrpryis
-  #password: _cbmPN06Bh7nJz5Y7cN2SwCFLh
-  #hostname: ec2-54-163-247-73.compute-1.amazonaws.com
-  #pool: 5
-  #port: 5432
-  #url: postgres://penesvigrpryis:_cbmPN06Bh7nJz5Y7cN2SwCFLh@ec2-54-163-247-73.compute-1.amazonaws.com:5432/ddf0ic2p9uevuu
-  #database: ddf0ic2p9uevuu
   <<: *default
   host: localhost
   adapter: postgresql
