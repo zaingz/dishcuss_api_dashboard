@@ -26,14 +26,21 @@ default: &default
 
 development:
   <<: *default
+  host: localhost
   adapter: postgresql
-  encoding: unicode
-  timeout: 5000
-  username: tayyab
-  database: dishcuss_api_test
+  encoding: utf8
+  database: dishcuss_production
+  pool: 5
+  username: dishcuss
+  password: dishcuss
+  #adapter: postgresql
+  #encoding: unicode
+  #timeout: 5000
+  #username: tayyab
+  #database: dishcuss_api_test
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+  #pool: 5
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
