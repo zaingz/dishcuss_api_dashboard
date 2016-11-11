@@ -13,10 +13,21 @@ class SearchController < ApplicationController
 
 	def search
 		if params[:name].present?
+			tot_review = Hash.new
+		    tot_review["res"] =  [] 
+		    tot_review["usr"] = []
 			use = User.where(role: 0).where("name ~* ?", params[:name]).limit(5)
 			res = Restaurant.approved.where("name ~* ?", params[:name]).limit(5)
-			#render json: res , each_serializer: RestaurantSocialSerializer , status: :ok
-			render json: {restaurant: ActiveModel::ArraySerializer.new(res , each_serializer: RestaurantSocialSerializer , root: "restaurants"), user: ActiveModel::ArraySerializer.new(use, each_serializer: UserSocialSerializer , root: "users")}  , status: :ok
+
+			use.each do |us|
+				 tot_review["usr"] << UserSocialSerializer.new(us)
+			end
+
+			res.each do |re|
+				tot_review["res"] << RestaurantSocialSerializer.new(re)
+			end
+			
+			render json: {restaurant: tot_review["res"] , user: tot_review["usr"] }  , status: :ok
 		else
 			render json: {'message' => 'Restaurant/User name missing !'} , status: :unprocessable_entity
 		end

@@ -63,6 +63,6 @@ class RestaurantNearbySerializer < ActiveModel::Serializer
   end
 
   def distance
-    (object.distance_to(serialization_options[:option_name])*1.6).round(1)
+    (object.distance_to(scope[:option_name])*1.6).round(1)
   end
 end

@@ -101,3 +101,8 @@
 	from bin/rails:3:in `load'
 	from bin/rails:3:in `<main>'
 === puma startup: 2016-11-10 12:10:37 +0500 ===
+=== puma startup: 2016-11-11 11:18:46 +0500 ===
+NOTE: ActiveModel::Serializer::ArraySerializer.new is deprecated; use ActiveModel::Serializer::CollectionSerializer. instead
+ActiveModel::Serializer::ArraySerializer.new called from /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/app/controllers/search_controller.rb:19.
+NOTE: ActiveModel::Serializer::ArraySerializer.new is deprecated; use ActiveModel::Serializer::CollectionSerializer. instead
+ActiveModel::Serializer::ArraySerializer.new called from /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/app/controllers/search_controller.rb:19.

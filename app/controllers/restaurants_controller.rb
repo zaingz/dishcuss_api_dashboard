@@ -178,7 +178,7 @@ class RestaurantsController < ApplicationController
 		if params[:lat].present? && params[:long].present?
 			res = Restaurant.near([params[:lat], params[:long]], 20, :units => :km)
 			lati_longi = [params[:lat] , params[:long]]
-			render json: res , each_serializer: RestaurantNearbySerializer , root: "restaurants" , option_name: lati_longi , status: :ok
+			render json: res , each_serializer: RestaurantNearbySerializer , root: "restaurants" ,  scope: { option_name: lati_longi }, status: :ok
 		else
 			render json: {'message' => 'Latitude longitude missing'} , status: :unprocessable_entity
 		end
