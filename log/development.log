@@ -7877,3 +7877,16 @@ Processing by SearchController#search as */*
 [active_model_serializers]   [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE "reports"."reportable_id" = $1 AND "reports"."reportable_type" = $2  [["reportable_id", 310], ["reportable_type", "Comment"]]
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2117.13ms)
 Completed 200 OK in 2165ms (Views: 1684.0ms | ActiveRecord: 440.8ms)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
