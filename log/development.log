@@ -11021,3 +11021,71 @@ If you want to use the new default:
     config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
   end
 . (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+
+
+Started GET "/api/version/0" for 127.0.0.1 at 2016-11-14 19:40:50 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"0"}
+  [1m[35mVersion Load (0.6ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 33ms (Views: 10.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/version/2" for 127.0.0.1 at 2016-11-14 19:40:56 +0500
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"2"}
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/version/3" for 127.0.0.1 at 2016-11-14 19:40:59 +0500
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"3"}
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/version/4" for 127.0.0.1 at 2016-11-14 19:41:02 +0500
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"4"}
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[36mVersion Load (0.6ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+
+
+Started GET "/api/version/4" for 127.0.0.1 at 2016-11-14 19:42:05 +0500
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"4"}
+  [1m[35mVersion Load (0.2ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 1.9ms)

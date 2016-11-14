@@ -6989,3 +6989,48 @@ Completed 200 OK in 123ms (Views: 25.1ms | ActiveRecord: 9.7ms)
 [30499] === puma shutdown: 2016-11-14 19:04:50 +0500 ===
 [30499] - Goodbye!
 Exiting
+=== puma startup: 2016-11-14 19:40:31 +0500 ===
+[31774] * Starting control server on unix:///tmp/puma-status-1479134431633-31774
+[31774] - Worker 0 (pid: 31811) booted, phase: 0
+[31774] - Worker 1 (pid: 31815) booted, phase: 0
+
+
+Started GET "/api/version/0" for 127.0.0.1 at 2016-11-14 19:40:50 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"0"}
+  [1m[35mVersion Load (0.6ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 33ms (Views: 10.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/version/2" for 127.0.0.1 at 2016-11-14 19:40:56 +0500
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"2"}
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/version/3" for 127.0.0.1 at 2016-11-14 19:40:59 +0500
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"3"}
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/version/4" for 127.0.0.1 at 2016-11-14 19:41:02 +0500
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"4"}
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/version/4" for 127.0.0.1 at 2016-11-14 19:42:05 +0500
+Processing by UsersController#version as HTML
+  Parameters: {"ver"=>"4"}
+  [1m[35mVersion Load (0.2ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 1.9ms)

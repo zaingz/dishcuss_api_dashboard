@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 	#before_action :authenticate , :except => [:create]
-	before_filter :restrict_access, except: [:create , :signin ,:restaurant_user_create , :verify_email , :social ]
-	before_filter :is_end_user, except: [:create , :signin , :social ,:restaurant_user_create , :signout , :verify_email , :notifications , :notification_seen , :update] 
+	before_filter :restrict_access, except: [:version , :create , :signin ,:restaurant_user_create , :verify_email , :social ]
+	before_filter :is_end_user, except: [:version , :create , :signin , :social ,:restaurant_user_create , :signout , :verify_email , :notifications , :notification_seen , :update] 
 
 	def create
 		if user = User.find_by_email(params[:user][:email])
@@ -548,11 +548,13 @@ class UsersController < ApplicationController
 	def version
 		c = Version.last
 		cd = false
-		if params[:ver].to_i > c.version.to_i
-			if c.force
+		
+		if c.force
+			if params[:ver].to_i != c.version.to_i
 				cd = true
 			end
 		end
+	
 		render json: {'block' => cd} , status: :ok
 	end
 
