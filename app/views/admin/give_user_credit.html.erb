@@ -1,15 +1,17 @@
 <div class="col-md-6 col-md-offset-3">
-  <h3>Give Credits</h3>
+  <h3>Latest Andriod Version</h3>
           
-    <%= form_tag(sent_credits_path , method: "post") do %>
+    <%= form_tag(set_version_path , method: "post") do %>
       <div class="box-body">
         <div class="form-group">
-          <%= label_tag 'email', 'Email'%>
-          <%= text_field_tag :email , '' , class: 'form-control', autofocus: true %>
+          <%= label_tag 'version', 'Version'%>
+          <%= text_field_tag :version , '' , class: 'form-control', autofocus: true %>
         </div>
+      </div>
+      <div class="box-body">
         <div class="form-group">
-          <%= label_tag 'credit', 'Credits'%>
-          <%= number_field_tag :credit, '' , class: 'form-control' %>
+          <%= label_tag 'force', 'Force Update '%>
+          <%= check_box_tag 'force', 'yes', true %>
         </div>
       </div>              
 

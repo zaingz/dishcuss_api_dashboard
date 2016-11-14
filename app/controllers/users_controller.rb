@@ -453,7 +453,7 @@ class UsersController < ApplicationController
 
 	def my_feeds
 		us = []
-		user = User.order(followers_count: :desc).each do |user|
+		user = User.where(role: 0).order(followers_count: :desc).each do |user|
 			if user != @current_user
 				if user.dp.present?
 					k = user.dp.url
@@ -543,6 +543,17 @@ class UsersController < ApplicationController
 		else
 			render json: {'message' => 'Missing Parameter'} , status: :unprocessable_entity
 		end
+	end
+
+	def version
+		c = Version.last
+		cd = false
+		if params[:ver].to_i > c.version.to_i
+			if c.force
+				cd = true
+			end
+		end
+		render json: {'block' => cd} , status: :ok
 	end
 
 	private

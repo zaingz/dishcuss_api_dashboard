@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   scope 'api' do
 	  #resources :posts, except: [:new, :edit]
+    get 'version/:ver' => 'users#version'
 	  resources :categories, only: [:create, :index]
 	  #mount Knock::Engine => "/knock"
 	  
@@ -158,8 +159,9 @@ Rails.application.routes.draw do
   get 'admin/notification_:id' => 'admin#notification' , as: 'superadmin_notification'
   get 'admin/block_:id' => 'admin#end_user_block' , as: 'block_user'
   get 'admin/unblock_:id' => 'admin#end_user_unblock' , as: 'unblock_user'
-  get 'admin/give_credits' => 'admin#give_user_credit' , as: 'give_credits'
+  get 'admin/versions' => 'admin#give_user_credit' , as: 'give_credits'
   post 'admin/sent_credits' => 'admin#credits_sent' , as: 'sent_credits'
+  post 'admin/set_versions' => 'admin#set_version' , as: 'set_version'
 
 
 

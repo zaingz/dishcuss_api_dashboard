@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108103044) do
+ActiveRecord::Schema.define(version: 20161114123208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20161108103044) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",       default: ""
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "categories_food_items", id: false, force: :cascade do |t|
@@ -37,18 +37,18 @@ ActiveRecord::Schema.define(version: 20161108103044) do
   add_index "categories_food_items", ["category_id", "food_item_id"], name: "index_categories_food_items_on_category_id_and_food_item_id", using: :btree
 
   create_table "checkins", force: :cascade do |t|
-    t.string   "address",       default: ""
+    t.string   "address"
     t.integer  "post_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.float    "lat",           default: 0.0
-    t.float    "long",          default: 0.0
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.float    "lat"
+    t.float    "long"
     t.integer  "restaurant_id"
   end
 
   create_table "comments", force: :cascade do |t|
     t.string   "title",            limit: 50, default: ""
-    t.text     "comment",                     default: ""
+    t.text     "comment"
     t.integer  "commentable_id"
     t.string   "commentable_type"
     t.integer  "user_id"
@@ -111,10 +111,10 @@ ActiveRecord::Schema.define(version: 20161108103044) do
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
 
   create_table "food_items", force: :cascade do |t|
-    t.string   "name",         default: ""
-    t.float    "price",        default: 0.0
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "name"
+    t.float    "price"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "likers_count", default: 0
     t.integer  "section_id"
   end
@@ -150,18 +150,18 @@ ActiveRecord::Schema.define(version: 20161108103044) do
   add_index "likes", ["liker_id", "liker_type"], name: "fk_likes", using: :btree
 
   create_table "menus", force: :cascade do |t|
-    t.string   "name",          default: ""
-    t.text     "summary",       default: ""
+    t.string   "name"
+    t.text     "summary"
     t.integer  "restaurant_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "messages", force: :cascade do |t|
-    t.text     "body",          default: ""
+    t.text     "body"
     t.integer  "status",        default: 0
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "sender_id"
     t.string   "sender_type"
     t.integer  "reciever_id"
@@ -182,32 +182,32 @@ ActiveRecord::Schema.define(version: 20161108103044) do
     t.string   "notifier_type"
     t.integer  "target_id"
     t.string   "target_type"
-    t.text     "body",          default: ""
+    t.text     "body"
     t.boolean  "seen",          default: false
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end
 
   create_table "offer_images", force: :cascade do |t|
-    t.string   "image",      default: ""
+    t.string   "image"
     t.integer  "qrcode_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "photos", force: :cascade do |t|
     t.integer  "imageable_id"
     t.string   "imageable_type"
-    t.string   "image",          default: ""
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "image"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",        default: ""
-    t.text     "status",       default: ""
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "title"
+    t.text     "status"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "user_id"
     t.integer  "likers_count", default: 0
     t.integer  "shares",       default: 0
@@ -243,19 +243,19 @@ ActiveRecord::Schema.define(version: 20161108103044) do
   end
 
   create_table "reports", force: :cascade do |t|
-    t.text     "reason",          default: ""
+    t.text     "reason"
     t.integer  "user_id"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "reportable_id"
     t.string   "reportable_type"
   end
 
   create_table "restaurants", force: :cascade do |t|
-    t.string   "name",            default: ""
+    t.string   "name"
     t.datetime "opening_time"
     t.datetime "closing_time"
-    t.string   "location",        default: ""
+    t.string   "location"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "approved",        default: false
@@ -264,8 +264,8 @@ ActiveRecord::Schema.define(version: 20161108103044) do
     t.integer  "likers_count",    default: 0
     t.boolean  "featured",        default: false
     t.boolean  "claim_credit",    default: false
-    t.float    "latitude",        default: 0.0
-    t.float    "longitude",       default: 0.0
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "per_head",        default: 0
     t.string   "typee",           default: "Restaurant"
   end
@@ -274,13 +274,13 @@ ActiveRecord::Schema.define(version: 20161108103044) do
   add_index "restaurants", ["name"], name: "index_restaurants_on_name", using: :btree
 
   create_table "reviews", force: :cascade do |t|
-    t.string   "title",           default: ""
-    t.text     "summary",         default: ""
+    t.string   "title"
+    t.text     "summary"
     t.integer  "rating"
     t.integer  "reviewable_id"
     t.string   "reviewable_type"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "reviewer_id"
     t.integer  "likers_count",    default: 0
     t.integer  "shares",          default: 0
@@ -289,10 +289,10 @@ ActiveRecord::Schema.define(version: 20161108103044) do
   add_index "reviews", ["reviewer_id"], name: "index_reviews_on_reviewer_id", using: :btree
 
   create_table "sections", force: :cascade do |t|
-    t.string   "title",      default: ""
+    t.string   "title"
     t.integer  "menu_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -312,9 +312,6 @@ ActiveRecord::Schema.define(version: 20161108103044) do
     t.boolean  "verified",                default: false
     t.datetime "dob"
     t.string   "referal_code",            default: ""
-    t.string   "dp"
-    t.boolean  "referal_code_used",       default: false
-    t.string   "email_verification_code"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",           default: 0,     null: false
     t.datetime "current_sign_in_at"
@@ -323,8 +320,16 @@ ActiveRecord::Schema.define(version: 20161108103044) do
     t.inet     "last_sign_in_ip"
     t.boolean  "block",                   default: false
     t.string   "encrypted_password"
-    t.string   "reset_password_token"
-    t.string   "reset_password_sent_at"
+    t.string   "dp"
+    t.boolean  "referal_code_used",       default: false
+    t.string   "email_verification_code"
+  end
+
+  create_table "versions", force: :cascade do |t|
+    t.boolean  "force",      default: false
+    t.string   "version",    default: ""
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end

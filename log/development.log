@@ -9564,3 +9564,1460 @@ Processing by AdminController#end_users as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
   [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
 Completed 200 OK in 179ms (Views: 174.1ms | ActiveRecord: 3.8ms)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVersions (20161114123208)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (647.5ms)[0m  [1mCREATE TABLE "versions" ("id" serial primary key, "force" boolean DEFAULT 'f', "version" character varying DEFAULT '', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161114123208"]]
+  [1m[36m (18.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'call_nows'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories_food_items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'checkins'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cover_images'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'credit_adjustments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'credit_histories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'credits'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'dislikes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'follows'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'food_items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'gcm_devices'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'identities'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'likes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'menus'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'messages'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'newsfeeds'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'notifications'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'offer_images'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'photos'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'qrcodes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ratings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'referrals'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'reports'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'restaurants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'reviews'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sections'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'versions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+
+
+Started GET "/admin/credit_history" for 127.0.0.1 at 2016-11-14 17:42:34 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdminController#credit_history as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mCreditHistory Load (0.6ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 97]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 97]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 85]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 84]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 130]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 130]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 88]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 80]]
+  Rendered admin/credit_history.html.erb within layouts/admin (101.8ms)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 11.5ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    27:                 <tbody>
+    28:                   <% @history.each do |us| %>
+    29:                     <tr>
+    30:                       <td><%= us.user.email %></td>
+    31:                       <td><%= us.restaurant.name %></td>
+    32:                       <td><%= us.restaurant.location %></td>
+    33:                       <td><%= us.price %></td>
+  app/views/admin/credit_history.html.erb:30:in `block in _app_views_admin_credit_history_html_erb__4030042988135934992_47390184747040'
+  app/views/admin/credit_history.html.erb:28:in `_app_views_admin_credit_history_html_erb__4030042988135934992_47390184747040'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (432.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (450.6ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-14 17:42:40 +0500
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.5ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  Rendered admin/index.html.erb within layouts/admin (55.4ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 440ms (Views: 434.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:42:40 +0500
+
+
+Started GET "/admin/give_credits" for 127.0.0.1 at 2016-11-14 17:42:42 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (2.4ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 422ms (Views: 417.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/give_credits" for 127.0.0.1 at 2016-11-14 17:45:53 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.5ms)
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 153ms (Views: 149.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:45:54 +0500
+
+
+Started GET "/admin/give_credits" for 127.0.0.1 at 2016-11-14 17:49:50 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (2.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 205ms (Views: 163.2ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:49:51 +0500
+
+
+Started GET "/admin/give_credits" for 127.0.0.1 at 2016-11-14 17:54:10 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (3.7ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 485ms (Views: 434.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:54:11 +0500
+
+
+Started GET "/admin/give_credits" for 127.0.0.1 at 2016-11-14 17:54:48 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.4ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 156ms (Views: 152.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:54:48 +0500
+
+
+Started GET "/admin/give_credits" for 127.0.0.1 at 2016-11-14 17:54:57 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.4ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 150ms (Views: 145.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:54:58 +0500
+
+
+Started GET "/admin/give_credits" for 127.0.0.1 at 2016-11-14 17:55:09 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.7ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 146ms (Views: 141.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:55:09 +0500
+
+
+Started GET "/admin/give_credits" for 127.0.0.1 at 2016-11-14 17:55:11 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.9ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 110ms (Views: 106.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:55:11 +0500
+
+
+Started GET "/admin/give_credits" for 127.0.0.1 at 2016-11-14 17:58:17 +0500
+
+ActionController::RoutingError (No route matches [GET] "/admin/give_credits"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (50.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (264.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (401.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (417.2ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-14 17:58:22 +0500
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.8ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  Rendered admin/index.html.erb within layouts/admin (70.0ms)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 311ms (Views: 259.4ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:58:23 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 17:58:25 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (2.7ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 107ms (Views: 100.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 17:59:06 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.0ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 149ms (Views: 120.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 17:59:06 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-14 17:59:11 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LhJl1ZC2TCusF1e09NdyttY/1kQjZA4qh+NwT6Kjl+qj7MNUUw+PqbmjFR34hLvf9W80nBZDHoc09xWYniBFuQ==", "version"=>"1.252", "force"=>"yes", "commit"=>"Done"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "versions"
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.4ms)
+
+ActionView::MissingTemplate (Missing template admin/set_version, application/set_version with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee]}. Searched in:
+  * "/home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/app/views"
+  * "/home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/devise-4.0.1/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (27.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.7ms)
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-14 18:27:58 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LhJl1ZC2TCusF1e09NdyttY/1kQjZA4qh+NwT6Kjl+qj7MNUUw+PqbmjFR34hLvf9W80nBZDHoc09xWYniBFuQ==", "version"=>"1.252", "force"=>"yes", "commit"=>"Done"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "versions" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-11-14 18:27:58.590244"], ["updated_at", "2016-11-14 18:27:58.590244"]]
+  [1m[35m (73.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 134ms (ActiveRecord: 79.5ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 18:27:58 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (2.2ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 432ms (Views: 426.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 18:27:59 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 18:29:41 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.8ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 176ms (Views: 137.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 18:29:42 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-14 18:29:48 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qrNa/ekmnkN/k3aJdlUOZ2HiNjVzJKLvtNF9Xyo9AgEnTfx8Kp9dwWonNCB6BscOQrLU7UYDskIHxRiIFr7QUg==", "version"=>"1.2.25", "force"=>"yes", "commit"=>"Done"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "versions"
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` ("yes") to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from set_version at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/app/controllers/admin_controller.rb:203)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "versions" SET "version" = $1, "updated_at" = $2 WHERE "versions"."id" = $3[0m  [["version", nil], ["updated_at", "2016-11-14 18:29:48.432628"], ["id", 1]]
+  [1m[35m (27.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 54ms (ActiveRecord: 29.4ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 18:29:48 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.5ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 109ms (Views: 104.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 18:29:48 +0500
+  [1m[36mVersion Load (0.7ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  [1m[35mVersion Load (0.4ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 18:31:44 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (2.3ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 545ms (Views: 474.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 18:31:45 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-14 18:31:49 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWuowWCXcfVSw5tEZb1gUu3XVIsWIj45BPjuJ/ht13QYlQ5Aoy6yd0d32e1p7qk7zoe2UyMFLpS37IvwxO4FJw==", "version"=>"1.25.25", "force"=>"yes", "commit"=>"Done"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` ("yes") to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from set_version at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/app/controllers/admin_controller.rb:203)
+  [1m[35mSQL (0.5ms)[0m  UPDATE "versions" SET "version" = $1, "updated_at" = $2 WHERE "versions"."id" = $3  [["version", "yes"], ["updated_at", "2016-11-14 18:31:49.400920"], ["id", 1]]
+  [1m[36m (41.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 71ms (ActiveRecord: 45.2ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 18:31:49 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.6ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 165ms (Views: 161.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 18:31:49 +0500
+  [1m[36mVersion Load (0.7ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 18:34:39 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (4.1ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 519ms (Views: 437.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 18:34:40 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-14 18:34:45 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ksAwCXkO2gVNt2bDH+qpgcuDADKj7t130JsET8HoPgkfPpaIurcZh1gDJGoTuWDo6NPi6pbJzdpjj2GY/WvsWg==", "version"=>"1.25.26.25", "force"=>"yes", "commit"=>"Done"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "versions" SET "version" = $1, "force" = $2, "updated_at" = $3 WHERE "versions"."id" = $4  [["version", "1.25.26.25"], ["force", "t"], ["updated_at", "2016-11-14 18:34:45.287162"], ["id", 1]]
+  [1m[36m (22.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 45ms (ActiveRecord: 25.4ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 18:34:45 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.0ms)
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 179ms (Views: 174.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 18:34:45 +0500
+  [1m[36mVersion Load (0.7ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 19:00:21 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (2.3ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 562ms (Views: 496.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/AdminLTE.self-31f2d3c14018ddb1ff55bb2ba91bf60dfb66cf667f7cf94c4661dc4149d776c1.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/_all-skins.min.self-81adfcf6e181e882cce5dc4071edc47d11e5b8e65d7031e834da2f1a5f3bc669.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/AdminLTE.min.self-f5d7fbe7ea91e88b9a30549dfb15fc42a5aafca923b5610773114db3176e10ed.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-black-light.min.self-19920c83b652af5e7db2315a99f1f2c65329783ea095bd483b57c5fa6097953b.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-black.self-cf95982945ac99730e2484e9aa4e48fa64f11f2f1ecd82aa7707585117c72b4e.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/restaurant_admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/_all-skins.self-1729a64aea7e3646597987fd79c40c65cea56ace3e73928852091b48d9aac816.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-black.min.self-924086331a07cc613cb8f8fcec74bc9cc326d83aacf24058681cf9a6cca623fa.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-blue-light.self-a149b437973344ff4fd584648cab505f23c5d1b2915cfe539ce80e7144fdf925.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-blue-light.min.self-b775d93375539f310e13f61bc16de18933a7007ab93fda1bd9a67b8b4a1a1b6e.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-green-light.self-29b7d4dc950b3a180a1489708dffd6066d6411e1315a4bf2e92727c6167ed5fa.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-blue.self-0ed2fca23861f9936c5054ef12a78d3dc35d7053161424c4bbf4895eb24540bb.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-blue.min.self-b287081469e39c271fe7e63e068fce7d0594bb2ccb2c6f69b426240982f63491.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-green-light.min.self-624287fb0360c8f9fdaf6f5a42c5ade6bbc21ff921d7af5f4fe5fafaa54dd583.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-green.self-a385ca516a078eb2acd6a731651489e1d06ee55d1f815251073a9a77698352c0.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-green.min.self-d57be2b2db08a13f62dab650e4ed247cdfc5c8febbc9d084c0589e14e031ef74.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-purple-light.self-f5256028decd4444aae395a49d84155c0220dc9ba17d7609839f0d58e5d06d11.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-purple-light.min.self-c830db77d60c364f29926412a72f13f406725d0aabf527928336f07eafe35d1d.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-purple.self-8712d03471ed590570f97776727786c24396bc88d5fd15a0f5d62c7d95530c0a.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-purple.min.self-9fe0396fc8e8bb797922aad88d919233c6c9bc67cf8323c04782ab6755d6c835.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-red-light.self-04982e72efb0901d470fabb3729f5dc79187c20bf5e9c8308eaafc2ef61a45b6.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-red-light.min.self-2b74859c961c457ac0cd42f65e762ea0d17a3d021f111a24d5b77419673f9056.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-red.self-8c0ba4091bfb6f3e8c212f6510e67ef1b907fec502a11a858906579e781281ef.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-red.min.self-d875910605c3ef17a31e41980625eff23778b244cde88d63803cb1e46bdfa92a.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-yellow-light.self-dbe49bba6fd9851c474570bbabe291e60e4b7a6f0c3b51032d8f300e293300a8.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-yellow-light.min.self-0f9ba425ae3bd77f7d314508bd5001175eb53b799956f4c7b1587def5557cf27.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:22 +0500
+
+
+Started GET "/assets/skins/skin-yellow.self-21587140f0e9fc8119ee2f4f54ea1a7e8683bdc14a3c8dc728a9f398001a587f.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/skins/skin-black-light.self-d133eaf349d4b0e809a0beeb219455a0b3ed783217233bc327f31ab2b7e63fd8.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/skins/skin-yellow.min.self-39908ebf80b293071a9a17905c598601a1be5a9a4bc221758798dabb9c0cafc5.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/application.self-b54b5bdb404c9ab9039876f4cd61db6e6968660566e0b7cca57dd086f03557a2.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/tabi.self-1feb98a0a36dc0f02aef1362a814b460d25136c7d4ba9461c0078206d18a38e8.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/web.self-cc1786589e2742c7e80af1ee80b0f0dc9dfe3c6ea74cc150b6fba6ba41302fcf.css?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/classie.self-6977e130d2dc21c0fe794d91a94b6a69eaa2d5bc630e4e39e90844c99c4186d0.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/jquery.smooth-scroll.min.self-cc00116f250944fd94e41e7c2ca2b906c06111e921b8829fab6f7cf55e996256.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/icheck.self-3d86448d48b23d0bdaeb7e7dc5e655bf358bbc8d570d51bb74c971beabd98f54.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/notificationFx.self-8d38dc9ebf892cb9382b78a2d9235e18047e584f37749b9420f1c7d16d2c6264.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/modernizr.custom.self-740da7d147dfd7abbeb2a959619165ed84d71fee4016c9ff31d96a00e1468e87.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/rating.self-516a95c2ef583bb545c55640dc74212eec7c69ec9c0a707818ecc086d30b2197.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/myScript.self-232f8759cc4e05ff74957bf3d4ce5a54d1a5dae7def9d8dc3424e6f962ee462d.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/signup.self-414ae8521418f38fc3f20b4721b84142b04606a48486491cdbf84973438d37f5.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/notifications.self-6921af6d53643e0a5208dbefa182fed36388d5ad9efd6aea011dea8b775041b8.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/restaurant_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started GET "/assets/web.self-538d6440534fa5f615e8a26932792a82a2e4a33a97886e2d815eab8fc216d415.js?body=1" for 127.0.0.1 at 2016-11-14 19:00:23 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-14 19:00:27 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xQsZnBMa4QgWuNbm8EtwLzQW7om6X6qrL7IBtWxJXldI9b8d0KMiigMMlE/8GLlGF0YMUY94ugacpmRiUMqMBA==", "version"=>"1", "force"=>"yes", "commit"=>"Done"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "versions" SET "version" = $1, "updated_at" = $2 WHERE "versions"."id" = $3  [["version", "1"], ["updated_at", "2016-11-14 19:00:27.180235"], ["id", 1]]
+  [1m[36m (22.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 42ms (ActiveRecord: 26.5ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-14 19:00:27 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.6ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 115ms (Views: 109.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-14 19:00:27 +0500
+
+
+Started GET "/api/user/12" for 127.0.0.1 at 2016-11-14 19:01:18 +0500
+
+ActionController::RoutingError (No route matches [GET] "/api/user/12"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (118.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (373.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (392.2ms)
+
+
+Started GET "/api/version/12" for 127.0.0.1 at 2016-11-14 19:01:27 +0500
+Processing by UsersController#version as */*
+  Parameters: {"ver"=>"12"}
+  Rendered text template (0.0ms)
+Filter chain halted as :restrict_access rendered or redirected
+Completed 401 Unauthorized in 81ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/version/12" for 127.0.0.1 at 2016-11-14 19:03:25 +0500
+Processing by UsersController#version as */*
+  Parameters: {"ver"=>"12"}
+  [1m[35mIdentity Exists (104.9ms)[0m  SELECT  1 AS one FROM "identities" WHERE "identities"."token" = $1 LIMIT 1  [["token", "twsaiswahtter185792632349733"]]
+  Rendered text template (0.0ms)
+Filter chain halted as :restrict_access rendered or redirected
+Completed 401 Unauthorized in 428ms (Views: 2.9ms | ActiveRecord: 106.1ms)
+  [1m[36mIdentity Load (0.7ms)[0m  [1mSELECT  "identities".* FROM "identities"  ORDER BY "identities"."id" DESC LIMIT 1[0m
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+
+
+Started GET "/api/version/12" for 127.0.0.1 at 2016-11-14 19:03:57 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#version as */*
+  Parameters: {"ver"=>"12"}
+  [1m[35mIdentity Exists (0.4ms)[0m  SELECT  1 AS one FROM "identities" WHERE "identities"."token" = $1 LIMIT 1  [["token", "14785236912345689sdf737646746841657865"]]
+  [1m[36mIdentity Load (0.4ms)[0m  [1mSELECT  "identities".* FROM "identities" WHERE "identities"."token" = $1 LIMIT 1[0m  [["token", "14785236912345689sdf737646746841657865"]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 216]]
+  [1m[36mVersion Load (0.7ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 123ms (Views: 25.1ms | ActiveRecord: 9.7ms)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)

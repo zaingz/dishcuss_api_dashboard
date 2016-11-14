@@ -194,6 +194,21 @@ class AdminController < ApplicationController
 		redirect_to :back
 	end
 
+	def set_version
+		c = Version.all.count
+		vc = false
+		if params[:force] == 'yes'
+			vc = true
+		end
+		if c == 0
+			Version.create(version: params[:version] , force: vc)
+		else
+			ve = Version.last
+			ve.update(version: params[:version] , force: vc)
+		end
+		redirect_to :back
+	end
+
 	private
 	def pundit_params
 		params.require(:user).permit(:email, :password , :name , :username)
