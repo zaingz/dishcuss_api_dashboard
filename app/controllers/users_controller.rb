@@ -12,7 +12,8 @@ class UsersController < ApplicationController
 				ident = params[:user][:identities_attributes]['0']
 				p ident
 				if ident[:provider].present? && ident[:uid].present? && ident[:token].present? 
-					if user = User.create(user_params)
+					if user = User.new(user_params)
+						user.save(validate: false)
 						user.update(verified: true)
 						user.generate_referral_code
 						user.save
@@ -147,7 +148,8 @@ class UsersController < ApplicationController
 				p ident
 				if ident[:uid].present? && ident[:token].present? 
 					p "User Create"
-					if user = User.create(user_params)
+					if user = User.new(user_params)
+						user.save(validate: false)
 						user.update(verified: true)
 						user.generate_referral_code
 						user.save
@@ -182,7 +184,8 @@ class UsersController < ApplicationController
 					render json: identity_t.first , root: "user" , serializer: UserTokenSerializer,  status: :ok
 				else
 					p "Create New User"
-					if user = User.create(user_params)
+					if user = User.new(user_params)
+						user.save(validate: false)
 						user.update(verified: true)
 						user.generate_referral_code
 						user.save

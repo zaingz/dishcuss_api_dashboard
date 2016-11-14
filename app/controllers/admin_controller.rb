@@ -184,8 +184,8 @@ class AdminController < ApplicationController
 	end
 
 	def credits_sent
-		if params[:email].present? && params[:credit].present?
-			if u = User.find_by_email(params[:email])
+		if params[:user_id].present? && params[:credit].present?
+			if u = User.find(params[:user_id])
 				c = u.credit
 				c.points = c.points + params[:credit].to_i
 				c.save

@@ -33,14 +33,12 @@ development:
   pool: 5
   username: dishcuss
   password: dishcuss
-  #adapter: postgresql
-  #encoding: unicode
-  #timeout: 5000
-  #username: tayyab
-  #database: dishcuss_api_test
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  #pool: 5
+  # adapter: postgresql
+  # encoding: unicode
+  # timeout: 5000
+  # username: tayyab
+  # database: dishcuss_api_test
+  # pool: 5
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -92,16 +90,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  #<<: *default
-  #adapter: postgresql
-  #encoding: unicode
-  #username: penesvigrpryis
-  #password: _cbmPN06Bh7nJz5Y7cN2SwCFLh
-  #hostname: ec2-54-163-247-73.compute-1.amazonaws.com
-  #pool: 5
-  #port: 5432
-  #url: postgres://penesvigrpryis:_cbmPN06Bh7nJz5Y7cN2SwCFLh@ec2-54-163-247-73.compute-1.amazonaws.com:5432/ddf0ic2p9uevuu
-  #database: ddf0ic2p9uevuu
   <<: *default
   host: localhost
   adapter: postgresql

@@ -22,26 +22,61 @@
                     <th>Email</th>
                     <th>Gender</th>
                     <th>Verified</th>
-                    <th>Referal Code</th>
+                    <!-- <th>Referal Code</th> -->
                     <th>Block</th>
+                    <th>Give Credit</th>
                   </tr>
                   </thead>
                   <tbody>
                     <% @user.each do |us| %>
+                      <% editi = "give_credit" + us.id.to_s %>
                       <tr>
                         <td><%= us.name %></td>
                         <td><%= us.username %></td>
                         <td><%= us.email %></td>
                         <td><%= us.gender %></td>
                         <td><%= us.verified ? 'Yes' : 'No' %></td>
-                        <td><%= us.referal_code %></td>
+                        <!-- <td><%= us.referal_code %></td> -->
                         <td><% if us.block  %>
                               <%= link_to "Yes" , unblock_user_path(us.id) %>
                             <% else  %>
                               <%= link_to "No" , block_user_path(us.id) %>
                             <% end  %>
                         </td>
+                        <td><%= link_to "Enter", "#"+editi, "data-toggle" => "modal" %></td>
                       </tr>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="<%= editi %>" role="dialog">
+                        <div class="modal-dialog">
+                        
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Give Credit</h4>
+                            </div>
+                            <div class="modal-body">
+                             <%= form_tag(sent_credits_path , method: "post" , :multipart => true) do %>
+                              <%= hidden_field_tag(:user_id, us.id) %> 
+                                <div class="box-body">
+                                  <div class="form-group">
+                                    <%= label_tag 'credit', 'Credit'%>
+                                    <%= number_field_tag :credit , '' , class: 'form-control', autofocus: true %>
+                                  </div>
+                                </div>                    
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <%= submit_tag "Done" , class: 'btn btn-default' %>
+                              <% end %> 
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+
+
                     <% end %>
                   </tbody>
               </table>

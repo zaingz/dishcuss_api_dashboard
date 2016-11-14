@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
 	has_many :identities ,dependent: :destroy
 	has_one :restaurant
 	has_many :reviews, :as => 'reviewable'
-	has_many :posts
-	has_many :reports
+	has_many :posts ,dependent: :destroy
+	has_many :reports ,dependent: :destroy
 	#has_many :messages
 	has_one :review ,:as => 'reviewer'
 	has_one :notification , :as => 'notifier'
@@ -27,17 +27,17 @@ class User < ActiveRecord::Base
   	has_many :dislikes , :as => 'disliker'
 
   	has_one :referral, :as => 'referred'
-  	has_many :referrals
+  	has_many :referrals ,dependent: :destroy
 
-  	has_one :credit
+  	has_one :credit ,dependent: :destroy
 
-  	has_many :credit_histories
+  	has_many :credit_histories ,dependent: :destroy
 
   	has_one :newsfeed , :as => 'feed'
 
-  	has_many :gcm_devices
+  	has_many :gcm_devices ,dependent: :destroy
 
-  	has_many :comments
+  	has_many :comments ,dependent: :destroy
 
   	def generate_referral_code
   		if self.username.present?
