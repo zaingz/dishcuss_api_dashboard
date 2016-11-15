@@ -57,9 +57,9 @@ class SearchController < ApplicationController
 		if params[:name].present?
 			p "Searching Sections"
 			arr = []
-			cat = Section.where('title ~* ?' , params[:name])
-			cat.each do |sec|
-				tempi = sec.menu.restaurant
+			cat = Restaurant.where('typee ~* ?' , params[:name]).uniq
+			cat.each do |res|
+				tempi = res
 				unless arr.include?(tempi)
 					arr << tempi
 				end
