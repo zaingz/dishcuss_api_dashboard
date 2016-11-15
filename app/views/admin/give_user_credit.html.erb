@@ -5,13 +5,13 @@
       <div class="box-body">
         <div class="form-group">
           <%= label_tag 'version', 'Version'%>
-          <%= text_field_tag :version , '' , class: 'form-control', autofocus: true %>
+          <%= text_field_tag :version , @version.version , class: 'form-control', autofocus: true %>
         </div>
       </div>
       <div class="box-body">
         <div class="form-group">
           <%= label_tag 'force', 'Force Update '%>
-          <%= check_box_tag 'force', 'yes', true %>
+          <%= check_box_tag 'force', "yes" , @version.force %>
         </div>
       </div>              
 

@@ -9013,3 +9013,1109 @@ Completed 200 OK in 163ms (Views: 154.4ms | ActiveRecord: 2.9ms)
 [16245] === puma shutdown: 2016-11-15 14:25:07 +0500 ===
 [16245] - Goodbye!
 Exiting
+=== puma startup: 2016-11-15 15:22:16 +0500 ===
+[21110] * Starting control server on unix:///tmp/puma-status-1479205336775-21110
+[21110] - Worker 0 (pid: 21146) booted, phase: 0
+[21110] - Worker 1 (pid: 21150) booted, phase: 0
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-15 15:23:07 +0500
+
+PG::ConnectionBad (FATAL:  password authentication failed for user "dishcuss"
+FATAL:  password authentication failed for user "dishcuss"
+):
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (881.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (901.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-15 15:23:27 +0500
+
+PG::ConnectionBad (FATAL:  password authentication failed for user "dishcuss"
+FATAL:  password authentication failed for user "dishcuss"
+):
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (48.6ms)
+[21110] - Gracefully shutting down workers...
+[21110] === puma shutdown: 2016-11-15 15:23:29 +0500 ===
+[21110] - Goodbye!
+Exiting
+=== puma startup: 2016-11-15 15:23:33 +0500 ===
+[21280] * Starting control server on unix:///tmp/puma-status-1479205413120-21280
+[21280] - Worker 0 (pid: 21318) booted, phase: 0
+[21280] - Worker 1 (pid: 21322) booted, phase: 0
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-15 15:23:33 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WebController#select_restaurant as HTML
+  Rendered web/select_restaurant.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 791ms (Views: 752.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:23:34 +0500
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 15:23:38 +0500
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.9ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  Rendered admin/index.html.erb within layouts/admin (132.1ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 427ms (Views: 291.9ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:23:39 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:23:52 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.3ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 120ms (Views: 115.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:25:11 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (43.2ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.3ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 123.9ms)
+
+SyntaxError (/home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/app/views/admin/give_user_credit.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+/home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/app/views/admin/give_user_credit.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/admin/give_user_credit.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+  app/views/admin/give_user_credit.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (398.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (418.6ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:25:25 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.2ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.2ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 138ms (Views: 134.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:25:25 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:25:51 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.3ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 129ms (Views: 121.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:25:51 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:28:39 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (2.3ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 503ms (Views: 442.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:28:40 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:28:46 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ZUmrZeR/mypGuc9J6QOtdqcXonlZANotbL9XCEJXI5aLQsVCo2Rz5sL//zmM8i10l6I9q7kaLCdYXIMmox3NQ==", "version"=>"2", "commit"=>"Done"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "versions"
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "versions" SET "version" = $1, "force" = $2, "updated_at" = $3 WHERE "versions"."id" = $4[0m  [["version", "2"], ["force", "f"], ["updated_at", "2016-11-15 15:28:46.347021"], ["id", 1]]
+  [1m[35m (17.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 29ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:28:46 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.9ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 166ms (Views: 157.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:28:46 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:28:51 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"du+4Qm5NqX1iLMGQ73OruOqU/kbvyzB3+5ZahYMgxIPRV5X681HG3lA92VEu5G244lYoOaRLW6/TRdXVOKXvOA==", "version"=>"2", "commit"=>"Done"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:28:51 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.6ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 113ms (Views: 106.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:28:51 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:28:56 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"au4SiV+g6wTJP5AtS8ujveRo7VAW8ivkOnifc3RfrvLNVj8xwryEp/suiOyKXGW97Ko7L11yQDwSqxAjz9qFSQ==", "version"=>"3", "commit"=>"Done"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.2ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "versions" SET "version" = $1, "updated_at" = $2 WHERE "versions"."id" = $3  [["version", "3"], ["updated_at", "2016-11-15 15:28:57.001347"], ["id", 1]]
+  [1m[36m (54.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 60ms (ActiveRecord: 55.5ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:28:57 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.5ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 100ms (Views: 96.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:28:57 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:29:26 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.8ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.2ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 119ms (Views: 113.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:29:26 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:29:31 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.6ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 114ms (Views: 110.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:29:31 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:34:29 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.4ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.3ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 124ms (Views: 120.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:34:29 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:34:33 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vCVyP90iROyiXTs1rNDTFrp2xPucY5bUjMcd20T2YRQbnV+HQD4rT5BMI/RtRxUWsrQShNfj/QykFJKL/3NKrw==", "version"=>"4", "force"=>"no", "commit"=>"Done"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.2ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "versions" SET "version" = $1, "updated_at" = $2 WHERE "versions"."id" = $3  [["version", "4"], ["updated_at", "2016-11-15 15:34:33.448639"], ["id", 1]]
+  [1m[36m (39.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 51ms (ActiveRecord: 40.5ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:34:33 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.8ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 109ms (Views: 105.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:34:33 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:35:05 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d3rYEm0OmgByUYdI+Nm62QY6yZTTq3Xf0oxZY7XbBGDQwvWq8BL1o0BAn4k5TnzZDvgf65grHgf6X9YzDl4v2w==", "version"=>"5", "force"=>"no", "commit"=>"Done"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "versions"
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "versions" SET "version" = $1, "updated_at" = $2 WHERE "versions"."id" = $3[0m  [["version", "5"], ["updated_at", "2016-11-15 15:35:05.522474"], ["id", 1]]
+  [1m[35m (44.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 51ms (ActiveRecord: 46.0ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:35:05 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.2ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 99ms (Views: 95.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:35:05 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:35:42 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.4ms)
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 109ms (Views: 104.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:35:42 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:35:53 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bhrVhqOVkp9Nuem02dis5QakOB5vwTT+B3FbE/tepuLJovg+Pon9PH+o8XUYT2rlDmbuYSRBXyYvotRDQNuNWQ==", "version"=>"5", "force"=>"yes", "commit"=>"Done"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.2ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "versions" SET "force" = $1, "updated_at" = $2 WHERE "versions"."id" = $3  [["force", "t"], ["updated_at", "2016-11-15 15:35:53.920713"], ["id", 1]]
+  [1m[36m (35.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 42ms (ActiveRecord: 36.8ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:35:53 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.2ms)
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 144ms (Views: 140.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:35:54 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:36:02 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xqlCZvSRqAiHJPuhfGHqjuVjr+yB0uUw2SnIn88m4JdhEW/eaY3Hq7U142C99iyO7aF5k8pSjujx+kfPdKPLLA==", "version"=>"5", "commit"=>"Done"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "versions"
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "versions" SET "force" = $1, "updated_at" = $2 WHERE "versions"."id" = $3[0m  [["force", "f"], ["updated_at", "2016-11-15 15:36:02.257463"], ["id", 1]]
+  [1m[35m (41.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 51ms (ActiveRecord: 43.6ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:36:02 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.4ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.6ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 125ms (Views: 121.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:36:02 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:37:38 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YV/Qwgu4O4D69YlKbRGWEBJsxf7fcxSjO1+pbyuU/BHG5/16lqRUI8jkkYushlAQGq4TgZTzf3sTjCY/kBHXqg==", "version"=>"6", "commit"=>"Done"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "versions" SET "version" = $1, "updated_at" = $2 WHERE "versions"."id" = $3  [["version", "6"], ["updated_at", "2016-11-15 15:37:38.956424"], ["id", 1]]
+  [1m[36m (41.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 50ms (ActiveRecord: 42.6ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:37:39 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.8ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (2.2ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 128ms (Views: 123.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:37:39 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:37:41 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X6+RwDiHjfz9wUiaeubHTuLrz5PaCxS4jiHZmzcDY9/4F7x4pZviX8/QUFu7cQFO6ikZ7JGLf2Cm8lbLjIZIZA==", "version"=>"6", "commit"=>"Done"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "versions"
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:37:41 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.7ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 113ms (Views: 109.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:37:42 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:38:37 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.2ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 107ms (Views: 103.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:38:38 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:38:42 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m0T0drI7CdEr60K7L+J1FKyxbcYDzqBrsbLB941gPfo8/NnOLydmchn6WnrudbMUpHO7uUhOy7OZYU6nNuUWQQ==", "version"=>"6", "force"=>"no", "commit"=>"Done"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:38:42 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.5ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 122ms (Views: 117.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:38:42 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:38:53 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JNwVgXxb6SlspKifkN7mapVkaGNAUqphvrmduLe0UmWDZDg54UeGil61sF5RSSBqnaa+HAvSwbmWahLoDDF53g==", "version"=>"6", "force"=>"no", "commit"=>"Done"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.6ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:38:53 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.7ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.6ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 109ms (Views: 103.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:38:54 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:40:38 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.1ms)
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 130ms (Views: 126.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:40:38 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:40:43 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LJ1wXdrEBkJtpediC7ls9e6bygupsOSBpHstOsH4yBeLJV3lR9hp4V+0/6PKLqr15lkcdOIwj1mMqKJqen3jrA==", "version"=>"6", "force"=>"no", "commit"=>"Done"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "versions"
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:40:43 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.7ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 137ms (Views: 132.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:40:43 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:41:53 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.7ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.2ms)
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 114ms (Views: 108.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:41:53 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:41:57 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"de5VRI8N0uDD8+pKqKUvQFRhQE+UdwuKd8z6XO816PzSVnj8EhG9Q/Hi8otpMulAXKOWMN/3YFJfH3UMVLDDRw==", "version"=>"6", "force"=>"yes", "commit"=>"Done"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "versions"
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "versions" SET "force" = $1, "updated_at" = $2 WHERE "versions"."id" = $3[0m  [["force", "t"], ["updated_at", "2016-11-15 15:41:57.770687"], ["id", 1]]
+  [1m[35m (40.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 46ms (ActiveRecord: 41.5ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:41:57 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.5ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 105ms (Views: 101.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:41:58 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:51:59 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (1.0ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (1.2ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 2.0ms)
+[21280] - Gracefully shutting down workers...
+[21280] === puma shutdown: 2016-11-15 15:53:22 +0500 ===
+[21280] - Goodbye!
+Exiting
+=== puma startup: 2016-11-15 15:54:48 +0500 ===
+[23606] * Starting control server on unix:///tmp/puma-status-1479207288228-23606
+[23606] - Worker 0 (pid: 23642) booted, phase: 0
+[23606] - Worker 1 (pid: 23646) booted, phase: 0
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:54:54 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.4ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (4.0ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 5330ms (Views: 5247.4ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:55:00 +0500
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 15:55:03 +0500
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (1.4ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  Rendered admin/index.html.erb within layouts/admin (98.9ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 245ms (Views: 220.6ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:55:04 +0500
+
+
+Started GET "/admin/restaurant_owner" for 127.0.0.1 at 2016-11-15 15:55:07 +0500
+Processing by AdminController#restaurant_users as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1 AND "restaurants"."owner_id" = $2  [["approved", "t"], ["owner_id", 109]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1 AND "restaurants"."owner_id" = $2[0m  [["approved", "t"], ["owner_id", 172]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1 AND "restaurants"."owner_id" = $2  [["approved", "t"], ["owner_id", 110]]
+  Rendered admin/restaurant_users.html.erb within layouts/admin (7.3ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 110ms (Views: 105.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:55:07 +0500
+
+
+Started GET "/admin/posts" for 127.0.0.1 at 2016-11-15 15:55:13 +0500
+Processing by AdminController#user_posts as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mPost Load (135.8ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 22]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 87]]
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 29]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  [1m[35mCheckin Load (0.1ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 31]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  [1m[35mCheckin Load (0.4ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 32]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  [1m[35mCheckin Load (0.6ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  [1m[35mCheckin Load (0.1ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT  "checkins".* FROM "checkins" WHERE "checkins"."post_id" = $1 LIMIT 1  [["post_id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  Rendered admin/user_posts.html.erb within layouts/admin (171.2ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 273ms (Views: 122.3ms | ActiveRecord: 142.8ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:55:13 +0500
+
+
+Started GET "/admin/end_users" for 127.0.0.1 at 2016-11-15 15:55:16 +0500
+Processing by AdminController#end_users as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 0]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mCredit Load (0.3ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 4]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 5]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 6]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 7]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 8]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 9]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 10]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 12]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 14]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 15]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 16]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 19]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 20]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 21]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 22]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 31]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 32]]
+  [1m[35mCredit Load (0.4ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 33]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 34]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 35]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 36]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 37]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 38]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 39]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 40]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 41]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 42]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 43]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 44]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 45]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 46]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 47]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 48]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 49]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 50]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 51]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 52]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 53]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 54]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 55]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 56]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 57]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 58]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 59]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 60]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 61]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 62]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 63]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 64]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 65]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 66]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 67]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 68]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 69]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 70]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 71]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 72]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 73]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 74]]
+  [1m[35mCredit Load (0.3ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 75]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 76]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 77]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 78]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 79]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 81]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 82]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 83]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 84]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 86]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 87]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 88]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 89]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 90]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 91]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 92]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 93]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 94]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 95]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 96]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 97]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 98]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 99]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 102]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 103]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 104]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 105]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 106]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 107]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 108]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 111]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 112]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 113]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 114]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 115]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 116]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 117]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 118]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 119]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 120]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 121]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 122]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 123]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 124]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 125]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 126]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 127]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 128]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 129]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 130]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 131]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 132]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 133]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 134]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 135]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 136]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 137]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 138]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 139]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 140]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 141]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 142]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 143]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 144]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 145]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 153]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 154]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 155]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 156]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 157]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 158]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 159]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 160]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 161]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 162]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 163]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 164]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 165]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 166]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 167]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 168]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 169]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 170]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 171]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 173]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 174]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 175]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 176]]
+  [1m[35mCredit Load (0.7ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 177]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 178]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 179]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 180]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 181]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 182]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 183]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 184]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 215]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 216]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 85]]
+  Rendered admin/end_users.html.erb within layouts/admin (276.7ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 373ms (Views: 338.4ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:55:16 +0500
+
+
+Started GET "/admin/restaurant_pending" for 127.0.0.1 at 2016-11-15 15:55:19 +0500
+Processing by AdminController#rest_pending as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1[0m  [["approved", "f"]]
+  Rendered admin/rest_pending.html.erb within layouts/admin (2.5ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 99ms (Views: 95.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:55:19 +0500
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:55:22 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mVersion Load (1.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.6ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 104ms (Views: 98.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:55:22 +0500
+
+
+Started POST "/admin/set_versions" for 127.0.0.1 at 2016-11-15 15:55:25 +0500
+Processing by AdminController#set_version as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NlyIqcd/B/U6KTpOpL7aXMKoMBKsLRmQ89BbgKB2K1OR5KURWmNoVgg4Io9lKRxcymrmbeetckjbA9TQG/MA6A==", "version"=>"6", "commit"=>"Done"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "versions"[0m
+  [1m[35mVersion Load (0.3ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "versions" SET "force" = $1, "updated_at" = $2 WHERE "versions"."id" = $3  [["force", "f"], ["updated_at", "2016-11-15 15:55:25.971703"], ["id", 1]]
+  [1m[36m (42.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/versions
+Completed 302 Found in 53ms (ActiveRecord: 43.8ms)
+
+
+Started GET "/admin/versions" for 127.0.0.1 at 2016-11-15 15:55:26 +0500
+Processing by AdminController#give_user_credit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1[0m
+  Rendered admin/give_user_credit.html.erb within layouts/admin (0.6ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 99ms (Views: 95.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 15:55:26 +0500
+[23606] - Gracefully shutting down workers...
+[23606] === puma shutdown: 2016-11-15 15:56:38 +0500 ===
+[23606] - Goodbye!
+Exiting

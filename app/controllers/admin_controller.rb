@@ -180,7 +180,7 @@ class AdminController < ApplicationController
 	end
 
 	def give_user_credit
-
+		@version = Version.last
 	end
 
 	def credits_sent
