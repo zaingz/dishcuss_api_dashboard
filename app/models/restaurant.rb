@@ -3,6 +3,9 @@ class Restaurant < ActiveRecord::Base
 	geocoded_by :location
 	after_validation :geocode
 
+	validates_presence_of :opening_time
+	validates_presence_of :closing_time
+
 	has_one :menu , dependent: :destroy
 	belongs_to :owner , :class_name => 'User'
 	has_many :reviews , :as => 'reviewable' ,dependent: :destroy

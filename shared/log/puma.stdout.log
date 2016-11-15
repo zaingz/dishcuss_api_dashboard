@@ -12307,3 +12307,508 @@ Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 16:53:18 +0500
 [26718] === puma shutdown: 2016-11-15 16:56:05 +0500 ===
 [26718] - Goodbye!
 Exiting
+=== puma startup: 2016-11-15 18:46:24 +0500 ===
+[29780] * Starting control server on unix:///tmp/puma-status-1479217584093-29780
+[29780] - Worker 1 (pid: 29821) booted, phase: 0
+[29780] - Worker 0 (pid: 29817) booted, phase: 0
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2016-11-15 18:46:26 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/admin/dashboard"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (726.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (742.7ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 18:46:29 +0500
+Processing by AdminController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-15 18:46:29 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/devise-4.0.1/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/devise-4.0.1/app/views/devise/sessions/new.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 1397ms (Views: 1365.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/AdminLTE.self-31f2d3c14018ddb1ff55bb2ba91bf60dfb66cf667f7cf94c4661dc4149d776c1.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/restaurant_admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/AdminLTE.min.self-f5d7fbe7ea91e88b9a30549dfb15fc42a5aafca923b5610773114db3176e10ed.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/_all-skins.self-1729a64aea7e3646597987fd79c40c65cea56ace3e73928852091b48d9aac816.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/_all-skins.min.self-81adfcf6e181e882cce5dc4071edc47d11e5b8e65d7031e834da2f1a5f3bc669.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-black-light.self-d133eaf349d4b0e809a0beeb219455a0b3ed783217233bc327f31ab2b7e63fd8.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-black.self-cf95982945ac99730e2484e9aa4e48fa64f11f2f1ecd82aa7707585117c72b4e.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-black-light.min.self-19920c83b652af5e7db2315a99f1f2c65329783ea095bd483b57c5fa6097953b.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-black.min.self-924086331a07cc613cb8f8fcec74bc9cc326d83aacf24058681cf9a6cca623fa.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-blue-light.self-a149b437973344ff4fd584648cab505f23c5d1b2915cfe539ce80e7144fdf925.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-blue-light.min.self-b775d93375539f310e13f61bc16de18933a7007ab93fda1bd9a67b8b4a1a1b6e.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-blue.self-0ed2fca23861f9936c5054ef12a78d3dc35d7053161424c4bbf4895eb24540bb.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-green-light.self-29b7d4dc950b3a180a1489708dffd6066d6411e1315a4bf2e92727c6167ed5fa.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-blue.min.self-b287081469e39c271fe7e63e068fce7d0594bb2ccb2c6f69b426240982f63491.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-green-light.min.self-624287fb0360c8f9fdaf6f5a42c5ade6bbc21ff921d7af5f4fe5fafaa54dd583.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-green.self-a385ca516a078eb2acd6a731651489e1d06ee55d1f815251073a9a77698352c0.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-green.min.self-d57be2b2db08a13f62dab650e4ed247cdfc5c8febbc9d084c0589e14e031ef74.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-purple-light.self-f5256028decd4444aae395a49d84155c0220dc9ba17d7609839f0d58e5d06d11.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-purple-light.min.self-c830db77d60c364f29926412a72f13f406725d0aabf527928336f07eafe35d1d.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-purple.self-8712d03471ed590570f97776727786c24396bc88d5fd15a0f5d62c7d95530c0a.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-purple.min.self-9fe0396fc8e8bb797922aad88d919233c6c9bc67cf8323c04782ab6755d6c835.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-red-light.self-04982e72efb0901d470fabb3729f5dc79187c20bf5e9c8308eaafc2ef61a45b6.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-red.min.self-d875910605c3ef17a31e41980625eff23778b244cde88d63803cb1e46bdfa92a.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-red-light.min.self-2b74859c961c457ac0cd42f65e762ea0d17a3d021f111a24d5b77419673f9056.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-red.self-8c0ba4091bfb6f3e8c212f6510e67ef1b907fec502a11a858906579e781281ef.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-yellow-light.self-dbe49bba6fd9851c474570bbabe291e60e4b7a6f0c3b51032d8f300e293300a8.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-yellow-light.min.self-0f9ba425ae3bd77f7d314508bd5001175eb53b799956f4c7b1587def5557cf27.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/skins/skin-yellow.self-21587140f0e9fc8119ee2f4f54ea1a7e8683bdc14a3c8dc728a9f398001a587f.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/application.self-b54b5bdb404c9ab9039876f4cd61db6e6968660566e0b7cca57dd086f03557a2.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/tabi.self-1feb98a0a36dc0f02aef1362a814b460d25136c7d4ba9461c0078206d18a38e8.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:31 +0500
+
+
+Started GET "/assets/web.self-cc1786589e2742c7e80af1ee80b0f0dc9dfe3c6ea74cc150b6fba6ba41302fcf.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/skins/skin-yellow.min.self-39908ebf80b293071a9a17905c598601a1be5a9a4bc221758798dabb9c0cafc5.css?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/classie.self-6977e130d2dc21c0fe794d91a94b6a69eaa2d5bc630e4e39e90844c99c4186d0.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/icheck.self-3d86448d48b23d0bdaeb7e7dc5e655bf358bbc8d570d51bb74c971beabd98f54.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/jquery.smooth-scroll.min.self-cc00116f250944fd94e41e7c2ca2b906c06111e921b8829fab6f7cf55e996256.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/modernizr.custom.self-740da7d147dfd7abbeb2a959619165ed84d71fee4016c9ff31d96a00e1468e87.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/myScript.self-232f8759cc4e05ff74957bf3d4ce5a54d1a5dae7def9d8dc3424e6f962ee462d.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/notificationFx.self-8d38dc9ebf892cb9382b78a2d9235e18047e584f37749b9420f1c7d16d2c6264.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/notifications.self-6921af6d53643e0a5208dbefa182fed36388d5ad9efd6aea011dea8b775041b8.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/rating.self-516a95c2ef583bb545c55640dc74212eec7c69ec9c0a707818ecc086d30b2197.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/restaurant_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/signup.self-414ae8521418f38fc3f20b4721b84142b04606a48486491cdbf84973438d37f5.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/web.self-538d6440534fa5f615e8a26932792a82a2e4a33a97886e2d815eab8fc216d415.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 18:46:32 +0500
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-15 18:46:39 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"URLLlglurz7PCuT+P1zOyJrC0m4fsBixYjQdZ3gZ5d5gUn5ui7hONHSZ8rIubbyTNIdn5Iq64GmDs6IBy3UUOA==", "user"=>{"email"=>"admin@dishcuss.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "admin@dishcuss.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (43.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2016-11-15 13:17:12.600032"], ["current_sign_in_at", "2016-11-15 18:46:39.417454"], ["sign_in_count", 24], ["updated_at", "2016-11-15 18:46:39.419054"], ["id", 100]]
+  [1m[36m (32.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/restaurants
+Completed 302 Found in 305ms (ActiveRecord: 76.7ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 18:46:39 +0500
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.8ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  Rendered admin/index.html.erb within layouts/admin (89.5ms)
+  [1m[35m (10.5ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 345ms (Views: 208.8ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:46:39 +0500
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 18:46:47 +0500
+Processing by RestaurantAdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (169.2ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 462ms (Views: 457.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:46:47 +0500
+
+
+Started POST "/rest_admin/search" for 127.0.0.1 at 2016-11-15 18:47:00 +0500
+Processing by RestaurantAdminController#check as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bH4lrVFrNpeSPTQ9Zij+Ru6+TGNk1qjUSCG+3Mf/FDXb7UZn5eqmPfPu6DWykdONT6u3kxjWM9v5VG7uQwFr1A==", "name"=>"Basd", "typee"=>"Fast Food", "opening_time"=>[""], "closing_time"=>[""], "cost"=>"", "call_now"=>"", "location"=>"", "commit"=>"Add"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+{"utf8"=>"✓", "authenticity_token"=>"bH4lrVFrNpeSPTQ9Zij+Ru6+TGNk1qjUSCG+3Mf/FDXb7UZn5eqmPfPu6DWykdONT6u3kxjWM9v5VG7uQwFr1A==", "name"=>"Basd", "typee"=>"Fast Food", "opening_time"=>[""], "closing_time"=>[""], "cost"=>"", "call_now"=>"", "location"=>"", "commit"=>"Add", "controller"=>"restaurant_admin", "action"=>"check"}
+Redirected to http://localhost:3000/rest_admin/restaurants
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 18:47:00 +0500
+Processing by RestaurantAdminController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (2.0ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.8ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 102ms (Views: 97.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:47:00 +0500
+
+
+Started POST "/rest_admin/search" for 127.0.0.1 at 2016-11-15 18:47:33 +0500
+Processing by RestaurantAdminController#check as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Twe9Gz4n0NLMv+hHpqqDY1B5DXUQy479NQEpG9jj4Pv4lN7RiqZAeK1sNE9yE66o8Wz2hWzLFfKEdPkpXB2fGg==", "name"=>"Desi", "typee"=>"Breakfast House", "opening_time"=>[""], "closing_time"=>[""], "cost"=>"522", "call_now"=>"+923338", "location"=>"Lahore Daewoo Express Bus Terminal, Lahore, Pakistan", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0055e9db764240 @tempfile=#<Tempfile:/tmp/RackMultipart20161115-29821-19gkbyx.jpg>, @original_filename="13411873_10153512308446423_1727094854152981802_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"13411873_10153512308446423_1727094854152981802_o.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Add"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+{"utf8"=>"✓", "authenticity_token"=>"Twe9Gz4n0NLMv+hHpqqDY1B5DXUQy479NQEpG9jj4Pv4lN7RiqZAeK1sNE9yE66o8Wz2hWzLFfKEdPkpXB2fGg==", "name"=>"Desi", "typee"=>"Breakfast House", "opening_time"=>[""], "closing_time"=>[""], "cost"=>"522", "call_now"=>"+923338", "location"=>"Lahore Daewoo Express Bus Terminal, Lahore, Pakistan", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0055e9db764240 @tempfile=#<Tempfile:/tmp/RackMultipart20161115-29821-19gkbyx.jpg>, @original_filename="13411873_10153512308446423_1727094854152981802_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"13411873_10153512308446423_1727094854152981802_o.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Add", "controller"=>"restaurant_admin", "action"=>"check"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (132.8ms)[0m  INSERT INTO "restaurants" ("name", "typee", "location", "per_head", "owner_id", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "Desi"], ["typee", "Breakfast House"], ["location", "Lahore Daewoo Express Bus Terminal, Lahore, Pakistan"], ["per_head", 522], ["owner_id", 100], ["latitude", 31.5063476], ["longitude", 74.3314364], ["created_at", "2016-11-15 18:47:34.835083"], ["updated_at", "2016-11-15 18:47:34.835083"]]
+  [1m[36m (54.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (120.5ms)[0m  [1mINSERT INTO "cover_images" ("image", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["image", "k66rvwwas5lnksxcvyxg.jpg"], ["restaurant_id", 32], ["created_at", "2016-11-15 18:47:35.284572"], ["updated_at", "2016-11-15 18:47:35.284572"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "cover_images" SET "image" = 'image/upload/v1479217661/k66rvwwas5lnksxcvyxg.jpg' WHERE "cover_images"."id" = $1  [["id", 29]]
+  [1m[36m (40.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (35.8ms)[0m  [1mINSERT INTO "call_nows" ("number", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["number", "+923338"], ["restaurant_id", 32], ["created_at", "2016-11-15 18:47:42.148505"], ["updated_at", "2016-11-15 18:47:42.148505"]]
+  [1m[35m (29.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/rest_admin/restaurants
+Completed 302 Found in 8232ms (ActiveRecord: 418.2ms)
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 18:47:42 +0500
+Processing by RestaurantAdminController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (4.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    107:                     <% @restaurant.each do |rest| %>
+    108:                       <tr>
+    109:                         <td><%= rest.name %></td>
+    110:                         <td><%= rest.opening_time.strftime("%H:%M %p") %></td>
+    111:                         <td><%= rest.closing_time.strftime("%H:%M %p") %></td>
+    112:                         <td><%= rest.location %></td>
+    113:                         <td><%= rest.approved ? "Yes" : "No" %></td>
+  app/views/restaurant_admin/index.html.erb:110:in `block in _app_views_restaurant_admin_index_html_erb___3086315033953255386_69883112665340'
+  app/views/restaurant_admin/index.html.erb:107:in `_app_views_restaurant_admin_index_html_erb___3086315033953255386_69883112665340'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.0ms)
+[29780] - Gracefully shutting down workers...
+[29780] === puma shutdown: 2016-11-15 18:48:08 +0500 ===
+[29780] - Goodbye!
+Exiting
+=== puma startup: 2016-11-15 18:49:04 +0500 ===
+[30108] * Starting control server on unix:///tmp/puma-status-1479217744846-30108
+[30108] - Worker 0 (pid: 30148) booted, phase: 0
+[30108] - Worker 1 (pid: 30152) booted, phase: 0
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 18:49:06 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantAdminController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1[0m  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (17.1ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 531ms (Views: 430.5ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:49:07 +0500
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 18:50:10 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantAdminController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1[0m  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (12.0ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 478ms (Views: 385.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:50:10 +0500
+
+
+Started POST "/rest_admin/search" for 127.0.0.1 at 2016-11-15 18:50:32 +0500
+Processing by RestaurantAdminController#check as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Up7cE5jIQHC1hQsiW1wXSxJCBSmaryj/9ME9EmyjqqHlDb/ZLEnQ2tRW1yqP5TqAs1f+2eavs/BFtO0g6F3VQA==", "name"=>"desi", "typee"=>"Breakfast House", "opening_time"=>[""], "closing_time"=>[""], "cost"=>"452", "call_now"=>"1245", "location"=>"Lahore Cantt. Railway Station, Lahore, Punjab, Pakistan", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f61c5350830 @tempfile=#<Tempfile:/tmp/RackMultipart20161115-30148-jg6036.jpg>, @original_filename="13411873_10153512308446423_1727094854152981802_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"13411873_10153512308446423_1727094854152981802_o.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Add"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+{"utf8"=>"✓", "authenticity_token"=>"Up7cE5jIQHC1hQsiW1wXSxJCBSmaryj/9ME9EmyjqqHlDb/ZLEnQ2tRW1yqP5TqAs1f+2eavs/BFtO0g6F3VQA==", "name"=>"desi", "typee"=>"Breakfast House", "opening_time"=>[""], "closing_time"=>[""], "cost"=>"452", "call_now"=>"1245", "location"=>"Lahore Cantt. Railway Station, Lahore, Punjab, Pakistan", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f61c5350830 @tempfile=#<Tempfile:/tmp/RackMultipart20161115-30148-jg6036.jpg>, @original_filename="13411873_10153512308446423_1727094854152981802_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"13411873_10153512308446423_1727094854152981802_o.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Add", "controller"=>"restaurant_admin", "action"=>"check"}
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (37.7ms)[0m  [1mINSERT INTO "restaurants" ("name", "typee", "location", "per_head", "owner_id", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "desi"], ["typee", "Breakfast House"], ["location", "Lahore Cantt. Railway Station, Lahore, Punjab, Pakistan"], ["per_head", 452], ["owner_id", 100], ["latitude", 31.530529], ["longitude", 74.3612409], ["created_at", "2016-11-15 18:50:33.541802"], ["updated_at", "2016-11-15 18:50:33.541802"]]
+  [1m[35m (28.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (27.1ms)[0m  INSERT INTO "cover_images" ("image", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["image", "en771a62dal0siakxozm.jpg"], ["restaurant_id", 33], ["created_at", "2016-11-15 18:50:33.648270"], ["updated_at", "2016-11-15 18:50:33.648270"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cover_images" SET "image" = 'image/upload/v1479217838/en771a62dal0siakxozm.jpg' WHERE "cover_images"."id" = $1[0m  [["id", 30]]
+  [1m[35m (42.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "call_nows" ("number", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["number", "1245"], ["restaurant_id", 33], ["created_at", "2016-11-15 18:50:39.418945"], ["updated_at", "2016-11-15 18:50:39.418945"]]
+  [1m[36m (10.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/rest_admin/restaurants
+Completed 302 Found in 6644ms (ActiveRecord: 153.0ms)
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 18:50:39 +0500
+Processing by RestaurantAdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1[0m  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (7.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    107:                     <% @restaurant.each do |rest| %>
+    108:                       <tr>
+    109:                         <td><%= rest.name %></td>
+    110:                         <td><%= rest.opening_time.strftime("%H:%M %p") %></td>
+    111:                         <td><%= rest.closing_time.strftime("%H:%M %p") %></td>
+    112:                         <td><%= rest.location %></td>
+    113:                         <td><%= rest.approved ? "Yes" : "No" %></td>
+  app/views/restaurant_admin/index.html.erb:110:in `block in _app_views_restaurant_admin_index_html_erb___803061127971793465_47239668685760'
+  app/views/restaurant_admin/index.html.erb:107:in `_app_views_restaurant_admin_index_html_erb___803061127971793465_47239668685760'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (402.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (422.7ms)
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 18:52:18 +0500
+Processing by RestaurantAdminController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (2.2ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 152ms (Views: 147.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:52:18 +0500
+[30108] - Gracefully shutting down workers...
+[30108] === puma shutdown: 2016-11-15 18:54:26 +0500 ===
+[30108] - Goodbye!
+Exiting
+=== puma startup: 2016-11-15 18:54:30 +0500 ===
+[30864] * Starting control server on unix:///tmp/puma-status-1479218070284-30864
+[30864] - Worker 0 (pid: 30902) booted, phase: 0
+[30864] - Worker 1 (pid: 30906) booted, phase: 0
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 18:54:32 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantAdminController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (1.0ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1[0m  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (13.8ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 530ms (Views: 455.0ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:54:33 +0500
+
+
+Started POST "/rest_admin/search" for 127.0.0.1 at 2016-11-15 18:54:55 +0500
+Processing by RestaurantAdminController#check as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4y1xkXI55KYC4i92GogVjzQ3dQpIFLHYjRz6yQUWN/9UvhJbxrh0DGMx837OMThElSKO+jQUKtc8aSr7gehIHg==", "name"=>"Desi", "typee"=>"Breakfast House", "opening_time"=>[""], "closing_time"=>[""], "cost"=>"250", "call_now"=>"025588865", "location"=>"Allama Iqbal International Airport, Lahore, Pakistan", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f38ddfe20f0 @tempfile=#<Tempfile:/tmp/RackMultipart20161115-30906-qgu5zk.jpg>, @original_filename="13411873_10153512308446423_1727094854152981802_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"13411873_10153512308446423_1727094854152981802_o.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Add"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+{"utf8"=>"✓", "authenticity_token"=>"4y1xkXI55KYC4i92GogVjzQ3dQpIFLHYjRz6yQUWN/9UvhJbxrh0DGMx837OMThElSKO+jQUKtc8aSr7gehIHg==", "name"=>"Desi", "typee"=>"Breakfast House", "opening_time"=>[""], "closing_time"=>[""], "cost"=>"250", "call_now"=>"025588865", "location"=>"Allama Iqbal International Airport, Lahore, Pakistan", "image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f38ddfe20f0 @tempfile=#<Tempfile:/tmp/RackMultipart20161115-30906-qgu5zk.jpg>, @original_filename="13411873_10153512308446423_1727094854152981802_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"13411873_10153512308446423_1727094854152981802_o.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Add", "controller"=>"restaurant_admin", "action"=>"check"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/rest_admin/restaurants
+Completed 302 Found in 1056ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 18:54:56 +0500
+Processing by RestaurantAdminController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1[0m  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (2.0ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 106ms (Views: 102.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:54:57 +0500
+[30864] - Gracefully shutting down workers...
+[30864] === puma shutdown: 2016-11-15 18:57:05 +0500 ===
+[30864] - Goodbye!
+Exiting
