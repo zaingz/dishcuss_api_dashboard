@@ -9,13 +9,13 @@ class User < ActiveRecord::Base
 	enum gender: [:male , :female]
 	enum role: [:end_user , :restaurant_owner , :admin , :food_pundit]
 	has_many :identities ,dependent: :destroy
-	has_one :restaurant
-	has_many :reviews, :as => 'reviewable'
+	has_one :restaurant ,dependent: :destroy
+	has_many :reviews, :as => 'reviewable' ,dependent: :destroy
 	has_many :posts ,dependent: :destroy
 	has_many :reports ,dependent: :destroy
 	#has_many :messages
-	has_one :review ,:as => 'reviewer'
-	has_one :notification , :as => 'notifier'
+	has_one :review ,:as => 'reviewer' ,dependent: :destroy
+	has_one :notification , :as => 'notifier' ,dependent: :destroy
 	accepts_nested_attributes_for :identities
 	#has_secure_password
 
@@ -23,17 +23,17 @@ class User < ActiveRecord::Base
   	acts_as_followable
   	acts_as_liker
 
-  	has_many :notifications , :as => 'target'
-  	has_many :dislikes , :as => 'disliker'
+  	has_many :notifications , :as => 'target' ,dependent: :destroy
+  	has_many :dislikes , :as => 'disliker' ,dependent: :destroy
 
-  	has_one :referral, :as => 'referred'
+  	has_one :referral, :as => 'referred' ,dependent: :destroy
   	has_many :referrals ,dependent: :destroy
 
   	has_one :credit ,dependent: :destroy
 
   	has_many :credit_histories ,dependent: :destroy
 
-  	has_one :newsfeed , :as => 'feed'
+  	has_one :newsfeed , :as => 'feed' ,dependent: :destroy
 
   	has_many :gcm_devices ,dependent: :destroy
 

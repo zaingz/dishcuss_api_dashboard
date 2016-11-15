@@ -11089,3 +11089,2019 @@ Processing by UsersController#version as HTML
   [1m[35mVersion Load (0.2ms)[0m  SELECT  "versions".* FROM "versions"  ORDER BY "versions"."id" DESC LIMIT 1
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
 Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 1.9ms)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-15 11:56:23 +0500
+
+PG::ConnectionBad (FATAL:  password authentication failed for user "dishcuss"
+FATAL:  password authentication failed for user "dishcuss"
+):
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (754.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (773.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-15 11:56:49 +0500
+
+PG::ConnectionBad (FATAL:  password authentication failed for user "dishcuss"
+FATAL:  password authentication failed for user "dishcuss"
+):
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-15 11:56:50 +0500
+
+PG::ConnectionBad (FATAL:  password authentication failed for user "dishcuss"
+FATAL:  password authentication failed for user "dishcuss"
+):
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-15 11:56:51 +0500
+
+PG::ConnectionBad (FATAL:  password authentication failed for user "dishcuss"
+FATAL:  password authentication failed for user "dishcuss"
+):
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.7ms)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-15 11:57:01 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (196.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WebController#select_restaurant as HTML
+  Rendered web/select_restaurant.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3519ms (Views: 3510.1ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/AdminLTE.self-31f2d3c14018ddb1ff55bb2ba91bf60dfb66cf667f7cf94c4661dc4149d776c1.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+Started GET "/assets/AdminLTE.min.self-f5d7fbe7ea91e88b9a30549dfb15fc42a5aafca923b5610773114db3176e10ed.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/restaurant_admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/_all-skins.self-1729a64aea7e3646597987fd79c40c65cea56ace3e73928852091b48d9aac816.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/_all-skins.min.self-81adfcf6e181e882cce5dc4071edc47d11e5b8e65d7031e834da2f1a5f3bc669.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-black-light.min.self-19920c83b652af5e7db2315a99f1f2c65329783ea095bd483b57c5fa6097953b.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/skins/skin-black.self-cf95982945ac99730e2484e9aa4e48fa64f11f2f1ecd82aa7707585117c72b4e.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-black.min.self-924086331a07cc613cb8f8fcec74bc9cc326d83aacf24058681cf9a6cca623fa.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-blue-light.self-a149b437973344ff4fd584648cab505f23c5d1b2915cfe539ce80e7144fdf925.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-blue-light.min.self-b775d93375539f310e13f61bc16de18933a7007ab93fda1bd9a67b8b4a1a1b6e.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-blue.self-0ed2fca23861f9936c5054ef12a78d3dc35d7053161424c4bbf4895eb24540bb.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-blue.min.self-b287081469e39c271fe7e63e068fce7d0594bb2ccb2c6f69b426240982f63491.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-green-light.self-29b7d4dc950b3a180a1489708dffd6066d6411e1315a4bf2e92727c6167ed5fa.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-green.self-a385ca516a078eb2acd6a731651489e1d06ee55d1f815251073a9a77698352c0.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-green-light.min.self-624287fb0360c8f9fdaf6f5a42c5ade6bbc21ff921d7af5f4fe5fafaa54dd583.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-green.min.self-d57be2b2db08a13f62dab650e4ed247cdfc5c8febbc9d084c0589e14e031ef74.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-purple-light.self-f5256028decd4444aae395a49d84155c0220dc9ba17d7609839f0d58e5d06d11.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-purple-light.min.self-c830db77d60c364f29926412a72f13f406725d0aabf527928336f07eafe35d1d.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-purple.self-8712d03471ed590570f97776727786c24396bc88d5fd15a0f5d62c7d95530c0a.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-purple.min.self-9fe0396fc8e8bb797922aad88d919233c6c9bc67cf8323c04782ab6755d6c835.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-red-light.self-04982e72efb0901d470fabb3729f5dc79187c20bf5e9c8308eaafc2ef61a45b6.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-red-light.min.self-2b74859c961c457ac0cd42f65e762ea0d17a3d021f111a24d5b77419673f9056.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-red.self-8c0ba4091bfb6f3e8c212f6510e67ef1b907fec502a11a858906579e781281ef.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-red.min.self-d875910605c3ef17a31e41980625eff23778b244cde88d63803cb1e46bdfa92a.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-black-light.self-d133eaf349d4b0e809a0beeb219455a0b3ed783217233bc327f31ab2b7e63fd8.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-yellow-light.self-dbe49bba6fd9851c474570bbabe291e60e4b7a6f0c3b51032d8f300e293300a8.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-yellow.min.self-39908ebf80b293071a9a17905c598601a1be5a9a4bc221758798dabb9c0cafc5.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-yellow-light.min.self-0f9ba425ae3bd77f7d314508bd5001175eb53b799956f4c7b1587def5557cf27.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/web.self-cc1786589e2742c7e80af1ee80b0f0dc9dfe3c6ea74cc150b6fba6ba41302fcf.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/skins/skin-yellow.self-21587140f0e9fc8119ee2f4f54ea1a7e8683bdc14a3c8dc728a9f398001a587f.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/tabi.self-1feb98a0a36dc0f02aef1362a814b460d25136c7d4ba9461c0078206d18a38e8.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:05 +0500
+
+
+Started GET "/assets/application.self-b54b5bdb404c9ab9039876f4cd61db6e6968660566e0b7cca57dd086f03557a2.css?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/classie.self-6977e130d2dc21c0fe794d91a94b6a69eaa2d5bc630e4e39e90844c99c4186d0.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/icheck.self-3d86448d48b23d0bdaeb7e7dc5e655bf358bbc8d570d51bb74c971beabd98f54.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/notificationFx.self-8d38dc9ebf892cb9382b78a2d9235e18047e584f37749b9420f1c7d16d2c6264.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/notifications.self-6921af6d53643e0a5208dbefa182fed36388d5ad9efd6aea011dea8b775041b8.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/jquery.smooth-scroll.min.self-cc00116f250944fd94e41e7c2ca2b906c06111e921b8829fab6f7cf55e996256.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/modernizr.custom.self-740da7d147dfd7abbeb2a959619165ed84d71fee4016c9ff31d96a00e1468e87.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/rating.self-516a95c2ef583bb545c55640dc74212eec7c69ec9c0a707818ecc086d30b2197.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/myScript.self-232f8759cc4e05ff74957bf3d4ce5a54d1a5dae7def9d8dc3424e6f962ee462d.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/restaurant_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/web.self-538d6440534fa5f615e8a26932792a82a2e4a33a97886e2d815eab8fc216d415.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/assets/signup.self-414ae8521418f38fc3f20b4721b84142b04606a48486491cdbf84973438d37f5.js?body=1" for 127.0.0.1 at 2016-11-15 11:57:06 +0500
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2016-11-15 11:58:05 +0500
+
+ActionController::RoutingError (No route matches [GET] "/admin/dashboard"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (27.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (134.7ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (411.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (429.4ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 11:58:13 +0500
+Processing by AdminController#index as HTML
+Completed 401 Unauthorized in 31ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-15 11:58:13 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/devise-4.0.1/app/views/devise/shared/_links.html.erb (3.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/devise-4.0.1/app/views/devise/sessions/new.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 328ms (Views: 162.1ms | ActiveRecord: 145.1ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 11:58:14 +0500
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-15 13:16:51 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WebController#select_restaurant as HTML
+  Rendered web/select_restaurant.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 863ms (Views: 852.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/AdminLTE.self-31f2d3c14018ddb1ff55bb2ba91bf60dfb66cf667f7cf94c4661dc4149d776c1.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/_all-skins.min.self-81adfcf6e181e882cce5dc4071edc47d11e5b8e65d7031e834da2f1a5f3bc669.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/AdminLTE.min.self-f5d7fbe7ea91e88b9a30549dfb15fc42a5aafca923b5610773114db3176e10ed.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/restaurant_admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/skins/_all-skins.self-1729a64aea7e3646597987fd79c40c65cea56ace3e73928852091b48d9aac816.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-black-light.self-d133eaf349d4b0e809a0beeb219455a0b3ed783217233bc327f31ab2b7e63fd8.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-black-light.min.self-19920c83b652af5e7db2315a99f1f2c65329783ea095bd483b57c5fa6097953b.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-black.self-cf95982945ac99730e2484e9aa4e48fa64f11f2f1ecd82aa7707585117c72b4e.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-black.min.self-924086331a07cc613cb8f8fcec74bc9cc326d83aacf24058681cf9a6cca623fa.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-blue-light.self-a149b437973344ff4fd584648cab505f23c5d1b2915cfe539ce80e7144fdf925.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-blue-light.min.self-b775d93375539f310e13f61bc16de18933a7007ab93fda1bd9a67b8b4a1a1b6e.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-blue.self-0ed2fca23861f9936c5054ef12a78d3dc35d7053161424c4bbf4895eb24540bb.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-blue.min.self-b287081469e39c271fe7e63e068fce7d0594bb2ccb2c6f69b426240982f63491.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-green-light.self-29b7d4dc950b3a180a1489708dffd6066d6411e1315a4bf2e92727c6167ed5fa.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-green-light.min.self-624287fb0360c8f9fdaf6f5a42c5ade6bbc21ff921d7af5f4fe5fafaa54dd583.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-green.self-a385ca516a078eb2acd6a731651489e1d06ee55d1f815251073a9a77698352c0.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-green.min.self-d57be2b2db08a13f62dab650e4ed247cdfc5c8febbc9d084c0589e14e031ef74.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-purple-light.self-f5256028decd4444aae395a49d84155c0220dc9ba17d7609839f0d58e5d06d11.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-purple-light.min.self-c830db77d60c364f29926412a72f13f406725d0aabf527928336f07eafe35d1d.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-purple.self-8712d03471ed590570f97776727786c24396bc88d5fd15a0f5d62c7d95530c0a.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-purple.min.self-9fe0396fc8e8bb797922aad88d919233c6c9bc67cf8323c04782ab6755d6c835.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-red-light.self-04982e72efb0901d470fabb3729f5dc79187c20bf5e9c8308eaafc2ef61a45b6.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-red-light.min.self-2b74859c961c457ac0cd42f65e762ea0d17a3d021f111a24d5b77419673f9056.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-red.self-8c0ba4091bfb6f3e8c212f6510e67ef1b907fec502a11a858906579e781281ef.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:52 +0500
+
+
+Started GET "/assets/skins/skin-red.min.self-d875910605c3ef17a31e41980625eff23778b244cde88d63803cb1e46bdfa92a.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/skins/skin-yellow-light.self-dbe49bba6fd9851c474570bbabe291e60e4b7a6f0c3b51032d8f300e293300a8.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/skins/skin-yellow-light.min.self-0f9ba425ae3bd77f7d314508bd5001175eb53b799956f4c7b1587def5557cf27.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/skins/skin-yellow.self-21587140f0e9fc8119ee2f4f54ea1a7e8683bdc14a3c8dc728a9f398001a587f.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/skins/skin-yellow.min.self-39908ebf80b293071a9a17905c598601a1be5a9a4bc221758798dabb9c0cafc5.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/tabi.self-1feb98a0a36dc0f02aef1362a814b460d25136c7d4ba9461c0078206d18a38e8.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/web.self-cc1786589e2742c7e80af1ee80b0f0dc9dfe3c6ea74cc150b6fba6ba41302fcf.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/application.self-b54b5bdb404c9ab9039876f4cd61db6e6968660566e0b7cca57dd086f03557a2.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/jquery.smooth-scroll.min.self-cc00116f250944fd94e41e7c2ca2b906c06111e921b8829fab6f7cf55e996256.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/notificationFx.self-8d38dc9ebf892cb9382b78a2d9235e18047e584f37749b9420f1c7d16d2c6264.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/classie.self-6977e130d2dc21c0fe794d91a94b6a69eaa2d5bc630e4e39e90844c99c4186d0.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/icheck.self-3d86448d48b23d0bdaeb7e7dc5e655bf358bbc8d570d51bb74c971beabd98f54.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/restaurant_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/modernizr.custom.self-740da7d147dfd7abbeb2a959619165ed84d71fee4016c9ff31d96a00e1468e87.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/myScript.self-232f8759cc4e05ff74957bf3d4ce5a54d1a5dae7def9d8dc3424e6f962ee462d.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/notifications.self-6921af6d53643e0a5208dbefa182fed36388d5ad9efd6aea011dea8b775041b8.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/rating.self-516a95c2ef583bb545c55640dc74212eec7c69ec9c0a707818ecc086d30b2197.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/signup.self-414ae8521418f38fc3f20b4721b84142b04606a48486491cdbf84973438d37f5.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/assets/web.self-538d6440534fa5f615e8a26932792a82a2e4a33a97886e2d815eab8fc216d415.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:53 +0500
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 13:16:59 +0500
+Processing by AdminController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-15 13:17:00 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/devise-4.0.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/devise-4.0.1/app/views/devise/sessions/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 157ms (Views: 131.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:17:00 +0500
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-15 13:17:11 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qt8dtowYDnB7EQSjLVmO5W2+ppa3EDuUhBoBYUoPtmIdWw1mKE1S4Px5oS/rC9pW9tu5AJxsIW5LOSSGOGi7Rw==", "user"=>{"email"=>"admin@dishcuss.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (122.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "admin@dishcuss.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2016-11-14 17:04:49.813486"], ["current_sign_in_at", "2016-11-15 13:17:12.600032"], ["sign_in_count", 23], ["updated_at", "2016-11-15 13:17:12.601776"], ["id", 100]]
+  [1m[36m (45.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/restaurants
+Completed 302 Found in 658ms (ActiveRecord: 168.3ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 13:17:12 +0500
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (163.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  Rendered admin/index.html.erb within layouts/admin (225.0ms)
+  [1m[35m (61.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 443ms (Views: 197.8ms | ActiveRecord: 229.7ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:17:13 +0500
+
+
+Started GET "/admin/end_users" for 127.0.0.1 at 2016-11-15 13:20:26 +0500
+Processing by AdminController#end_users as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  Rendered admin/end_users.html.erb within layouts/admin (96.8ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 393ms (Views: 335.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/admin/restaurant_owner" for 127.0.0.1 at 2016-11-15 13:22:17 +0500
+Processing by AdminController#restaurant_users as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1 AND "restaurants"."owner_id" = $2[0m  [["approved", "t"], ["owner_id", 109]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1 AND "restaurants"."owner_id" = $2  [["approved", "t"], ["owner_id", 172]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1 AND "restaurants"."owner_id" = $2[0m  [["approved", "t"], ["owner_id", 110]]
+  Rendered admin/restaurant_users.html.erb within layouts/admin (61.0ms)
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 206ms (Views: 198.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/admin/restaurant_owner" for 127.0.0.1 at 2016-11-15 13:22:44 +0500
+Processing by AdminController#restaurant_users as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1 AND "restaurants"."owner_id" = $2[0m  [["approved", "t"], ["owner_id", 109]]
+  [1m[35mRestaurant Load (0.5ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1 AND "restaurants"."owner_id" = $2  [["approved", "t"], ["owner_id", 172]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1 AND "restaurants"."owner_id" = $2[0m  [["approved", "t"], ["owner_id", 110]]
+  Rendered admin/restaurant_users.html.erb within layouts/admin (12.9ms)
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 131ms (Views: 125.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/end_users" for 127.0.0.1 at 2016-11-15 13:22:47 +0500
+Processing by AdminController#end_users as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 0]]
+  Rendered admin/end_users.html.erb within layouts/admin (128.4ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 268ms (Views: 262.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/end_users" for 127.0.0.1 at 2016-11-15 13:27:57 +0500
+Processing by AdminController#end_users as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[35mCredit Load (61.8ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 3]]
+  Rendered admin/end_users.html.erb within layouts/admin (471.8ms)
+Completed 500 Internal Server Error in 475ms (ActiveRecord: 145.7ms)
+
+ActionView::Template::Error (undefined method `points' for nil:NilClass):
+    36:                         <td><%= us.email %></td>
+    37:                         <td><%= us.gender %></td>
+    38:                         <td><%= us.verified ? 'Yes' : 'No' %></td>
+    39:                         <td><%= us.credit.points %></td>
+    40:                         <td><% if us.block  %>
+    41:                               <%= link_to "Yes" , unblock_user_path(us.id) %>
+    42:                             <% else  %>
+  app/views/admin/end_users.html.erb:39:in `block in _app_views_admin_end_users_html_erb___659003155770204667_70212435084520'
+  app/views/admin/end_users.html.erb:31:in `_app_views_admin_end_users_html_erb___659003155770204667_70212435084520'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (46.2ms)
+
+
+Started GET "/admin/end_users" for 127.0.0.1 at 2016-11-15 13:28:33 +0500
+Processing by AdminController#end_users as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."role" = $1  [["role", 0]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mCredit Load (0.3ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 4]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 5]]
+  [1m[35mCredit Load (0.3ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 6]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 7]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 8]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 9]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 10]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 12]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 14]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 15]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 16]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 19]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 20]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 21]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 22]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 31]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 32]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 33]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 34]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 35]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 36]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 37]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 38]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 39]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 40]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 41]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 42]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 43]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 44]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 45]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 46]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 47]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 48]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 49]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 50]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 51]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 52]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 53]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 54]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 55]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 56]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 57]]
+  [1m[36mCredit Load (0.7ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 58]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 59]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 60]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 61]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 62]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 63]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 64]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 65]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 66]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 67]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 68]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 69]]
+  [1m[36mCredit Load (0.7ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 70]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 71]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 72]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 73]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 74]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 75]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 76]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 77]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 78]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 79]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 81]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 82]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 83]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 84]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 86]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 87]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 88]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 89]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 90]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 91]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 92]]
+  [1m[35mCredit Load (0.6ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 93]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 94]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 95]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 96]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 97]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 98]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 99]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 102]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 103]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 104]]
+  [1m[35mCredit Load (0.3ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 105]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 106]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 107]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 108]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 111]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 112]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 113]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 114]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 115]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 116]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 117]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 118]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 119]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 120]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 121]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 122]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 123]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 124]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 125]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 126]]
+  [1m[35mCredit Load (0.3ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 127]]
+  [1m[36mCredit Load (0.5ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 128]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 129]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 130]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 131]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 132]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 133]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 134]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 135]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 136]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 137]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 138]]
+  [1m[35mCredit Load (0.6ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 139]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 140]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 141]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 142]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 143]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 144]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 145]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 153]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 154]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 155]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 156]]
+  [1m[36mCredit Load (0.6ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 157]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 158]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 159]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 160]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 161]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 162]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 163]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 164]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 165]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 166]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 167]]
+  [1m[35mCredit Load (0.7ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 168]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 169]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 170]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 171]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 173]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 174]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 175]]
+  [1m[36mCredit Load (0.6ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 176]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 177]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 178]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 179]]
+  [1m[36mCredit Load (0.3ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 180]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 181]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 182]]
+  [1m[35mCredit Load (0.1ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 183]]
+  [1m[36mCredit Load (0.1ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 184]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 215]]
+  [1m[36mCredit Load (0.2ms)[0m  [1mSELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1[0m  [["user_id", 216]]
+  [1m[35mCredit Load (0.2ms)[0m  SELECT  "credits".* FROM "credits" WHERE "credits"."user_id" = $1 LIMIT 1  [["user_id", 85]]
+  Rendered admin/end_users.html.erb within layouts/admin (292.5ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 422ms (Views: 380.9ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:28:33 +0500
+
+
+Started GET "/admin/restaurant_pending" for 127.0.0.1 at 2016-11-15 13:31:02 +0500
+Processing by AdminController#rest_pending as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."approved" = $1[0m  [["approved", "f"]]
+  Rendered admin/rest_pending.html.erb within layouts/admin (2.8ms)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 155ms (Views: 150.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 13:31:13 +0500
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.5ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  Rendered admin/index.html.erb within layouts/admin (36.7ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 130ms (Views: 123.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/admin/restaurant_31" for 127.0.0.1 at 2016-11-15 13:31:15 +0500
+Processing by AdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (66.5ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 31], ["reviewable_type", "Restaurant"]]
+  [1m[36mCheckin Load (21.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  [1m[35mCreditHistory Load (15.6ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1  [["restaurant_id", 31]]
+  Rendered admin/restaurant_detail.html.erb within layouts/admin (224.8ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 321ms (Views: 179.7ms | ActiveRecord: 135.7ms)
+
+
+Started GET "/rest_admin/restaurant_31" for 127.0.0.1 at 2016-11-15 13:31:18 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (0.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 31], ["reviewable_type", "Restaurant"]]
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  [1m[35mCreditHistory Load (0.3ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1  [["restaurant_id", 31]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (11.2ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.7ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 130ms (Views: 124.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rest_admin/qrcode_31" for 127.0.0.1 at 2016-11-15 13:31:23 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1 AND "restaurants"."id" = $2 LIMIT 1[0m  [["owner_id", 100], ["id", 31]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=31 [WHERE "restaurants"."owner_id" = ?]):
+  app/controllers/restaurant_admin_controller.rb:220:in `qrcode'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:31:39 +0500
+
+
+Started GET "/rest_admin/restaurant_31" for 127.0.0.1 at 2016-11-15 13:31:41 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (0.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 31], ["reviewable_type", "Restaurant"]]
+  [1m[36mCheckin Load (0.3ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  [1m[35mCreditHistory Load (0.4ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1  [["restaurant_id", 31]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (9.2ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 125ms (Views: 119.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:31:42 +0500
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 13:31:45 +0500
+Processing by RestaurantAdminController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1[0m  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (4.2ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 137ms (Views: 130.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/rest_admin/restaurants" for 127.0.0.1 at 2016-11-15 13:31:54 +0500
+Processing by RestaurantAdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.8ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1  [["owner_id", 100]]
+  Rendered restaurant_admin/index.html.erb within layouts/rest_admin (4.2ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 104ms (Views: 96.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/restaurant_31" for 127.0.0.1 at 2016-11-15 13:32:24 +0500
+Processing by AdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2[0m  [["reviewable_id", 31], ["reviewable_type", "Restaurant"]]
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 31]]
+  [1m[36mCreditHistory Load (0.3ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  Rendered admin/restaurant_detail.html.erb within layouts/admin (47.4ms)
+  [1m[35m (2.2ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 167ms (Views: 153.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/admin/restaurant_31" for 127.0.0.1 at 2016-11-15 13:32:30 +0500
+Processing by AdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2[0m  [["reviewable_id", 31], ["reviewable_type", "Restaurant"]]
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 31]]
+  [1m[36mCreditHistory Load (0.4ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  Rendered admin/restaurant_detail.html.erb within layouts/admin (4.7ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 104ms (Views: 99.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/restaurant_featured" for 127.0.0.1 at 2016-11-15 13:32:33 +0500
+Processing by AdminController#rest_featured as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."featured" = $1  [["featured", "t"]]
+  Rendered admin/rest_featured.html.erb within layouts/admin (3.1ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 136ms (Views: 131.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 13:32:37 +0500
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.6ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  Rendered admin/index.html.erb within layouts/admin (59.9ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 154ms (Views: 146.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin/restaurant_18" for 127.0.0.1 at 2016-11-15 13:32:43 +0500
+Processing by AdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2[0m  [["reviewable_id", 18], ["reviewable_type", "Restaurant"]]
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 18]]
+  Rendered admin/restaurant_detail.html.erb within layouts/admin (3.2ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 117ms (Views: 109.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2016-11-15 13:32:54 +0500
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.9ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 110]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 110]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 172]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 172]]
+  Rendered admin/index.html.erb within layouts/admin (40.9ms)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 161ms (Views: 156.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:32:54 +0500
+
+
+Started GET "/admin/restaurant_17" for 127.0.0.1 at 2016-11-15 13:33:01 +0500
+Processing by AdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.8ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mReview Load (0.7ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2[0m  [["reviewable_id", 17], ["reviewable_type", "Restaurant"]]
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 17]]
+  [1m[36mCreditHistory Load (0.2ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1[0m  [["restaurant_id", 17]]
+  Rendered admin/restaurant_detail.html.erb within layouts/admin (4.4ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3[0m  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_type" = $1 AND "notifications"."target_id" = $2 AND "notifications"."seen" = $3  [["target_type", "User"], ["target_id", 100], ["seen", false]]
+Completed 200 OK in 127ms (Views: 116.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/rest_admin/restaurant_17" for 127.0.0.1 at 2016-11-15 13:33:05 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2[0m  [["reviewable_id", 17], ["reviewable_type", "Restaurant"]]
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 17]]
+  [1m[36mCreditHistory Load (0.2ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1[0m  [["restaurant_id", 17]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (19.6ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 163ms (Views: 156.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rest_admin/qrcode_17" for 127.0.0.1 at 2016-11-15 13:33:06 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (1.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1 AND "restaurants"."id" = $2 LIMIT 1  [["owner_id", 100], ["id", 17]]
+Completed 404 Not Found in 6ms (ActiveRecord: 1.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=17 [WHERE "restaurants"."owner_id" = ?]):
+  app/controllers/restaurant_admin_controller.rb:220:in `qrcode'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (393.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (411.0ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:33:30 +0500
+
+
+Started GET "/rest_admin/restaurant_17" for 127.0.0.1 at 2016-11-15 13:33:40 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2[0m  [["reviewable_id", 17], ["reviewable_type", "Restaurant"]]
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 17]]
+  [1m[36mCreditHistory Load (0.2ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1[0m  [["restaurant_id", 17]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (5.6ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 114ms (Views: 108.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:33:41 +0500
+
+
+Started PUT "/rest_admin/update_17" for 127.0.0.1 at 2016-11-15 13:33:51 +0500
+Processing by RestaurantAdminController#update_rest as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hs9qNWml+ye8TNVzYPfo/1p3moA1lj8euOW3Ncg3QzEhd0eN9LmUhI5dzbKhYC7/UrVM/34WVMaQNjhlc7Joig==", "restaurant"=>{"name"=>"Dumpukht Kada", "opening_time"=>"07:00:00.000", "closing_time"=>"20:00:00.000", "location"=>"Street 143, H-Block, Phase-1, DHA Lahore, Pakistan World"}, "commit"=>"Update", "id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (44.4ms)[0m  UPDATE "restaurants" SET "opening_time" = $1, "closing_time" = $2, "location" = $3, "updated_at" = $4 WHERE "restaurants"."id" = $5  [["opening_time", "2016-11-15 07:00:00.000000"], ["closing_time", "2016-11-15 20:00:00.000000"], ["location", "Street 143, H-Block, Phase-1, DHA Lahore, Pakistan World"], ["updated_at", "2016-11-15 13:33:52.010229"], ["id", 17]]
+  [1m[36m (51.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/rest_admin/restaurant_17
+Completed 302 Found in 1006ms (ActiveRecord: 96.9ms)
+
+
+Started GET "/rest_admin/restaurant_17" for 127.0.0.1 at 2016-11-15 13:33:52 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 17], ["reviewable_type", "Restaurant"]]
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1[0m  [["restaurant_id", 17]]
+  [1m[35mCreditHistory Load (0.2ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1  [["restaurant_id", 17]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (7.1ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 114ms (Views: 109.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:33:52 +0500
+
+
+Started GET "/rest_admin/food_items_17" for 127.0.0.1 at 2016-11-15 13:33:59 +0500
+Processing by RestaurantAdminController#food_items as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (1.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mMenu Load (43.8ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 17]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.0ms)[0m  INSERT INTO "menus" ("name", "summary", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Menu"], ["summary", "Dumpukht Kada menu"], ["restaurant_id", 17], ["created_at", "2016-11-15 13:34:00.067562"], ["updated_at", "2016-11-15 13:34:00.067562"]]
+  [1m[36m (23.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/rest_admin/food_items_17
+Completed 302 Found in 158ms (ActiveRecord: 98.7ms)
+
+
+Started GET "/rest_admin/food_items_17" for 127.0.0.1 at 2016-11-15 13:34:00 +0500
+Processing by RestaurantAdminController#food_items as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mMenu Load (0.2ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 17]]
+  [1m[36mSection Load (39.2ms)[0m  [1mSELECT "sections".* FROM "sections" WHERE "sections"."menu_id" = $1[0m  [["menu_id", 10]]
+  [1m[35mCategory Load (59.9ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered restaurant_admin/food_items.html.erb within layouts/rest_admin (161.9ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.9ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 347ms (Views: 216.0ms | ActiveRecord: 105.1ms)
+
+
+Started GET "/rest_admin/restaurant_17" for 127.0.0.1 at 2016-11-15 13:34:07 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 17], ["reviewable_type", "Restaurant"]]
+  [1m[36mCheckin Load (0.1ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1[0m  [["restaurant_id", 17]]
+  [1m[35mCreditHistory Load (0.1ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1  [["restaurant_id", 17]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (5.1ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 114ms (Views: 109.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/rest_admin/notification_17" for 127.0.0.1 at 2016-11-15 13:34:13 +0500
+Processing by RestaurantAdminController#notifications as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1 AND "restaurants"."id" = $2 LIMIT 1[0m  [["owner_id", 100], ["id", 17]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=17 [WHERE "restaurants"."owner_id" = ?]):
+  app/controllers/restaurant_admin_controller.rb:187:in `notifications'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.3ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:34:17 +0500
+
+
+Started GET "/rest_admin/restaurant_17" for 127.0.0.1 at 2016-11-15 13:34:19 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 17], ["reviewable_type", "Restaurant"]]
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1[0m  [["restaurant_id", 17]]
+  [1m[35mCreditHistory Load (0.6ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1  [["restaurant_id", 17]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (6.6ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 124ms (Views: 118.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:34:20 +0500
+
+
+Started GET "/rest_admin/qrcode_17" for 127.0.0.1 at 2016-11-15 13:34:41 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1 AND "restaurants"."id" = $2 LIMIT 1[0m  [["owner_id", 100], ["id", 17]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=17 [WHERE "restaurants"."owner_id" = ?]):
+  app/controllers/restaurant_admin_controller.rb:220:in `qrcode'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.7ms)
+
+
+Started GET "/rest_admin/qrcode_17" for 127.0.0.1 at 2016-11-15 13:36:19 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35m (25.7ms)[0m  SELECT COUNT(*) FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  [["restaurant_id", 17]]
+  [1m[36mQrcode Load (19.0ms)[0m  [1mSELECT "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  ORDER BY "qrcodes"."created_at" DESC[0m  [["restaurant_id", 17]]
+  Rendered restaurant_admin/qrcode.html.erb within layouts/rest_admin (49.3ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.5ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 295ms (Views: 148.6ms | ActiveRecord: 68.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:36:20 +0500
+
+
+Started GET "/rest_admin/restaurant_17" for 127.0.0.1 at 2016-11-15 13:36:23 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (1.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2[0m  [["reviewable_id", 17], ["reviewable_type", "Restaurant"]]
+  [1m[35mCheckin Load (0.1ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 17]]
+  [1m[36mCreditHistory Load (0.2ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1[0m  [["restaurant_id", 17]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (29.6ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.9ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 131ms (Views: 121.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/rest_admin/notification_17" for 127.0.0.1 at 2016-11-15 13:36:28 +0500
+Processing by RestaurantAdminController#notifications as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1 AND "restaurants"."id" = $2 LIMIT 1  [["owner_id", 100], ["id", 17]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=17 [WHERE "restaurants"."owner_id" = ?]):
+  app/controllers/restaurant_admin_controller.rb:187:in `notifications'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.4ms)
+
+
+Started GET "/rest_admin/notification_17" for 127.0.0.1 at 2016-11-15 13:37:03 +0500
+Processing by RestaurantAdminController#notifications as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2[0m  [["target_id", 17], ["target_type", "Restaurant"]]
+  Rendered restaurant_admin/notifications.html.erb within layouts/rest_admin (3.4ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 655ms (Views: 595.1ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:37:04 +0500
+
+
+Started GET "/rest_admin/restaurant_17" for 127.0.0.1 at 2016-11-15 13:37:07 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2[0m  [["reviewable_id", 17], ["reviewable_type", "Restaurant"]]
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 17]]
+  [1m[36mCreditHistory Load (0.2ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1[0m  [["restaurant_id", 17]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (29.2ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.7ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 133ms (Views: 124.3ms | ActiveRecord: 4.9ms)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
+  [1m[36mQrcode Load (0.7ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1[0m
+  [1m[35mQrcode Load (0.7ms)[0m  SELECT  "qrcodes".* FROM "qrcodes"  ORDER BY "qrcodes"."id" DESC LIMIT 1
+  [1m[36mRestaurant Load (0.6ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+
+
+Started GET "/rest_admin/restaurant_31" for 127.0.0.1 at 2016-11-15 13:37:59 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 31], ["reviewable_type", "Restaurant"]]
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  [1m[35mCreditHistory Load (0.2ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1  [["restaurant_id", 31]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (25.2ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 186ms (Views: 120.5ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 13:37:59 +0500
+
+
+Started GET "/rest_admin/qrcode_31" for 127.0.0.1 at 2016-11-15 13:38:02 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.7ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  [["restaurant_id", 31]]
+  [1m[36mQrcode Load (0.3ms)[0m  [1mSELECT "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  ORDER BY "qrcodes"."created_at" DESC[0m  [["restaurant_id", 31]]
+  [1m[35mOfferImage Load (47.5ms)[0m  SELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1  [["qrcode_id", 8]]
+  [1m[36mOfferImage Load (0.4ms)[0m  [1mSELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1[0m  [["qrcode_id", 7]]
+  Rendered restaurant_admin/qrcode.html.erb within layouts/rest_admin (160.2ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.7ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 275ms (Views: 203.4ms | ActiveRecord: 54.5ms)
+
+
+Started GET "/rest_admin/qrcodedetail_8" for 127.0.0.1 at 2016-11-15 13:58:53 +0500
+Processing by RestaurantAdminController#qrdetail as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mQrcode Load (0.3ms)[0m  SELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1 AND "restaurants"."id" = $2 LIMIT 1  [["owner_id", 100], ["id", 31]]
+Completed 404 Not Found in 99ms (ActiveRecord: 8.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=31 [WHERE "restaurants"."owner_id" = ?]):
+  app/controllers/restaurant_admin_controller.rb:234:in `qrdetail'
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (54.9ms)
+
+
+Started GET "/rest_admin/qrcodedetail_8" for 127.0.0.1 at 2016-11-15 14:03:08 +0500
+
+SyntaxError (/home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/app/controllers/restaurant_admin_controller.rb:235: syntax error, unexpected ')', expecting keyword_end):
+  app/controllers/restaurant_admin_controller.rb:235: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.4ms)
+
+
+Started GET "/rest_admin/qrcodedetail_8" for 127.0.0.1 at 2016-11-15 14:03:14 +0500
+
+SyntaxError (/home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/app/controllers/restaurant_admin_controller.rb:235: syntax error, unexpected ')', expecting keyword_end):
+  app/controllers/restaurant_admin_controller.rb:235: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tayyab/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.4ms)
+
+
+Started GET "/rest_admin/qrcodedetail_8" for 127.0.0.1 at 2016-11-15 14:05:18 +0500
+Processing by RestaurantAdminController#qrdetail as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mQrcode Load (0.2ms)[0m  SELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mCreditHistory Load (0.2ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."qrcode_id" = $1  [["qrcode_id", 8]]
+  Rendered restaurant_admin/qrdetail.html.erb within layouts/rest_admin (29.0ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 1253ms (Views: 1156.5ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 14:05:20 +0500
+
+
+Started GET "/rest_admin/qrcode_31" for 127.0.0.1 at 2016-11-15 14:05:24 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  [["restaurant_id", 31]]
+  [1m[36mQrcode Load (0.3ms)[0m  [1mSELECT "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  ORDER BY "qrcodes"."created_at" DESC[0m  [["restaurant_id", 31]]
+  [1m[35mOfferImage Load (0.3ms)[0m  SELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1  [["qrcode_id", 8]]
+  [1m[36mOfferImage Load (0.3ms)[0m  [1mSELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1[0m  [["qrcode_id", 7]]
+  Rendered restaurant_admin/qrcode.html.erb within layouts/rest_admin (659.2ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 786ms (Views: 770.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/rest_admin/qrcodedetail_8" for 127.0.0.1 at 2016-11-15 14:05:28 +0500
+Processing by RestaurantAdminController#qrdetail as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mQrcode Load (0.4ms)[0m  SELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mCreditHistory Load (1.0ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."qrcode_id" = $1  [["qrcode_id", 8]]
+  Rendered restaurant_admin/qrdetail.html.erb within layouts/rest_admin (4.6ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 155ms (Views: 147.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/rest_admin/qrcodedetail_7" for 127.0.0.1 at 2016-11-15 14:05:33 +0500
+Processing by RestaurantAdminController#qrdetail as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mQrcode Load (0.4ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mRestaurant Load (0.9ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mCreditHistory Load (0.5ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."qrcode_id" = $1[0m  [["qrcode_id", 7]]
+  Rendered restaurant_admin/qrdetail.html.erb within layouts/rest_admin (6.3ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.7ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 132ms (Views: 124.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/rest_admin/qrcode_31" for 127.0.0.1 at 2016-11-15 14:09:22 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  [1m[35mQrcode Load (0.2ms)[0m  SELECT "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  ORDER BY "qrcodes"."created_at" DESC  [["restaurant_id", 31]]
+  [1m[36mOfferImage Load (0.2ms)[0m  [1mSELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1[0m  [["qrcode_id", 8]]
+  [1m[35mOfferImage Load (0.3ms)[0m  SELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1  [["qrcode_id", 7]]
+  Rendered restaurant_admin/qrcode.html.erb within layouts/rest_admin (27.5ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 194ms (Views: 129.9ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 14:09:23 +0500
+
+
+Started GET "/rest_admin/qrcodedetail_8" for 127.0.0.1 at 2016-11-15 14:09:26 +0500
+Processing by RestaurantAdminController#qrdetail as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mQrcode Load (0.6ms)[0m  [1mSELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mCreditHistory Load (0.2ms)[0m  [1mSELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."qrcode_id" = $1[0m  [["qrcode_id", 8]]
+  Rendered restaurant_admin/qrdetail.html.erb within layouts/rest_admin (5.0ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 109ms (Views: 93.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/rest_admin/qrcode_31" for 127.0.0.1 at 2016-11-15 14:10:26 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  [1m[35mQrcode Load (0.2ms)[0m  SELECT "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  ORDER BY "qrcodes"."created_at" DESC  [["restaurant_id", 31]]
+  [1m[36mOfferImage Load (0.2ms)[0m  [1mSELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1[0m  [["qrcode_id", 8]]
+  [1m[35mOfferImage Load (0.3ms)[0m  SELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1  [["qrcode_id", 7]]
+  Rendered restaurant_admin/qrcode.html.erb within layouts/rest_admin (8.6ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 117ms (Views: 112.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 14:10:26 +0500
+
+
+Started GET "/rest_admin/qrcode_31" for 127.0.0.1 at 2016-11-15 14:24:01 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  [["restaurant_id", 31]]
+  [1m[36mQrcode Load (0.2ms)[0m  [1mSELECT "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  ORDER BY "qrcodes"."created_at" DESC[0m  [["restaurant_id", 31]]
+  [1m[35mOfferImage Load (0.1ms)[0m  SELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1  [["qrcode_id", 8]]
+  [1m[36mOfferImage Load (0.2ms)[0m  [1mSELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1[0m  [["qrcode_id", 7]]
+  Rendered restaurant_admin/qrcode.html.erb within layouts/rest_admin (24.4ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 188ms (Views: 126.8ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 14:24:02 +0500
+
+
+Started GET "/rest_admin/qrcodedestroy_7" for 127.0.0.1 at 2016-11-15 14:24:05 +0500
+Processing by RestaurantAdminController#del_qrcode as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mQrcode Load (0.3ms)[0m  SELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCreditHistory Load (0.3ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."qrcode_id" = $1  [["qrcode_id", 7]]
+  [1m[36mOfferImage Load (0.3ms)[0m  [1mSELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1[0m  [["qrcode_id", 7]]
+  [1m[35mSQL (18.1ms)[0m  DELETE FROM "offer_images" WHERE "offer_images"."id" = $1  [["id", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "qrcodes" WHERE "qrcodes"."id" = $1[0m  [["id", 7]]
+  [1m[35m (36.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/rest_admin/qrcode_31
+Completed 302 Found in 2686ms (ActiveRecord: 57.0ms)
+
+
+Started GET "/rest_admin/qrcode_31" for 127.0.0.1 at 2016-11-15 14:24:08 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  [1m[35mQrcode Load (0.2ms)[0m  SELECT "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  ORDER BY "qrcodes"."created_at" DESC  [["restaurant_id", 31]]
+  [1m[36mOfferImage Load (0.2ms)[0m  [1mSELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1[0m  [["qrcode_id", 8]]
+  Rendered restaurant_admin/qrcode.html.erb within layouts/rest_admin (3.8ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.7ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 113ms (Views: 108.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rest_admin/qrcodedestroy_8" for 127.0.0.1 at 2016-11-15 14:24:11 +0500
+Processing by RestaurantAdminController#del_qrcode as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mQrcode Load (0.5ms)[0m  SELECT  "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCreditHistory Load (0.4ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."qrcode_id" = $1  [["qrcode_id", 8]]
+  [1m[36mOfferImage Load (0.2ms)[0m  [1mSELECT  "offer_images".* FROM "offer_images" WHERE "offer_images"."qrcode_id" = $1 LIMIT 1[0m  [["qrcode_id", 8]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "offer_images" WHERE "offer_images"."id" = $1  [["id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "qrcodes" WHERE "qrcodes"."id" = $1[0m  [["id", 8]]
+  [1m[35m (48.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/rest_admin/qrcode_31
+Completed 302 Found in 3303ms (ActiveRecord: 50.2ms)
+
+
+Started GET "/rest_admin/qrcode_31" for 127.0.0.1 at 2016-11-15 14:24:14 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 100]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  [1m[35mQrcode Load (0.2ms)[0m  SELECT "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  ORDER BY "qrcodes"."created_at" DESC  [["restaurant_id", 31]]
+  Rendered restaurant_admin/qrcode.html.erb within layouts/rest_admin (2.1ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 117ms (Views: 110.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/rest_admin/restaurant_31" for 127.0.0.1 at 2016-11-15 14:24:23 +0500
+Processing by RestaurantAdminController#restaurant_detail as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 31], ["reviewable_type", "Restaurant"]]
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  [1m[35mCreditHistory Load (0.3ms)[0m  SELECT "credit_histories".* FROM "credit_histories" WHERE "credit_histories"."restaurant_id" = $1  [["restaurant_id", 31]]
+  Rendered restaurant_admin/restaurant_detail.html.erb within layouts/rest_admin (67.0ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[36mNotification Load (0.6ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 210ms (Views: 182.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/rest_admin/qrcode_31" for 127.0.0.1 at 2016-11-15 14:24:32 +0500
+Processing by RestaurantAdminController#qrcode as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 100]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  [["restaurant_id", 31]]
+  [1m[36mQrcode Load (0.3ms)[0m  [1mSELECT "qrcodes".* FROM "qrcodes" WHERE "qrcodes"."restaurant_id" = $1  ORDER BY "qrcodes"."created_at" DESC[0m  [["restaurant_id", 31]]
+  Rendered restaurant_admin/qrcode.html.erb within layouts/rest_admin (4.4ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3[0m  [["target_id", 100], ["target_type", "User"], ["seen", false]]
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."target_id" = $1 AND "notifications"."target_type" = $2 AND "notifications"."seen" = $3  [["target_id", 100], ["target_type", "User"], ["seen", "f"]]
+Completed 200 OK in 163ms (Views: 154.4ms | ActiveRecord: 2.9ms)
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)

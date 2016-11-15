@@ -184,7 +184,11 @@ class RestaurantAdminController < ApplicationController
 	end
 
 	def notifications
-		@restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		if @current_user.role == 'admin'
+			@restaurant = Restaurant.find(params[:id])
+		else
+			@restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		end
 		@notifications = @restaurant.notifications
 	end
 
@@ -217,13 +221,32 @@ class RestaurantAdminController < ApplicationController
 	end
 
 	def qrcode
-		@restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		if @current_user.role == 'admin'
+			@restaurant = Restaurant.find(params[:id])
+		else
+			@restaurant = Restaurant.where(owner_id: @current_user.id).find(params[:id])
+		end
 		@qrcode = @restaurant.qrcodes.order(created_at: 'DESC')
 	end
 
 	def qrdetail
 		@qr = Qrcode.find(params[:id])
-		@qrcode = Restaurant.where(owner_id: @current_user.id).find(@qr.restaurant.id).qrcodes.find(params[:id]).credit_histories
+		if @current_user.role == 'admin'
+			@qrcode = @qr.credit_histories
+		else
+			@qrcode = Restaurant.where(owner_id: @current_user.id).find(@qr.restaurant.id).qrcodes.find(params[:id]).credit_histories
+		end
+	end
+
+	def del_qrcode
+		@qr = Qrcode.find(params[:id])
+		if @current_user.role == 'admin'
+			@qr.destroy
+		else
+			@qrcode = Restaurant.where(owner_id: @current_user.id).find(@qr.restaurant.id).qrcodes.find(params[:id])
+			@qrcode.destroy
+		end
+		redirect_to :back
 	end
 
 	private

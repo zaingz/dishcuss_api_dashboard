@@ -6,9 +6,9 @@ class FoodItem < ActiveRecord::Base
 	attr_accessor :image , :photo_id
 
 	acts_as_likeable
-	has_many :photos , :as => 'imageable'
+	has_many :photos , :as => 'imageable' ,dependent: :destroy
 	accepts_nested_attributes_for :photos
 
-	has_many :dislikes, :as => 'dislikable'
+	has_many :dislikes, :as => 'dislikable' ,dependent: :destroy
 
 end

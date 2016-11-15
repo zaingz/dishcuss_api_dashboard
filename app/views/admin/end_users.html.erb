@@ -22,7 +22,7 @@
                     <th>Email</th>
                     <th>Gender</th>
                     <th>Verified</th>
-                    <!-- <th>Referal Code</th> -->
+                    <th>Credit</th>
                     <th>Block</th>
                     <th>Give Credit</th>
                   </tr>
@@ -36,7 +36,7 @@
                         <td><%= us.email %></td>
                         <td><%= us.gender %></td>
                         <td><%= us.verified ? 'Yes' : 'No' %></td>
-                        <!-- <td><%= us.referal_code %></td> -->
+                        <td><%= us.credit.present? ? us.credit.points : 0%></td>
                         <td><% if us.block  %>
                               <%= link_to "Yes" , unblock_user_path(us.id) %>
                             <% else  %>

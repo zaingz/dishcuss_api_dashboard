@@ -76,6 +76,7 @@
                      <p style="text-align: center;">
                       <a href="<%= code.img.split('public')[1] %>" download="<%= code.code %>.png" class='btn btn-primary'>Download</a>
                       <a href="<%= qrcodes_detail_rest_admin_path(code.id) %>" class='btn btn-primary'>Detail</a>
+                      <a href="<%= qrcodes_destroy_rest_admin_path(code.id) %>" class='btn btn-danger'>Delete</a>
                      </p>
                      
                   </div>

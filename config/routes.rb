@@ -181,6 +181,7 @@ Rails.application.routes.draw do
   get 'rest_admin/qrcode_:id' => 'restaurant_admin#qrcode' , as: 'qrcodes_rest_admin'
   post 'rest_admin/qrcode_:id' => 'restaurant_admin#gen_qr' , as: 'qrcode_create_rest_admin'
   get 'rest_admin/qrcodedetail_:id' => 'restaurant_admin#qrdetail' , as: 'qrcodes_detail_rest_admin'
+  get 'rest_admin/qrcodedestroy_:id' => 'restaurant_admin#del_qrcode' , as: 'qrcodes_destroy_rest_admin'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

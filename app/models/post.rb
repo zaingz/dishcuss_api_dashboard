@@ -6,10 +6,10 @@ class Post < ActiveRecord::Base
 	acts_as_likeable
 	acts_as_commentable
 	
-	has_many :photos , :as => 'imageable'
+	has_many :photos , :as => 'imageable' ,dependent: :destroy
 	accepts_nested_attributes_for :photos
 
-	has_many :dislikes, :as => 'dislikable'
+	has_many :dislikes, :as => 'dislikable' ,dependent: :destroy
 	attr_accessor :image , :photo_id
 
 end

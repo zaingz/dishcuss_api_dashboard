@@ -1,8 +1,8 @@
 class Qrcode < ActiveRecord::Base
 	belongs_to :restaurant
-	has_many :credit_histories
+	has_many :credit_histories ,dependent: :destroy
 
-	has_one :offer_image
+	has_one :offer_image ,dependent: :destroy
 
 	#validates_uniqueness_of :code
 
