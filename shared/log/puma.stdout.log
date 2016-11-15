@@ -12812,3 +12812,36 @@ Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:54:57 +0500
 [30864] === puma shutdown: 2016-11-15 18:57:05 +0500 ===
 [30864] - Goodbye!
 Exiting
+=== puma startup: 2016-11-15 23:02:43 +0500 ===
+[3526] * Starting control server on unix:///tmp/puma-status-1479232963810-3526
+[3526] - Worker 0 (pid: 3562) booted, phase: 0
+[3526] - Worker 1 (pid: 3566) booted, phase: 0
+
+
+Started GET "/api/restaurants/sections/search?name=tea%20house" for 127.0.0.1 at 2016-11-15 23:03:01 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#sec_search as */*
+  Parameters: {"name"=>"tea house"}
+"Searching Sections"
+  [1m[35mRestaurant Load (40.4ms)[0m  SELECT DISTINCT "restaurants".* FROM "restaurants" WHERE (typee ~* 'tea house')
+[active_model_serializers]   [1m[36mCoverImage Load (0.4ms)[0m  [1mSELECT  "cover_images".* FROM "cover_images" WHERE "cover_images"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 31]]
+[active_model_serializers]   [1m[35mCheckin Load (92.4ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."restaurant_id" = $1  [["restaurant_id", 31]]
+[active_model_serializers]   [1m[36mCallNow Load (47.8ms)[0m  [1mSELECT "call_nows".* FROM "call_nows" WHERE "call_nows"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+[active_model_serializers]   [1m[35mReview Load (48.6ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = $1 AND "reviews"."reviewable_type" = $2  [["reviewable_id", 31], ["reviewable_type", "Restaurant"]]
+[active_model_serializers]   [1m[36mPhoto Load (18.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2[0m  [["imageable_id", 31], ["imageable_type", "Restaurant"]]
+[active_model_serializers]   [1m[35mRating Load (44.5ms)[0m  SELECT "ratings".* FROM "ratings" WHERE "ratings"."restaurant_id" = $1  [["restaurant_id", 31]]
+[active_model_serializers]   [1m[36mUser Load (79.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)[0m  [["liker_type", "User"], ["likeable_type", "Restaurant"], ["likeable_id", 31]]
+[active_model_serializers]   [1m[35mUser Load (9.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "follows"."follower_id" FROM "follows" WHERE "follows"."follower_type" = $1 AND "follows"."followable_type" = $2 AND "follows"."followable_id" = $3)  [["follower_type", "User"], ["followable_type", "Restaurant"], ["followable_id", 31]]
+[active_model_serializers]   [1m[36mMenu Load (0.3ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 31]]
+[active_model_serializers]   [1m[35mSection Load (0.3ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."menu_id" = $1  [["menu_id", 9]]
+[active_model_serializers]   [1m[36mFoodItem Load (2.5ms)[0m  [1mSELECT "food_items".* FROM "food_items" WHERE "food_items"."section_id" = $1[0m  [["section_id", 9]]
+[active_model_serializers]   [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (SELECT "likes"."liker_id" FROM "likes" WHERE "likes"."liker_type" = $1 AND "likes"."likeable_type" = $2 AND "likes"."likeable_id" = $3)  [["liker_type", "User"], ["likeable_type", "FoodItem"], ["likeable_id", 17]]
+[active_model_serializers]   [1m[36mCategory Load (20.9ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_food_items" ON "categories"."id" = "categories_food_items"."category_id" WHERE "categories_food_items"."food_item_id" = $1[0m  [["food_item_id", 17]]
+[active_model_serializers]   [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."imageable_id" = $1 AND "photos"."imageable_type" = $2  [["imageable_id", 17], ["imageable_type", "FoodItem"]]
+[active_model_serializers]   [1m[36mReport Load (30.3ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE "reports"."reportable_id" = $1 AND "reports"."reportable_type" = $2[0m  [["reportable_id", 590], ["reportable_type", "Photo"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (1637.22ms)
+Completed 200 OK in 1804ms (Views: 1159.7ms | ActiveRecord: 559.7ms)
+[3526] - Gracefully shutting down workers...
+[3526] === puma shutdown: 2016-11-15 23:22:00 +0500 ===
+[3526] - Goodbye!
+Exiting

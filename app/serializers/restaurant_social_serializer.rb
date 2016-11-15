@@ -53,7 +53,11 @@ class RestaurantSocialSerializer < ActiveModel::Serializer
   end
 
   def price_per_head
-    object.per_head
+    c = 0
+    if object.per_head.present?
+      c = object.per_head
+    end
+    c
   end
 
   def follows

@@ -490,3 +490,4 @@ ActiveModel::Serializer::ArraySerializer.new called from /home/tayyab/Downloads/
 	from bin/rails:3:in `load'
 	from bin/rails:3:in `<main>'
 === puma startup: 2016-11-15 18:54:30 +0500 ===
+=== puma startup: 2016-11-15 23:02:43 +0500 ===
