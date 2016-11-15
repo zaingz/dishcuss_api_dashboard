@@ -17097,3 +17097,16 @@ Completed 200 OK in 106ms (Views: 102.7ms | ActiveRecord: 1.9ms)
 
 
 Started GET "/assets/tabi.css" for 127.0.0.1 at 2016-11-15 18:54:57 +0500
+DEPRECATION WARNING: [Devise] config.email_regexp will have a new default on Devise 4.1
+To keep the current behavior please set in your config/initializers/devise.rb the following:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  end
+
+If you want to use the new default:
+
+  Devise.setup do |config|
+    config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  end
+. (called from <top (required)> at /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/config/initializers/devise.rb:3)
