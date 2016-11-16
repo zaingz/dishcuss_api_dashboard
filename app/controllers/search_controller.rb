@@ -57,7 +57,7 @@ class SearchController < ApplicationController
 		if params[:name].present?
 			p "Searching Sections"
 			arr = []
-			cat = Restaurant.where('typee ~* ?' , params[:name]).uniq
+			cat = Restaurant.approved.where('typee ~* ?' , params[:name]).uniq
 			cat.each do |res|
 				tempi = res
 				unless arr.include?(tempi)

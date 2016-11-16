@@ -8,21 +8,32 @@ class NewsfeedController < ApplicationController
 			tot_review = Hash.new
 		    tot_review["Review"] =  [] 
 		    tot_review["Checkin"] = []
+		    rev_id = []
+		    chk_id = []
 		    days_for_review = 30
 		    days_less = Time.now
 		    count = 0
 		    while((tot_review["Review"].length + tot_review["Checkin"].length) < 40 && count < 11)
 				#user.newsfeed.ids.each do |use|
 					Review.where(reviewer_id: user.newsfeed.ids).where("created_at >= ?", days_for_review.days.ago).where("created_at < ?", days_less).each do |review|
-						tot_review["Review"] << ReviewUserSerializer.new(review , scope: {option_name: @current_user} )
+						unless rev_id.include?(review.id)
+						    rev_id << review.id
+						    tot_review["Review"] << ReviewUserSerializer.new(review , scope: {option_name: @current_user} )
+						end
 					end
 					Post.where(user_id: user.newsfeed.ids).where("created_at >= ?", days_for_review.days.ago).where("created_at < ?", days_less).each do |post|
-						tot_review["Checkin"] << PostUserSerializer.new(post , scope: {option_name: @current_user})
+						unless chk_id.include?(post.id)
+							chk_id << post.id
+						   tot_review["Checkin"] << PostUserSerializer.new(post , scope: {option_name: @current_user})
+						end
 					end
 				#end
 				#user.newsfeed.rest_ids.each do |use|
 					Review.where(reviewable_type: 'Restaurant').where(reviewable_id: user.newsfeed.rest_ids).where("created_at >= ?", days_for_review.days.ago).where("created_at < ?", days_less).each do |review|
-						tot_review["Review"] << ReviewUserSerializer.new(review , scope: {option_name: @current_user} )
+						unless rev_id.include?(review.id)
+							rev_id << review.id
+						    tot_review["Review"] << ReviewUserSerializer.new(review , scope: {option_name: @current_user} )
+						end
 					end
 				#end
 				count = count + 1
