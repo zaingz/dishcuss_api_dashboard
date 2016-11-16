@@ -4,7 +4,8 @@ class UsersController < ApplicationController
 	before_filter :is_end_user, except: [:version , :create , :signin , :social ,:restaurant_user_create , :signout , :verify_email , :notifications , :notification_seen , :update] 
 
 	def create
-		if user = User.find_by_email(params[:user][:email])
+		em = params[:user][:email].downcase
+		if user = User.find_by_email(em)
 			render json: {'message' => 'Already signedup!'} , status: :ok
 		else
 			p params
@@ -13,7 +14,8 @@ class UsersController < ApplicationController
 				p ident
 				if ident[:provider].present? && ident[:uid].present? && ident[:token].present? 
 					if user = User.new(user_params)
-						user.save(validate: false)
+						user.email = em
+						user.save
 						user.update(verified: true)
 						user.generate_referral_code
 						user.save
@@ -33,7 +35,7 @@ class UsersController < ApplicationController
 				end
 			elsif(params[:user][:password].length >= 8 && params[:user][:password].length <= 16)
 				pass = BCrypt::Password.create(params[:user][:password])
-				user = User.create( email: params[:user][:email] , :encrypted_password => pass )
+				user = User.create( email: em , :encrypted_password => pass )
 				user.update(user_create_params)
 				user.generate_referral_code
 				user.generate_email_verification_code
@@ -49,7 +51,7 @@ class UsersController < ApplicationController
 					end
 				end
 				render json: identity  , root: "user" , serializer: UserTokenSerializer, status: :created
-				#UserMailer.welcome_email(user).deliver_later
+				UserMailer.welcome_email(user).deliver_later
 			else
 				render json: {'message' => 'Password length must be inbetween 8 to 16'} , status: :unprocessable_entity
 			end
@@ -90,9 +92,10 @@ class UsersController < ApplicationController
 
 	def signin
 		p params
-		if params[:user][:email].present? && ( params[:user][:email].length > 1 )
+		em = params[:user][:email].downcase
+		if em.present? && (em.length > 1 )
 			p "Email Present"
-			if user = User.find_by_email(params[:user][:email])
+			if user = User.find_by_email(em)
 				p "User Found BY Email"
 				if params[:user][:password].blank?
 					p "User Password Blank"
@@ -149,8 +152,9 @@ class UsersController < ApplicationController
 				if ident[:uid].present? && ident[:token].present? 
 					p "User Create"
 					if user = User.new(user_params)
-						user.save(validate: false)
-						user.update(verified: true)
+						user.email = em
+						user.verified = true
+						user.save
 						user.generate_referral_code
 						user.save
 						cred = Credit.create(user_id: user.id)
@@ -185,8 +189,9 @@ class UsersController < ApplicationController
 				else
 					p "Create New User"
 					if user = User.new(user_params)
-						user.save(validate: false)
-						user.update(verified: true)
+						user.email = em
+						user.save
+						user.verified = true
 						user.generate_referral_code
 						user.save
 						cred = Credit.create(user_id: user.id)

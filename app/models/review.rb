@@ -5,6 +5,6 @@ class Review < ActiveRecord::Base
 	acts_as_likeable
 	acts_as_commentable
 
-	has_many :reports , :as => 'reportable' ,dependent: :destroy
-	has_many :dislikes, :as => 'dislikable' ,dependent: :destroy
+	has_many :reports , :as => 'reportable' 
+	has_many :dislikes, :as => 'dislikable' 
 end

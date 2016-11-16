@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
 	has_many :photos , :as => 'imageable' ,dependent: :destroy
 	accepts_nested_attributes_for :photos
 
-	has_many :dislikes, :as => 'dislikable' ,dependent: :destroy
+	has_many :dislikes, :as => 'dislikable'
 	attr_accessor :image , :photo_id
 
 end

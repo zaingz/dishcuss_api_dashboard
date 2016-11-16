@@ -8,19 +8,19 @@ class Restaurant < ActiveRecord::Base
 
 	has_one :menu , dependent: :destroy
 	belongs_to :owner , :class_name => 'User'
-	has_many :reviews , :as => 'reviewable' ,dependent: :destroy
+	has_many :reviews , :as => 'reviewable' 
 
 	acts_as_followable
 	acts_as_likeable
 
-	has_many :photos , :as => 'imageable' ,dependent: :destroy
+	has_many :photos , :as => 'imageable' 
 	accepts_nested_attributes_for :photos
 
 	#has_many :messages , dependent: :destroy
 
-	has_many :notifications , :as => 'target' ,dependent: :destroy
+	has_many :notifications , :as => 'target'
 
-	has_many :dislikes, :as => 'dislikable' ,dependent: :destroy
+	has_many :dislikes, :as => 'dislikable'
 
 	has_many :credit_histories , dependent: :destroy
 

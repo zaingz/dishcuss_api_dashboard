@@ -14,8 +14,8 @@ class Comment < ActiveRecord::Base
 
   # NOTE: Comments belong to a user
 
-  has_one :photo , :as => 'imageable' ,dependent: :destroy
-  has_many :reports , :as => 'reportable' ,dependent: :destroy
-  has_many :comments , :as => 'commentable' ,dependent: :destroy
+  has_one :photo , :as => 'imageable' 
+  has_many :reports , :as => 'reportable' 
+  has_many :comments , :as => 'commentable' 
 
 end

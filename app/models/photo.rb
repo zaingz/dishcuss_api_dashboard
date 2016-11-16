@@ -3,5 +3,5 @@ class Photo < ActiveRecord::Base
 	belongs_to :imageable, :polymorphic => true
 	validates_associated :imageable
 	
-	has_many :reports , :as => 'reportable' ,dependent: :destroy
+	has_many :reports , :as => 'reportable' 
 end

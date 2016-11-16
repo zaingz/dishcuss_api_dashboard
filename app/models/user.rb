@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 	#validates_uniqueness_of :username
 	devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
+         :recoverable, :rememberable, :trackable,
          :omniauthable, :omniauth_providers => [:facebook , :google_oauth2 , :twitter]
 
 	validates_presence_of :email
@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 	enum gender: [:male , :female]
 	enum role: [:end_user , :restaurant_owner , :admin , :food_pundit]
 	has_many :identities ,dependent: :destroy
-	has_one :restaurant ,dependent: :destroy
+	has_one :restaurant
 	has_many :reviews, :as => 'reviewable' ,dependent: :destroy
 	has_many :posts ,dependent: :destroy
 	has_many :reports ,dependent: :destroy

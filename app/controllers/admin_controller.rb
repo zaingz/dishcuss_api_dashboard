@@ -78,6 +78,7 @@ class AdminController < ApplicationController
 
 	def credit_history
 		@history = CreditHistory.all
+		@flaot = Credit.pluck(:points).inject(0){|sum,x| sum + x }
 	end
 
 	def notification
