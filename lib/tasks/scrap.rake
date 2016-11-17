@@ -6,11 +6,11 @@ namespace :scrap do
 	require 'open-uri'
 
 	#open("/home/tayyab/Downloads/Tayyab/Office/Projects/foodpanda scrap/Order online food delivery from Lahore's best restaurants.html")
-	r = open("/home/holygon/panda/foodpanda scrap/Order online food delivery from Lahore's best restaurants.html")
+	r = open("/home/holygon/panda/Order online food delivery from Lahore's best restaurants.html")
 	rest_tem = Nokogiri::HTML(r)
-	count = 1
+	count = 100
 	rest_tem.css('.vendor__inner').each do |es|
-		if count < 100
+		if count < 200
 			t_img = es.css('.vendor__image img').attr('src').to_s
 			img = "https://asia-public.foodpanda.com/dynamic/production/pk/images/vendors/" + t_img.split('/').last.gsub('(1)','')
 			#unless img.include? "no_pic_logo"
