@@ -51,10 +51,10 @@ class RestaurantNearbySerializer < ActiveModel::Serializer
 
   def menu
     ch = {}
-    if object.menu.present?
+    #if object.menu.present?
       #ch = ActiveModel::Serializer.serializer_for()
-      ch = MenuSerializer.new(object.menu , {root: false})
-    end
+    #  ch = MenuSerializer.new(object.menu , {root: false})
+    #end
     ch
   end
 

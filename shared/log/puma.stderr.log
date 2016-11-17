@@ -777,3 +777,4 @@ ActiveModel::Serializer::ArraySerializer.new called from /home/tayyab/Downloads/
 	from /home/tayyab/Downloads/Tayyab/Office/Projects/Dishcuss Sever/dishcuss_api_dashboard/bin/spring:13:in `<top (required)>'
 	from bin/rails:3:in `load'
 	from bin/rails:3:in `<main>'
+=== puma startup: 2016-11-17 20:03:00 +0500 ===
