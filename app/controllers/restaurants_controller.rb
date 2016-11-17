@@ -176,7 +176,7 @@ class RestaurantsController < ApplicationController
 	def nearby
 		p params
 		if params[:lat].present? && params[:long].present?
-			res = Restaurant.approved.near([params[:lat], params[:long]], 20, :units => :km)
+			res = Restaurant.approved.near([params[:lat], params[:long]], 20, :units => :km).limit(10)
 			lati_longi = [params[:lat] , params[:long]]
 			render json: res , each_serializer: RestaurantNearbySerializer , root: "restaurants" ,  scope: { option_name: lati_longi }, status: :ok
 		else
