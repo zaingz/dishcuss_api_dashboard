@@ -19,6 +19,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'active_model_serializers', '~> 0.10.0'
 
+gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+
 
 gem 'devise'
 gem 'rqrcode', '~> 0.10.1'

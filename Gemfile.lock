@@ -236,6 +236,7 @@ DEPENDENCIES
   gcm
   geocoder
   jquery-rails
+  nokogiri (~> 1.6, >= 1.6.8)
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-oauth2
