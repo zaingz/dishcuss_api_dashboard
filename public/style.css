@@ -1,0 +1,621 @@
+@font-face {
+    font-family: NexaLight;
+    src: url('fonts/NexaLight.otf');
+}
+
+@font-face {
+    font-family: NexaBold;
+    src: url('fonts/NexaBold.otf');
+}
+
+@font-face {
+    font-family: Fofer;
+    src: url('fonts/Fofer.otf');
+}
+
+@font-face {
+    font-family: Comic Sans;
+    src: url('fonts/comic.ttf');
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#wrapper {
+    overflow: hidden;
+}
+
+.container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 95%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.navbar {
+    background: transparent;
+    border: none;
+    padding-top: 20px;
+    position: absolute;
+    margin-top: 20px;
+    border-top: 2px solid #f6881f;
+    border-radius: 0;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%, -50%);
+    font-family: NexaLight;
+    z-index: 999;
+    width: 90%;
+}
+
+.navbar ul {
+    border-left: 1px solid #f6881f;
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+}
+
+.navbar-brand img {
+    height: 70px;
+}
+
+.navbar-nav {
+    padding: 9px;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #f6881f;
+    background: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #f6881f;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #f6881f;
+}
+
+#intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/intro.jpg') no-repeat fixed center;
+    height: 750px;
+    background-size: cover;
+    width: 100%;
+}
+
+.intro-heading {
+    font-size: 54px;
+    color: #f6881f;
+    text-align: right;
+    padding-top: 250px;
+    line-height: 100%;
+    font-weight: 900;
+    font-family: NexaBold;
+    position: relative;
+}
+
+.intro-heading:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 385px;
+    border-bottom: 1px solid #f6881f;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 1px solid #f6881f;
+}
+.intro-tagline {
+    position: relative;
+    color: #fff;
+    text-align: right;
+    font-size: 26px;
+    font-family: NexaLight;
+}
+
+@media screen and (max-width: 767px) {
+    .intro-heading {
+        font-size: 46px;
+    }
+    
+    .intro-heading:after {
+        width: 330px;
+    }
+    
+    .intro-tagline {
+        font-size: 22px;
+    }
+    
+    .navbar ul {
+        border: none;
+        text-align: center;
+    }
+    
+    .navbar-brand {
+        float: none;
+    }
+    
+    .navbar-brand > img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .intro-heading {
+        font-size: 40px;
+    }
+    
+    .intro-heading:after {
+        width: 285px;
+    }
+    
+    .intro-tagline {
+        font-size: 18px;
+    }
+}
+
+.section-heading {
+    width: 100%;
+    position: relative;
+    line-height: 40px;
+    font-family: NexaBold;
+    margin-top: 40px;
+    color: #fff;
+}
+
+.section-heading:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 90px;
+    border-bottom: 2px solid #f6881f;
+}
+
+.widget-title {
+    width: 100%;
+    font-size: 18px;
+    position: relative;
+    line-height: 20px;
+    font-family: NexaBold;
+    margin-top: 20px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.widget-title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 90px;
+    border-bottom: 2px solid #f6881f;
+}
+
+#about {
+    margin: 40px 0;
+}
+
+.about-start {
+    width: 100%;
+    position: relative;
+}
+
+.about-start:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 1px;
+    width: 60%;
+    border-bottom: 1px solid #f6881f;
+    transform: translate(-50%, -50%);
+}
+
+.about-img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about-tagline {
+    font-family: NexaLight;
+    font-size: 32px;
+    text-align: right;
+    margin-top: 13%;
+}
+
+.about-free {
+    font-family: NexaBold;
+    font-size: 54px;
+    color: #f6881f;
+    border: 1px solid #f6881f;
+    width: 165px;
+    padding: 0 13px;
+    transform: rotate(-20deg);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.about-dishcuss {
+    font-size: 18px;
+    font-family: NexaLight;
+}
+
+.about-dishcuss p {
+    margin-top: 35px;
+}
+
+#about .section-heading {
+    color: #000;
+}
+
+@media screen and (max-width: 767px) {
+    .about-tagline {
+        font-size: 24px;
+        margin-top: 5%;
+    }
+    
+    .about-free {
+        margin-top: 50px;
+        font-size: 48px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .about-tagline {
+        font-size: 20px;
+    }
+    .section-heading {
+        font-size: 24px;
+    }
+    
+    .about-dishcuss {
+        font-size: 16px;
+    }
+}
+
+#food-pundits {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('img/food-pundits-back.jpg') no-repeat fixed center;
+    border-bottom: 30px solid #f6881f;
+    background-size: cover;
+}
+
+.foods {
+    margin: 40px 0;
+    color: #fff;
+    font-family: Comic Sans;
+}
+
+.foods ul {
+    list-style: none;
+    list-style-position: inside;
+    position: relative;
+    color: #fff;
+    padding: 0;
+    font-size: 18px;
+}
+
+.foods ul:before {
+    content: "";
+    border-left: 7px double #f6881f;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.foods ul li {
+    margin-bottom: 70px;
+    margin-left: 25px;
+}
+
+.foods a {
+    color: #fff;
+    cursor: pointer;
+}
+
+.foods a:hover {
+    text-decoration: none;
+}
+
+.food-description {
+    cursor: default;
+    font-size: 18px;
+    margin-top: 100px;
+    border-left: 2px solid #f6881f;
+    padding-left: 15px;
+}
+
+.food-title {
+    color: #f6881f;
+    font-family: Fofer;
+    font-size: 36px;
+}
+
+.foods ul li:before {
+    content: url('img/bullets.png');
+    position: absolute;
+    left: -8px;
+}
+
+.desi-food-pundit, .sasta-food-pundit, .fast-food-pundit, .continental-food-pundit, .foreign-food-pundit {
+    display: none;
+    position: relative;
+    z-index: 2;
+}
+
+.desi-food-pundit {
+    display: block;
+}
+
+.sasta-image, .fast-image, .conti-image, .foreign-image {
+    display: none;
+}
+
+.food-image img {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 300px;
+}
+
+@media screen and (max-width: 767px) {
+    .food-description {
+        margin-top: 20px;
+    }
+    
+    .foods ul li {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .food-description {
+        margin-top: 0px;
+    }
+    
+    .food-image img {
+        max-width: 250px;
+    }
+}
+
+#how-works {
+    background: url('img/works-back.jpg') no-repeat fixed center;
+    font-family: NexaLight;
+    padding-bottom: 60px;
+    background-size: cover;
+}
+
+#how-works .screens {
+    width: 985px;
+    margin: auto;
+}
+
+.screens a {
+    padding: 60px 0;
+    color: #9d9db8;
+}
+
+.phone-screen img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.screen-number {
+    font-size: 72px;
+    font-family: NexaBold;
+    line-height: 30px;
+}
+
+h4.screen-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: underline;
+    font-family: NexaBold;
+    font-size: 24px;
+}
+
+.inner-screens {
+    padding-top: 110px;
+    cursor: pointer;
+    position: relative;
+}
+
+.point-1, .point-2, .point-3, .point-4 {
+    display: none;
+}
+
+.inner-screens > .point-1 {
+    position: absolute;
+    top: -12px;
+    right: -190px;
+    z-index: 99;
+}
+
+.inner-screens > .point-2 {
+    position: absolute;
+    top: -258px;
+    right: -190px;
+    z-index: 99;
+}
+
+.inner-screens > .point-3 {
+    position: absolute;
+    top: -12px;
+    left: -190px;
+    z-index: 99;
+}
+
+.inner-screens > .point-4 {
+    position: absolute;
+    top: -238px;
+    left: -190px;
+    z-index: 99;
+}
+
+.left-screen {
+    text-align: right !important;
+}
+
+.right-screen {
+    text-align: left !important;
+}
+
+.screen-description {
+    font-size: 14px;
+}
+
+a .inner-screens:hover .point-1, a .inner-screens:hover .point-2, a .inner-screens:hover .point-3, a .inner-screens:hover .point-4 {
+    display: block;
+}
+
+a .inner-screens:hover {
+    text-decoration: none;
+}
+
+a .inner-screens:hover .screen-number{
+    color: #f6881f;
+    text-decoration: none;
+}
+
+a .inner-screens:hover h4.screen-heading, a .inner-screens:hover .screen-description {
+    color: #fff;
+    text-decoration: none;
+}
+
+#screen-2, #screen-3, #screen-4 {
+    display: none;
+}
+
+#screenCarousel {
+    display: none;
+    margin-top: 20px;
+}
+
+.carousel-inner {
+    padding-bottom: 120px;
+}
+
+.carousel-caption {
+    bottom: -110px;
+    left: 5%;
+    right: 5%;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-caption h3 {
+    font-family: NexaBold;
+    text-decoration: underline;
+    color: #f6881f;
+}
+
+
+
+@media screen and (max-width: 991px) {
+    .screens {
+        display: none;
+    }
+    
+    #screenCarousel {
+        display: block;
+    }
+    
+    .carousel-inner > .item > img, 
+        .carousel-inner > .item > a > img {
+        width: 30%;
+        margin: auto;
+    }
+    
+    #how-works .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+        .carousel-inner > .item > img, 
+        .carousel-inner > .item > a > img {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .carousel-caption h3 {
+        font-size: 18px;
+    }
+    
+    .carousel-caption p {
+        font-size: 12px;
+    }
+}
+
+#footer {
+    background: #fff;
+    font-family: NexaLight;
+}
+
+.footer-widgets {
+    padding: 50px 0;
+    border-bottom: 1px solid #ecedee;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul a {
+    color: #757976;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.social-icons .fa {
+    padding-right: 20px;
+    color: #b0b9c3;
+}
+
+footer ul li:first-child {
+    padding-left: 0;
+}
+
+.footer-copyrights {
+    padding: 20px 0 10px 0;
+    text-align: center;
+}

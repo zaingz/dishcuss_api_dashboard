@@ -1,5 +1,9 @@
 class WebController < ApplicationController
 
+	def landing
+
+	end
+
 	def signin
 
 	end

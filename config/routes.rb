@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  root 'web#select_restaurant'
+  root 'web#landing'
 
   scope 'api' do
 	  #resources :posts, except: [:new, :edit]

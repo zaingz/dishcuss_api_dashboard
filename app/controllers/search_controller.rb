@@ -57,14 +57,14 @@ class SearchController < ApplicationController
 		if params[:name].present?
 			p "Searching Sections"
 			arr = []
-			cat = Restaurant.approved.where('typee ~* ?' , params[:name]).uniq
-			cat.each do |res|
-				tempi = res
-				unless arr.include?(tempi)
-					arr << tempi
-				end
-			end
-			render json: arr , each_serializer: RestaurantSocialSerializer , root: "restaurant"  , status: :ok
+			cat = Restaurant.approved.where('typee ~* ?' , params[:name]).limit(10)
+			#cat.each do |res|
+			#	tempi = res
+			#	unless arr.include?(tempi)
+			#		arr << tempi
+			#	end
+			#end
+			render json: cat , each_serializer: RestaurantSocialSerializer , root: "restaurant"  , status: :ok
 		else
 			render json: {'message' => 'Section name missing !'} , status: :unprocessable_entity
 		end
