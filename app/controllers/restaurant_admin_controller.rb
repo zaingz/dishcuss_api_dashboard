@@ -249,6 +249,13 @@ class RestaurantAdminController < ApplicationController
 		redirect_to :back
 	end
 
+	def edit_qrcode
+		if qr = Qrcode.find(params[:qrcode_id])
+			qr.update(max_credit: params[:max_cre])
+		end
+		redirect_to :back
+	end
+
 	private
 	def rest_update_params
 		params.require(:restaurant).permit(:name , :opening_time , :closing_time , :location )

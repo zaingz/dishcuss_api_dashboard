@@ -2,6 +2,7 @@
   <h1>
     <%= @qr.restaurant.name %>
     <small >QR Code</small>
+    <small style="float: right;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button></small>
     <small style="float: right;"><%= link_to 'Back' , qrcodes_rest_admin_path(@qr.restaurant.id) , class: 'btn btn-info' %></small>
   </h1>
 </section>
@@ -20,6 +21,7 @@
                     <th>Username</th>
                     <th>Email</th>
                     <th>Price</th>
+                    <th>Max Credit</th>
                     <th>Time</th>
                   </tr>
                 </thead>
@@ -29,6 +31,7 @@
                       <td><%= us.user.username %></td>
                       <td><%= us.user.email %></td>
                       <td><%= us.price %></td>
+                      <td><%= @qr.max_credit %></td>
                       <td><%= us.updated_at.strftime('%H:%M %F') %></td>
                     </tr>
                   <% end %>
@@ -38,6 +41,33 @@
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
+  </div>
+</div>
+
+<div class="modal fade" id="edit" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit QR code</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_tag(qrcode_edit_rest_admin_path , method: "put" , :multipart => true , 'data-no-turbolink' => true) do %>
+        <%= hidden_field_tag(:qrcode_id, @qr.id) %> 
+          <div class="box-body">
+            <div class="form-group">
+              <%= label_tag 'max_cre', 'Max Credit'%>
+              <%= number_field_tag :max_cre , 0 , class: 'form-control', autofocus: true %>
+            </div>
+          </div>                    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= submit_tag "Update" , class: 'btn btn-default' %>
+        <% end %> 
+      </div>
+    </div>
+    
   </div>
 </div>
 
