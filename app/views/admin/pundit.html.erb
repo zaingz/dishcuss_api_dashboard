@@ -17,7 +17,7 @@
         </div>
         <div class="modal-body">
           
-          <%= form_tag(admin_pundit_path , method: "post") do %>
+          <%= form_tag(admin_pundit_path , method: "post", 'data-no-turbolink' => true) do %>
             <div class="box-body">
               <div class="form-group">
                 <%= label_tag 'name', 'Name'%>

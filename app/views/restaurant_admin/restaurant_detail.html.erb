@@ -34,7 +34,7 @@
           <h4 class="modal-title">Edit Restaurant</h4>
         </div>
         <div class="modal-body">
-          <%= form_for @restaurant ,  url: restaurant_update_admin_path(@restaurant), html: { method: :put } do |f| %>
+          <%= form_for @restaurant ,  url: restaurant_update_admin_path(@restaurant), 'data-no-turbolink' => true, html: { method: :put } do |f| %>
             <% if @restaurant.errors.any? %>
               <div id="error_explanation">
                 <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
@@ -95,7 +95,7 @@
           <h4 class="modal-title">Change Cover Image</h4>
         </div>
         <div class="modal-body">
-          <%= form_tag(cover_image_update_path(@restaurant) , method: "put" , :multipart => true) do %>
+          <%= form_tag(cover_image_update_path(@restaurant) , method: "put" , :multipart => true , 'data-no-turbolink' => true) do %>
 
             <div class="box-body">
               <div class="form-group">

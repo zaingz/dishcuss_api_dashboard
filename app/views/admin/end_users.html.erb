@@ -57,7 +57,7 @@
                               <h4 class="modal-title">Give Credit</h4>
                             </div>
                             <div class="modal-body">
-                             <%= form_tag(sent_credits_path , method: "post" , :multipart => true) do %>
+                             <%= form_tag(sent_credits_path , method: "post" , 'data-no-turbolink' => true, :multipart => true) do %>
                               <%= hidden_field_tag(:user_id, us.id) %> 
                                 <div class="box-body">
                                   <div class="form-group">

@@ -18,7 +18,7 @@
           <h4 class="modal-title">Generate QR Code</h4>
         </div>
         <div class="modal-body">
-          <%= form_tag(qrcode_create_rest_admin_path(@restaurant.id) , method: "post" , :multipart => true) do %>
+          <%= form_tag(qrcode_create_rest_admin_path(@restaurant.id) , method: "post" , :multipart => true, 'data-no-turbolink' => true) do %>
             <div class="box-body">
               <div class="form-group">
                 <%= label_tag 'points', 'Points'%>

@@ -48,7 +48,7 @@
                           </div>
                           <div class="modal-body">
                             <p><%= us.body %></p>
-                            <%= form_tag(admin_send_messages_path , method: "post") do %>
+                            <%= form_tag(admin_send_messages_path , method: "post", 'data-no-turbolink' => true) do %>
                             <%= hidden_field_tag 'user_id', us.sender.id %>
                             <%= hidden_field_tag 'restaurant_id', @restaurant.id %>
                             <%= hidden_field_tag 'message_id', us.id %>

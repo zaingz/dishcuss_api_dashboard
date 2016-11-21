@@ -30,7 +30,7 @@
           <h4 class="modal-title">Add Restaurant</h4>
         </div>
         <div class="modal-body">
-          <%= form_tag(rest_admin_search_path , method: "post" , :multipart => true) do %>
+          <%= form_tag(rest_admin_search_path , method: "post" , :multipart => true , 'data-no-turbolink' => true) do %>
             <div class="box-body">
               <div class="form-group">
                 <%= label_tag 'name', 'Name'%>

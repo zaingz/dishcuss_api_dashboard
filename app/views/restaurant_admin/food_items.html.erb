@@ -15,7 +15,7 @@
           <h4 class="modal-title">Add Fooditem</h4>
         </div>
         <div class="modal-body">
-          <%= form_tag(restaurant_add_food_admin_path , method: "post" , :multipart => true) do %>
+          <%= form_tag(restaurant_add_food_admin_path , method: "post" , :multipart => true , 'data-no-turbolink' => true) do %>
           <%= hidden_field_tag(:restaurant_id, @restaurant.id) %> 
             <div class="box-body">
               <div class="form-group">
@@ -108,7 +108,7 @@
                               <h4 class="modal-title">Edit FoodItem</h4>
                             </div>
                             <div class="modal-body">
-                              <%= form_for us.food_items[temp] ,  url: restaurant_food_items_update_admin_path(us.food_items[temp]), html: { method: :put } do |f| %>
+                              <%= form_for us.food_items[temp] ,  url: restaurant_food_items_update_admin_path(us.food_items[temp], 'data-no-turbolink' => true ), html: { method: :put } do |f| %>
                                 <% if us.food_items[temp].errors.any? %>
                                   <div id="error_explanation">
                                     <h2><%= pluralize(us.food_items[temp].errors.count, "error") %> prohibited this restaurant from being saved:</h2>
