@@ -162,8 +162,9 @@ Rails.application.routes.draw do
   get 'admin/versions' => 'admin#give_user_credit' , as: 'give_credits'
   post 'admin/sent_credits' => 'admin#credits_sent' , as: 'sent_credits'
   post 'admin/set_versions' => 'admin#set_version' , as: 'set_version'
-
-
+  get 'admin/review_delete/:id' => 'admin#delete_review' , as: 'delete_review_admin'
+  get 'admin/post_delete/:id' => 'admin#delete_post' , as: 'delete_post_admin'
+  post 'admin/transfer_ownership' => 'admin#transfer_ownership' , as: 'transfer_ownership_admin'
 
   get 'rest_admin/restaurants' => 'restaurant_admin#index' , as: 'owner_restaurants'
   get 'rest_admin/restaurant_:id' => 'restaurant_admin#restaurant_detail' , as: 'restauarant_owner_details'

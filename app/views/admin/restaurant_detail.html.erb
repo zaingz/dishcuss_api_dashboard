@@ -2,6 +2,7 @@
   <h1>
     <%= @restaurant.name %>
     <small><%= @restaurant.location %></small>
+    <small style="float: right;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#ownership">Tranfer Ownership</button></small>
     <small style="float: right;"><%= link_to 'Edit' , restauarant_owner_details_path(@restaurant.id), class: 'btn btn-info' %></small>
     <small style="float: right;"><%= link_to 'Back' , url_for(:back) , class: 'btn btn-info' %></small>
   </h1>
@@ -112,6 +113,37 @@
   </div>
 </div>
 <% end %>
+
+<div class="modal fade" id="ownership" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Transfer Ownership</h4>
+        </div>
+        <div class="modal-body">
+          <%= form_tag(transfer_ownership_admin_path , method: "post" , :multipart => true , 'data-no-turbolink' => true) do %>
+            <div class="box-body">
+              <div class="form-group">
+                <%= label_tag 'email', 'Email'%>
+                <%= text_field_tag :email , params[:email] , class: 'form-control', autofocus: true %>
+                <%= hidden_field_tag :id , @restaurant.id , class: 'form-control', autofocus: true %>
+              </div>
+            </div>
+            <!-- /.box-body -->
+                     
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= submit_tag "Transfer" , class: 'btn btn-default' %>
+          <% end %> 
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 <script>
   $(function () {

@@ -23,6 +23,7 @@
                     <th>Reviewer</th>
                     <th>Review On</th>
                     <th>Time</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -34,6 +35,7 @@
                       <td><%= us.reviewer.email %></td>
                       <td><%= us.reviewable_type %></td>
                       <td><%= us.created_at.strftime('%H:%M %F') %></td>
+                      <td><%= link_to 'Delete' , delete_review_admin_path(us.id) %></td>
                     </tr>
                   <% end %>
                 </tbody>

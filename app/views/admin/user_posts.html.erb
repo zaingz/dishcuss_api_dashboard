@@ -22,6 +22,7 @@
                     <th>Checkin</th>
                     <th>User</th>
                     <th>Time</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -32,6 +33,7 @@
                       <td><%= us.checkin.present? ? us.checkin.address : 'No' %></td>
                       <td><%= us.user.email %></td>
                       <td><%= us.created_at.strftime('%H:%M %F') %></td>
+                      <td><%= link_to 'Delete' , delete_post_admin_path(us.id) %></td>
                     </tr>
                   <% end %>
                 </tbody>

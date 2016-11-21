@@ -210,6 +210,49 @@ class AdminController < ApplicationController
 		redirect_to :back
 	end
 
+	def delete_review
+		po = Review.find(params[:id])
+		us = po.reviewer
+		if po.destroy
+			#Report.where(reportable_type: 'Review').where(reportable_id: params[:id]).delete_all
+			#Dislike.where(dislikable_type: 'Review').where(dislikable_id: params[:id]).delete_all
+			if us.present?
+				cre = us.credit
+				if cre.points > 10
+					cre.points = cre.points - 10
+					cre.save
+				end
+			end
+		end
+		redirect_to :back
+	end
+
+	def delete_post
+		po = Post.find(params[:id])
+		us = po.user
+		if po.destroy
+			#Dislike.where(dislikable_type: 'Post').where(dislikable_id: params[:id]).delete_all
+			if us.present?
+				cre = us.credit
+				if cre.points > 5
+					cre.points = cre.points - 5
+					cre.save
+				end
+			end
+		end
+		redirect_to :back
+	end
+
+	def transfer_ownership
+		if a = User.find_by_email(params[:email])
+			if a.role == 'restaurant_owner'
+				r = Restaurant.find(params[:id])
+				r.update(owner_id: a.id)
+			end
+		end
+		redirect_to :back
+	end
+
 	private
 	def pundit_params
 		params.require(:user).permit(:email, :password , :name , :username)

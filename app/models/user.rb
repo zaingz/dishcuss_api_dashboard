@@ -41,9 +41,9 @@ class User < ActiveRecord::Base
 
   	def generate_referral_code
   		if self.username.present?
-  			as = self.username
+  			as = self.username.split(' ').last
   		elsif self.name.present?
-  			as = self.name
+  			as = self.name.split(' ').last
   		else
   			as = 'User'
   		end
