@@ -53,7 +53,7 @@ class RestaurantExploreSerializer < ActiveModel::Serializer
     ch = {}
     if object.menu.present?
       #ch = ActiveModel::Serializer.serializer_for()
-      ch = MenuSerializer.new(object.menu , {root: false})
+      #ch = MenuSerializer.new(object.menu , {root: false})
     end
     ch
   end

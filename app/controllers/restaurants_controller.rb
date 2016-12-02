@@ -154,20 +154,12 @@ class RestaurantsController < ApplicationController
 	end
 
 	def explore_rest
-		#sql = "SELECT restaurants.id
-		#		FROM restaurants
-		#		LEFT JOIN ratings
-		#		ON restaurants.id=ratings.restaurant_id 
-		#		WHERE restaurants.approved=true;"
-		#records_array = Restaurant.connection.execute(sql, :skip_logging)
-
-		#restu = []
-		#records_array.each do |sd|
-		#	restu.push(sd.to_json)
-		#end
-
+		offseti = 0
+	    if params[:offset].present?
+	    	offseti = params[:offset]
+	    end
 		res = Restaurant.approved
-		c = res.highest_rated
+		c = res.highest_rated.limit(20).offset(offseti)
 		
 		#render json: { 'records' => restu } , status: :ok
 		render json: c , each_serializer: RestaurantExploreSerializer , root: "restaurants" , status: :ok
