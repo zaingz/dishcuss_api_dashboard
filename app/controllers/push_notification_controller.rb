@@ -18,6 +18,19 @@ class PushNotificationController < ApplicationController
 		registration_ids= @current_user.gcm_devices.pluck(:token) # an array of one or more client registration tokens
 		options = {data: {score: "123"}, collapse_key: "Notification"}
 		response = gcm.send(registration_ids, options)
+
+		apn = Houston::Client.development
+	    apn.certificate = File.read("#{Rails.root}/config/requried.pem") # certificate from prerequisites
+	   	apn.passphrase = "123456"
+	   	@current_user.gcm_devices.where(device: 'ios').each do |tok|
+	      notification = Houston::Notification.new(device: tok.token)
+	      notification.alert = 'message here'
+	      # take a look at the docs about these params
+	      notification.badge = 1
+	      notification.sound = "sosumi.aiff"
+	      notification.custom_data = {data: {message: 'message here' , title: 'DishCuss' , redirect_id: 126 , redirect_type: 'Post' }, title_e: "DishCuss"}
+	      apn.push(notification)
+	    end
 	end
 
 	def notifications

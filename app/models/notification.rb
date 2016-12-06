@@ -37,9 +37,25 @@ class Notification < ActiveRecord::Base
 					end
 				end
 
-				registration_ids= c.first.gcm_devices.pluck(:token) # an array of one or more client registration tokens
 				options = {data: {message: self.body.split('***')[0] , title: 'DishCuss' , redirect_id: d , redirect_type: e }, title_e: "DishCuss"}
-				response = gcm.send(registration_ids, options)
+
+				registration_ids= c.first.gcm_devices.where(device: 'android').pluck(:token) # an array of one or more client registration tokens
+				if registration_ids.count > 0
+					response = gcm.send(registration_ids, options)
+				end
+
+				apn = Houston::Client.development
+			    apn.certificate = File.read("#{Rails.root}/config/requried.pem") # certificate from prerequisites
+			   	apn.passphrase = "123456"
+			   	@current_user.gcm_devices.where(device: 'ios').each do |tok|
+			      notification = Houston::Notification.new(device: tok.token)
+			      notification.alert = self.body.split('***')[0]
+			      # take a look at the docs about these params
+			      notification.badge = 1
+			      notification.sound = "sosumi.aiff"
+			      notification.custom_data = options
+			      apn.push(notification)
+			    end
 			end
 		end
 	end

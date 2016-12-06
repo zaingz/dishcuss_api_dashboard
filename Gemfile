@@ -32,6 +32,7 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'geocoder'
 gem 'gcm'
+gem 'houston', '~> 2.2', '>= 2.2.3'
 gem 'yaml_db' , :group => :development
 
 
