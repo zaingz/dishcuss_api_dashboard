@@ -140,6 +140,21 @@ class AdminController < ApplicationController
 		end
 	end
 
+	def create_restaurant_owner
+		if user = User.find_by_email(params[:email])
+			redirect_to :back
+		else
+			if params[:password].present?
+				#encrypt password
+				pass = BCrypt::Password.create(params[:password])
+				user = User.create(email: params[:email], encrypted_password: pass , name: params[:name] , username: params[:username] , role: 1 , verified: '')
+				redirect_to :back
+			else
+				redirect_to :back
+			end
+		end
+	end
+
 	def create_credit_adjust
 		if cred = CreditAdjustment.find_by_typee(params[:credit][:typee])
 			cred.update(points: params[:credit][:points])
@@ -252,6 +267,8 @@ class AdminController < ApplicationController
 		end
 		redirect_to :back
 	end
+
+	
 
 	private
 	def pundit_params

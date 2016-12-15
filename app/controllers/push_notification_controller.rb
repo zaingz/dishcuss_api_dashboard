@@ -31,6 +31,7 @@ class PushNotificationController < ApplicationController
 	      notification.custom_data = {data: {message: 'message here' , title: 'DishCuss' , redirect_id: 126 , redirect_type: 'Post' }, title_e: "DishCuss"}
 	      apn.push(notification)
 	    end
+	    render json: {'message' => 'Success!'} , status: :ok
 	end
 
 	def notifications

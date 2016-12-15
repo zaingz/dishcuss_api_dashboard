@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
   root 'web#landing'
+  #get 'push_test' => 'push_notification#send_push'
 
   scope 'api' do
 	  #resources :posts, except: [:new, :edit]
@@ -140,6 +141,7 @@ Rails.application.routes.draw do
   get 'admin/end_users' => 'admin#end_users'
   get 'admin/restaurant_owner' => 'admin#restaurant_users'
   post 'admin/pundit' => 'admin#create_pundit'
+  post 'admin/restaurant_owner_create' => 'admin#create_restaurant_owner' , as: 'create_restaurant_owner_admin'
   get 'admin/pundit' => 'admin#pundit'
   get 'admin/pundit_:id' => 'admin#edit_pundit' , as: 'edit_pundit'
   put 'admin/pundit/:id' => 'admin#update_pundit' , as: 'update_pundit'
