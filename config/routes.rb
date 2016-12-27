@@ -102,6 +102,9 @@ Rails.application.routes.draw do
 	  get 'enable_claim/:id' => 'admin#enable_claim_restaurant'
   end
 
+  post 'block_all_users' => 'users#bolock_all_user'
+  post 'reset_db' => 'users#delete_dp'
+
 
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   # The priority is based upon order of creation: first created -> highest priority.

@@ -64,4 +64,11 @@ class ApplicationController < ActionController::Base
 			redirect_to '/' ,status: :unauthorized
 		end
 	end
+
+	def is_admin_api
+		if @current_user.role == 'admin'
+		else
+			render json: {'message' => 'Unauthorized'} ,status: :unauthorized
+		end
+	end
 end

